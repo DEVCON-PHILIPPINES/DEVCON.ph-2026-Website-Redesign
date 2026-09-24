@@ -1,0 +1,42 @@
+# DEVCON Philippines
+
+> DEVCON Philippines (DevConnect Philippines Inc.) is the Philippines' largest volunteer tech community: an SEC-registered, BIR-compliant non-profit founded in 2009, with 13 locations across Luzon, Visayas, and Mindanao. Theme for 2026 (DEVCON 17): Engineering an AI-Ready Nation.
+
+Key facts:
+- Founded: 2009. Legal name: DevConnect Philippines Inc. Status: non-profit (SEC-registered, BIR-compliant).
+- Reach: 70k+ online; 19k+ face-to-face attendees in 2025; 120+ free events every year; 500+ builders trained on AI Fluency.
+- Locations (13): Manila, Laguna, Legazpi, Pampanga (Luzon); Cebu, Iloilo, Bohol, Bacolod, Tacloban (Visayas); Davao, Cagayan de Oro, Iligan, Bukidnon (Mindanao). Bohol, Bacolod, Tacloban, and Cagayan de Oro are volunteer communities.
+- DEVCON HQ Office: Makati or Ortigas, Metro Manila. Contact: hello@devcon.ph.
+- AI programs: Hour of AI for Kids, Open-Source AI Code Camps, AI Fluency Masterclass for Builders with an Agentic AI Hackathon, 5-month AI Engineering Internships, AI Certification Scholarships.
+
+## Start here
+- [Home](https://devcon.ph/): overview, locations map, news
+- [About DEVCON](https://devcon.ph/about/): 17-year story and mission
+- [Partner with DEVCON](https://devcon.ph/partner/): sponsorship and DevRel partnerships
+- [Locations](https://devcon.ph/chapters/): all 13 chapters and volunteer communities
+- [Programs](https://devcon.ph/programs/): every DEVCON program
+
+## AI programs
+- [AI Scholarships](https://devcon.ph/ai/): AI Certification Scholarships, starting with Claude
+- [AI Fluency Masterclass](https://devcon.ph/ai-fluency-masterclass/)
+- [Open-Source AI Code Camps](https://devcon.ph/ai-code-camps/)
+- [AI Engineering Internships](https://devcon.ph/jumpstart-internships/)
+
+## Case studies
+- [DevRel case studies](https://devcon.ph/devrel-case-studies/)
+- [Smart contract code camps, Year 1](https://devcon.ph/case-study-sui/)
+- [Nationwide smart contracts code camp series](https://devcon.ph/case-study-icp/)
+- [Hour of AI for Kids](https://devcon.ph/case-study-hour-of-ai/)
+
+## Get involved
+- [Attend an event](https://devcon.ph/attend/)
+- [Invite DEVCON to your city](https://devcon.ph/invite/)
+- [Leadership](https://devcon.ph/leadership/)
+
+## Community Playbook and policies
+- [Community Playbook](https://devcon.ph/playbook/)
+- [Volunteering Basics](https://devcon.ph/volunteers-guide/)
+- [Code of Conduct](https://devcon.ph/code-of-conduct-for-national-and-chapter-officers-and-volunteers/)
+- [Privacy and Safe Space Consent](https://devcon.ph/standard-privacy-and-safespace-consent/)
+- [Campus Events Guidelines](https://devcon.ph/campus-events-guidelines/)
+- [Child Protection Policy](https://devcon.ph/child-protection-policy/)

@@ -2,7 +2,7 @@
 
 The rebuilt **devcon.ph** for DEVCON 17: *Engineering an AI-Ready Nation*. It is written to replace the current devcon.ph content, so every page lives here and nothing links back to the old site.
 
-**Current version:** v1.53 · Sep 24, 2026, 8:32 AM PHT (see [CHANGELOG.md](CHANGELOG.md))
+**Current version:** v1.54 · Sep 24, 2026, 8:36 AM PHT (see [CHANGELOG.md](CHANGELOG.md))
 
 ## What's in this repo
 
@@ -37,7 +37,7 @@ To serve it on devcon.ph instead, add the domain under **Custom domain** on the 
 
 ## SEO
 
-Every page has its own title and description, a canonical `https://devcon.ph/<slug>/` URL, Open Graph and X share tags, and schema.org data. After launch, submit `sitemap.xml` in Google Search Console.
+Every page has its own title and description, a canonical `https://devcon.ph/<slug>/` URL, Open Graph and X share tags, and schema.org data. Key pages also have answer-first FAQ sections marked up for AI search, `robots.txt` explicitly allows search engines and AI assistants, and `llms.txt` gives AI tools a plain-text summary with links. After launch, submit `sitemap.xml` in Google Search Console and Bing Webmaster Tools.
 
 ## Built for
 
