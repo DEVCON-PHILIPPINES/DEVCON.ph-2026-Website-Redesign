@@ -1,0 +1,108 @@
+name: Deploy (GitHub Pages + Cloudflare Pages)
+
+# One approval deploys the same commit to both hosts, then verifies they match.
+# Cloudflare's own Git auto-deploy for production is turned off, so this workflow is the only way production changes.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "docs/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: production-deploy
+  cancel-in-progress: false
+
+jobs:
+  check:
+    name: site-checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python3 scripts/check_site.py
+
+  deploy:
+    name: Deploy to both hosts
+    needs: check
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+      deployments: write
+    environment:
+      name: github-pages
+      url: ${{ steps.gh.outputs.page_url }}
+    outputs:
+      gh_url: ${{ steps.gh.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      # Cloudflare first: if it fails, GitHub Pages is not updated, so the two never drift.
+      - name: Deploy to Cloudflare Pages (production)
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          npx --yes wrangler@3 pages deploy docs \
+            --project-name "${{ vars.CLOUDFLARE_PROJECT }}" \
+            --branch main \
+            --commit-hash "${{ github.sha }}" \
+            --commit-message "$(git log -1 --pretty=%s | head -c 300)" \
+            --commit-dirty=true
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+      - id: gh
+        name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
+
+  verify:
+    name: Verify both hosts match
+    needs: deploy
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Compare live version and pages
+        env:
+          GH_URL: ${{ needs.deploy.outputs.gh_url }}
+          CF_URL: https://${{ vars.CLOUDFLARE_PROJECT }}.pages.dev/
+        run: |
+          expected=$(grep -o '<meta name="version" content="[^"]*"' docs/index.html | head -1 | sed 's/.*content="//;s/"//')
+          echo "Expected version: $expected"
+          check() {  # $1 = base url
+            for i in $(seq 1 20); do
+              v=$(curl -s "$1?v=$RANDOM" | grep -o '<meta name="version" content="[^"]*"' | head -1 | sed 's/.*content="//;s/"//')
+              [ "$v" = "$expected" ] && { echo "OK $1 -> $v"; return 0; }
+              echo "waiting on $1 (got '$v')"; sleep 15
+            done
+            echo "::error::$1 is serving '$v', expected '$expected'"; return 1
+          }
+          check "$GH_URL" && check "$CF_URL"
+          # spot-check that every page resolves on both hosts
+          fail=0
+          for p in $(python3 -c "import json;print(' '.join(json.load(open('docs/url-map.json'))['pages']))"); do
+            for base in "${GH_URL%/}" "${CF_URL%/}"; do
+              code=$(curl -s -o /dev/null -w '%{http_code}' "$base$p")
+              [ "$code" = "200" ] || { echo "::error::$base$p returned $code"; fail=1; }
+            done
+          done
+          [ $fail = 0 ] && echo "All pages live on both hosts."
+          exit $fail
