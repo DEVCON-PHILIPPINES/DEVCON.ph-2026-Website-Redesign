@@ -8,7 +8,7 @@ Fails the build if any page in docs/ has:
   - a missing or duplicate <title> / meta description
   - banned wording from the DEVCON content style guide
 """
-import json, os, re, sys, html
+import json, os, re, sys, html, glob
 
 DOCS = os.path.join(os.path.dirname(__file__), '..', 'docs')
 BANNED = [(r'\bNMBLR\b', 'use "Amihan and Avtica"'),
@@ -47,26 +47,49 @@ def security_checks(f, s):
         if 'noopener' not in a: e.append(f'{f}: target=_blank link without rel=noopener')
     return e
 
+def resolve(src, href):
+    """Resolve a relative href from docs/<src> to a docs-relative .html file (directory URLs -> index.html)."""
+    base = os.path.dirname(src)
+    p = os.path.normpath(os.path.join(base, href)) if href else src
+    if href.endswith('/') or href in ('.', './', '..', '../'): p = os.path.join(p, 'index.html')
+    p = p.replace('\\', '/')
+    if p.startswith('../'): return None
+    if not p.endswith('.html'):
+        if os.path.isdir(os.path.join(DOCS, p)): p = p + '/index.html'
+        else: p = p + '.html'
+    return os.path.normpath(p).replace('\\', '/')
+
+def is_redirect(s): return 'http-equiv="refresh"' in s[:1500]
+
 def main():
-    files = sorted(f for f in os.listdir(DOCS) if f.endswith('.html'))
+    files = sorted(os.path.relpath(f, DOCS).replace('\\', '/') for f in glob.glob(os.path.join(DOCS, '**', '*.html'), recursive=True))
     if not files:
         print('No pages found in docs/'); return 1
-    ids = {f: set(re.findall(r'id="([^"]+)"', open(os.path.join(DOCS, f), encoding='utf-8').read())) for f in files}
+    src = {f: open(os.path.join(DOCS, f), encoding='utf-8').read() for f in files}
+    ids = {f: set(re.findall(r'id="([^"]+)"', s)) for f, s in src.items()}
     errors, titles, descs = [], {}, {}
+    pages = redirects = 0
     for f in files:
-        path = os.path.join(DOCS, f)
-        s = open(path, encoding='utf-8').read()
-        size = os.path.getsize(path) / 1e6
+        s = src[f]
+        errors += security_checks(f, s)
+        if is_redirect(s):
+            redirects += 1
+            m = re.search(r'url=([^"]+)"', s)
+            tgt = resolve(f, m.group(1)) if m else None
+            if not tgt or tgt not in ids: errors.append(f'{f}: redirect target missing ({m.group(1) if m else "none"})')
+            continue
+        if f == '404.html': continue
+        pages += 1
+        size = os.path.getsize(os.path.join(DOCS, f)) / 1e6
         if size > MAX_PAGE_MB: errors.append(f'{f}: {size:.1f} MB is over the {MAX_PAGE_MB} MB page budget')
         body = s[s.find('<body'):]
         for h in re.findall(r'href="([^"]+)"', body):
             if re.match(r'https?://(www\.)?devcon\.ph', h): errors.append(f'{f}: links out to the old site ({h})'); continue
             if h.startswith(('http:', 'https:', 'mailto:', 'tel:', 'data:')): continue
-            fn, _, frag = h.partition('#'); fn = fn or f
-            if fn in ('./', '/'): fn = 'index.html'
-            if fn and '.' not in fn and fn + '.html' in ids: fn = fn + '.html'   # clean URLs (GitHub Pages)
-            if fn not in ids: errors.append(f'{f}: broken link to {h}')
-            elif frag and frag not in ids[fn]: errors.append(f'{f}: missing anchor #{frag} in {fn}')
+            fn, _, frag = h.partition('#')
+            tgt = resolve(f, fn) if fn else f
+            if not tgt or tgt not in ids: errors.append(f'{f}: broken link to {h}')
+            elif frag and frag not in ids[tgt]: errors.append(f'{f}: missing anchor #{frag} in {tgt}')
         for block in re.findall(r'<script type="application/ld\+json">(.*?)</script>', s, re.S):
             try: json.loads(block)
             except ValueError as e: errors.append(f'{f}: invalid JSON-LD ({e})')
@@ -76,13 +99,12 @@ def main():
         else: titles.setdefault(t[0], []).append(f)
         if len(d) != 1: errors.append(f'{f}: expected one meta description, found {len(d)}')
         else: descs.setdefault(d[0], []).append(f)
-        errors += security_checks(f, s)
         text = visible_text(s)
         for pat, fix in BANNED:
             if re.search(pat, text): errors.append(f'{f}: banned wording /{pat}/ ({fix})')
     errors += [f'duplicate <title> on {", ".join(v)}' for v in titles.values() if len(v) > 1]
     errors += [f'duplicate meta description on {", ".join(v)}' for v in descs.values() if len(v) > 1]
-    print(f'Checked {len(files)} pages.')
+    print(f'Checked {pages} pages and {redirects} redirects.')
     for e in errors: print('::error::' + e)
     if errors: print(f'{len(errors)} problem(s) found.'); return 1
     print('All checks passed.'); return 0

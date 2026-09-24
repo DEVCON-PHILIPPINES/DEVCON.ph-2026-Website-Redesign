@@ -1,6 +1,6 @@
 # DEVCON.PH 2026 Website Redesign: Product Requirements Document
 
-**Status:** Live on GitHub Pages · **Current version:** v1.69 · **Owner:** DEVCON Philippines National Office (Communications)
+**Status:** Live on GitHub Pages · **Current version:** v1.70 · **Owner:** DEVCON Philippines National Office (Communications)
 **Source of truth:** this file. When the site, a brief, or a chat thread disagrees with this PRD, update this PRD first, then the site.
 
 ---
@@ -49,7 +49,26 @@ The site is a static, self-contained HTML build. It is a visual and content blue
 - **DevRel case studies:** hub (`devrel-case-studies`) and case-study-sui, case-study-icp, case-study-hour-of-ai, case-study-zoho-creator, case-study-campus-devcon-summit, case-study-pro-summit, case-study-mindanao-ai-caravan.
 - **Community Playbook:** playbook, volunteers-guide, code-of-conduct-for-national-and-chapter-officers-and-volunteers, standard-privacy-and-safespace-consent, campus-events-guidelines, child-protection-policy, brand-kit.
 
-URLs on the deployed site are extensionless (for example `/about`, not `/about.html`). The downloadable ZIP keeps `.html` so files open locally.
+**URLs match devcon.ph.** Every page lives at a trailing-slash URL, the same as the current devcon.ph (for example `/about/`, `/manila/`, `/jumpstart-internships/`), so existing links, bookmarks, and search results keep working. The downloadable ZIP keeps `.html` file names so pages open locally.
+
+**Legacy URL migration.** Every known devcon.ph URL either maps to a page with the same path or redirects to its new home. `docs/url-map.json` lists all pages and redirects. Highlights:
+
+| Old URL | New page |
+|---|---|
+| `/she-2026/` | `/sheisdevcon/` |
+| `/campussummit2023/` | `/case-study-campus-devcon-summit/` |
+| `/prosummit2023/` | `/case-study-pro-summit/` |
+| `/summergiveaway2023/` | `/case-study-zoho-creator/` |
+| `/ai-fluency/` | `/ai-fluency-masterclass/` |
+| `/events/` | `/attend/` |
+| Sui "Build Beyond" news post | `/case-study-sui/` |
+| ISLA CAMP / ICP 2025 news post | `/case-study-icp/` |
+| AI Engineering Scholarship 2025 news post | `/ai/` |
+| Climate Bayanihan workshop 2025 post | `/programs/` |
+| `/feed/`, `/comments/feed/`, `/author/devconadmin/`, `/news/`, `/blog/` | `/` |
+| `/<page>.html` links from earlier previews | `/<page>/` |
+
+Common aliases also redirect (for example `/sponsors/`, `/partners/`, `/contact/` → `/partner/`; `/case-studies/` → `/devrel-case-studies/`; `/cdo/` → `/cagayandeoro/`). Anything else hits a smart `404.html`, which matches the old path by slug or keyword (chapter names, programs, news topics) and forwards to the closest page. If nothing matches, it shows links to Home, Locations, Programs, Events, and Partner, never a dead end. When a new old URL is reported, add it to `REDIRECTS` in `scripts/restructure.py`.
 
 ## 5. Content rules (style guide)
 
@@ -106,7 +125,7 @@ A rule-based chat at the lower left of every page. It runs entirely in the brows
 
 - **Self-contained pages:** each page is one HTML file with inlined CSS, JavaScript, and images (base64). This prevents broken rendering when files are opened individually.
 - **Build:** a single-page build is split into per-page files, stamped with version and PHT time (filename, header change-log comment, and meta tags; never the visible footer), then hardened.
-- **Repo layout:** `docs/` is the deployed site; `combined/` holds the single-file version; `scripts/check_site.py` runs the checks.
+- **Repo layout:** `docs/` is the deployed site (`docs/<slug>/index.html` per page, redirect stubs, `404.html`, `url-map.json`); `combined/` holds the single-file version; `scripts/restructure.py` builds the deploy layout and redirects; `scripts/harden.py` pins the CSP; `scripts/check_site.py` runs the checks, including that every redirect lands on a real page.
 - **SEO and AEO:** per-page titles and descriptions, canonical URLs for devcon.ph, Open Graph and X cards, JSON-LD (NGO, Organization, Breadcrumb, Article, FAQPage), sitemap.xml, AI-friendly robots.txt, and llms.txt.
 
 ## 9. Security
