@@ -1,9 +1,10 @@
 <!doctype html>
 <!--
   DEVCON Philippines website
-  Version v1.67 · Updated Sep 24, 2026, 12:05 PM PHT
+  Version v1.68 · Updated Sep 24, 2026, 12:10 PM PHT
 
   Change log (newest first)
+  v1.68   Sep 24, 2026, 12:10 PM PHT  Assistant now leads with feedback
   v1.67   Sep 24, 2026, 12:05 PM PHT  FAQ assistant added
   v1.66   Sep 24, 2026, 11:43 AM PHT  FAQ answers link to next steps
   v1.65   Sep 24, 2026, 10:32 AM PHT  Invite page guidance updated
@@ -77,8 +78,8 @@
 <html lang="en-PH">
 <head>
 <meta charset="utf-8"/>
-<meta name="version" content="v1.67"/>
-<meta name="build-date" content="2026-09-24T12:05+08:00"/>
+<meta name="version" content="v1.68"/>
+<meta name="build-date" content="2026-09-24T12:10+08:00"/>
 <script>/* hold #anchor on arrival so it can be scrolled to smoothly */(function(){var h=location.hash;if(h&&h.length>1&&h.indexOf("#/")!==0){window.__pendingAnchor=h;try{history.scrollRestoration="manual";history.replaceState(history.state,"",location.pathname+location.search);}catch(e){}}})();</script>
 
 <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,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"/>
@@ -1589,6 +1590,15 @@ button.bk-copy-btn:hover{border-color:var(--y)}
 }
 @media print{.devie{display:none}}
 
+/* v1.68 Devie feedback-first */
+.devie-fb{margin:0 12px 8px;min-height:48px;border:0;border-radius:14px;background:var(--y);color:#070430;font:inherit;font-weight:900;font-size:.92rem;cursor:pointer;box-shadow:0 6px 18px rgba(242,197,0,.25)}
+.devie-fb:hover{filter:brightness(1.05)}
+.devie-fb:focus-visible,.devie-nudge-b:focus-visible{outline:3px solid #fff;outline-offset:2px}
+.devie-chip--fb{border-color:var(--y);color:var(--y)}
+.devie-go--fb{background:var(--y)}
+.devie-nudge{margin-top:8px!important}
+.devie-nudge-b{min-height:44px;padding:6px 0;border:0;background:none;color:var(--y);font:inherit;font-weight:800;font-size:.82rem;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+
 /* ================= MULTI-PAGE (hash routes) ================= */
 .page[hidden]{display:none!important}
 .narrow{max-width:880px}
@@ -2551,7 +2561,7 @@ button.bk-copy-btn:hover{border-color:var(--y)}
   });
 })();
 </script>
-<a class="fb-float" id="give-feedback" href="mailto:jumpstart-interns-c5-2026@devcon.ph,ddeleon@devcon.ph,acapucion@devcon.ph,rj@devcon.ph,jfernando@devcon.ph?subject=DEVCON.PH%202026%20Website%20Redesign%20Feedback%20and%20Screenshots" data-to="jumpstart-interns-c5-2026@devcon.ph,ddeleon@devcon.ph,acapucion@devcon.ph,rj@devcon.ph,jfernando@devcon.ph" data-subject="DEVCON.PH 2026 Website Redesign Feedback and Screenshots">
+<a class="fb-float" id="give-feedback" href="mailto:jumpstart-interns-c5-2026@devcon.ph,rj@devcon.ph,acapucion@devcon.ph,ddeleon@devcon.ph,jfernando@devcon.ph?subject=DEVCON.PH%202026%20Website%20Redesign%20Feedback%20and%20Screenshots" data-to="jumpstart-interns-c5-2026@devcon.ph,rj@devcon.ph,acapucion@devcon.ph,ddeleon@devcon.ph,jfernando@devcon.ph" data-subject="DEVCON.PH 2026 Website Redesign Feedback and Screenshots">
   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H8l-4 4Z"/><path d="M8 9h8M8 12h5"/></svg><span>Give Feedback</span><span class="sr-only"> (opens your email app)</span>
 </a>
 <script>
@@ -2577,17 +2587,18 @@ button.bk-copy-btn:hover{border-color:var(--y)}
   <section class="devie-panel" id="devie-panel" role="dialog" aria-modal="false" aria-labelledby="devie-name" hidden>
     <header class="devie-head">
       <span class="devie-av devie-av--lg" aria-hidden="true">D</span>
-      <div><p class="devie-name" id="devie-name">Devie</p><p class="devie-role">DEVCON AI Assistant · FAQ bot</p></div>
+      <div><p class="devie-name" id="devie-name">Devie</p><p class="devie-role">DEVCON AI Assistant · Feedback and FAQ</p></div>
       <button class="devie-x" type="button" id="devie-close" aria-label="Close Devie">&#215;</button>
     </header>
     <div class="devie-log" id="devie-log" role="log" aria-live="polite" aria-relevant="additions"></div>
+    <button class="devie-fb" id="devie-fb" type="button">&#128172; Submit feedback</button>
     <div class="devie-chips" id="devie-chips"></div>
     <form class="devie-form" id="devie-form" autocomplete="off">
       <label class="sr-only" for="devie-in">Ask Devie a question</label>
       <input id="devie-in" type="text" maxlength="200" placeholder="Ask in English, Filipino, Bisaya, and more"/>
       <button type="submit" class="devie-send" aria-label="Send">&#10148;</button>
     </form>
-    <p class="devie-note">Devie answers basic questions about this website and points you to the right page. For anything else, email hello@devcon.ph.</p>
+    <p class="devie-note">Devie collects feedback on the new website and answers basic questions. Feedback opens in your email app, so nothing is sent until you hit send.</p>
   </section>
 </div>
 <script>
@@ -2693,7 +2704,7 @@ button.bk-copy-btn:hover{border-color:var(--y)}
     if(links&&links.length){ var w=el('div','devie-links'); links.forEach(function(l){ w.appendChild(linkBtn(l[0],l[1],l[2])); }); m.appendChild(w); }
     log.appendChild(m); log.scrollTop=log.scrollHeight; }
   function me(text){ var m=el('div','devie-msg devie-msg--me'); var p=el('p'); p.textContent=text; m.appendChild(p); log.appendChild(m); log.scrollTop=log.scrollHeight; }
-  function renderChips(){ chips.innerHTML=''; SUGGEST.forEach(function(s){ var b=el('button','devie-chip'); b.type='button'; b.textContent=s[0]; b.addEventListener('click',function(){ ask(s[1], s[0]); }); chips.appendChild(b); }); }
+  function renderChips(){ chips.innerHTML=''; SUGGEST.forEach(function(s){ var b=el('button','devie-chip'); b.type='button'; b.textContent=s[0]; if(s[1]==='__fb__'){ b.className+=' devie-chip--fb'; b.addEventListener('click',function(){ me('Submit feedback'); setTimeout(startFeedback,250); }); } else b.addEventListener('click',function(){ ask(s[1], s[0]); }); chips.appendChild(b); }); }
   function answer(q){
     var t=norm(q);
     // a named chapter wins
@@ -2707,22 +2718,56 @@ button.bk-copy-btn:hover{border-color:var(--y)}
     var links=[]; if(best.go) links.push([best.go[0], GO[best.go[best.go.length-1]]||GO[best.go[0]]||'Open', best.go[1]]);
     (EXTRA[best.t]||[]).forEach(function(x){ links.push(x); });
     if(best.t==='hi'||best.t==='thanks'){ bot(R[best.t]); return; }
-    if(best.t==='feedback'){ var fb=document.getElementById('give-feedback'); bot(R.feedback, fb?[[fb.getAttribute('href'),'Send feedback']]:null); return; }
+    if(best.t==='feedback'){ startFeedback(); return; }
     bot(R[best.t], links);
   }
-  function ask(q, shown){ me(shown||q); setTimeout(function(){ answer(q); }, 280); }
+  /* ---------- feedback: the primary job ---------- */
+  var FB_TO = 'jumpstart-interns-c5-2026@devcon.ph,rj@devcon.ph,acapucion@devcon.ph,ddeleon@devcon.ph,jfernando@devcon.ph', FB_SUBJECT = 'DEVCON.PH 2026 Website Redesign Feedback and Screenshots', fbMode=false;
+  function fbHref(text){
+    var v=(document.querySelector('meta[name="version"]')||{}).content||'';
+    var body=['Hi DEVCON website team,','', 'Feedback: '+(text||''),'',
+      'Page: '+document.title,'Link: '+location.href,'Site version: '+v,
+      'Screen: '+window.innerWidth+' x '+window.innerHeight+' px','Browser: '+navigator.userAgent,'',
+      'Screenshots: please attach them to this email.','','Sent via Devie, DEVCON AI Assistant'].join('\n');
+    return 'mailto:'+FB_TO+'?subject='+encodeURIComponent(FB_SUBJECT)+'&body='+encodeURIComponent(body);
+  }
+  function fbButton(text){ var a=el('a','devie-go devie-go--fb'); a.href=fbHref(text); a.textContent='Open email to send \u2192'; return a; }
+  function startFeedback(){
+    fbMode=true;
+    bot('Yesss, feedback era! \uD83D\uDE4C What looks off, confusing, or could be better on this page? Type it below and I&#8217;ll draft the email to the website team for you. You can attach screenshots before sending.');
+    var m=log.lastChild, w=el('div','devie-links'), a=fbButton(''); a.textContent='Skip, just open the email \u2192'; w.appendChild(a); m.appendChild(w); log.scrollTop=log.scrollHeight;
+    inp.placeholder='Type your feedback here'; inp.focus();
+  }
+  function sendFeedback(text){
+    fbMode=false; inp.placeholder='Ask in English, Filipino, Bisaya, and more';
+    var m=el('div','devie-msg devie-msg--bot');
+    m.appendChild(el('p',null,'Salamat, bestie! \uD83D\uDC9B Your feedback is ready. Tap below to open your email app, attach a screenshot if you have one, then hit send.'));
+    var w=el('div','devie-links'); w.appendChild(fbButton(text)); m.appendChild(w); log.appendChild(m); log.scrollTop=log.scrollHeight;
+    setTimeout(function(){ bot('Anything else? Ask me about DEVCON, or send more feedback anytime. \u2728'); renderChips(); }, 500);
+  }
+  function feedbackNudge(){
+    var m=log.lastChild; if(!m || !m.classList.contains('devie-msg--bot')) return;
+    var p=el('p','devie-nudge'); var b=el('button','devie-nudge-b'); b.type='button'; b.textContent='Got feedback on this page? Tell us \u2192';
+    b.addEventListener('click',startFeedback); p.appendChild(b); m.appendChild(p); log.scrollTop=log.scrollHeight;
+  }
+  function ask(q, shown){ me(shown||q); setTimeout(function(){
+    if(fbMode){ sendFeedback(q); return; }
+    if(/\b(feedback|bug|broken|error|suggest|suggestion|report|sira|guba|daot)\b/i.test(q)){ startFeedback(); return; }
+    answer(q); feedbackNudge(); }, 280); }
   var greeted=false;
   function welcome(){
     var slug=currentChapter(), g;
     if(slug){ g=G[CH[slug][1]]; }
     else { var keys=Object.keys(G); g=G[keys[Math.floor(Math.random()*keys.length)]]; }
     bot('<b>'+g.hi+'</b> <span class="devie-lang">('+g.lang+')</span><br>I&#8217;m <b>Devie</b>, your DEVCON AI Assistant. ✨ I can answer basic questions about this site and point you to the right page, bestie. Ask in English, Filipino, Bisaya, Ilonggo, and more!');
+    bot('<b>Quick favor:</b> this is the new DEVCON.PH 2026 website, and we&#8217;d love your feedback. 💬 Anything confusing, broken, or missing? Tap <b>Submit feedback</b> and I&#8217;ll draft the email for you. Or just ask me anything!');
     renderChips(); greeted=true;
   }
   function open(){ panel.hidden=false; fab.setAttribute('aria-expanded','true'); root.classList.add('is-open'); if(!greeted) welcome(); setTimeout(function(){ inp.focus(); },50); }
   function close(){ panel.hidden=true; fab.setAttribute('aria-expanded','false'); root.classList.remove('is-open'); fab.focus(); }
   fab.addEventListener('click',function(){ panel.hidden?open():close(); });
   document.getElementById('devie-close').addEventListener('click',close);
+  document.getElementById('devie-fb').addEventListener('click',function(){ me('Submit feedback'); setTimeout(startFeedback,250); });
   document.addEventListener('keydown',function(e){ if(e.key==='Escape' && !panel.hidden) close(); });
   form.addEventListener('submit',function(e){ e.preventDefault(); var q=inp.value.trim(); if(!q) return; inp.value=''; ask(q); });
 })();
