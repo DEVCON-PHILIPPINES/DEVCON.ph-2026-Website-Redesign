@@ -1,9 +1,10 @@
 <!doctype html>
 <!--
   DEVCON Philippines website
-  Version v1.60 · Updated Sep 24, 2026, 9:17 AM PHT
+  Version v1.61 · Updated Sep 24, 2026, 9:46 AM PHT
 
   Change log (newest first)
+  v1.61   Sep 24, 2026, 9:46 AM PHT   Floating feedback button added
   v1.60   Sep 24, 2026, 9:17 AM PHT   New case studies added
   v1.59   Sep 24, 2026, 9:05 AM PHT   Chapter president links go straight to the presidents section
   v1.58   Sep 24, 2026, 9:01 AM PHT   Brand Kit page added to the Community Playbook
@@ -70,8 +71,8 @@
 <html lang="en-PH">
 <head>
 <meta charset="utf-8"/>
-<meta name="version" content="v1.60"/>
-<meta name="build-date" content="2026-09-24T09:17+08:00"/>
+<meta name="version" content="v1.61"/>
+<meta name="build-date" content="2026-09-24T09:46+08:00"/>
 <script>/* hold #anchor on arrival so it can be scrolled to smoothly */(function(){var h=location.hash;if(h&&h.length>1&&h.indexOf("#/")!==0){window.__pendingAnchor=h;try{history.scrollRestoration="manual";history.replaceState(history.state,"",location.pathname+location.search);}catch(e){}}})();</script>
 
 <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,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"/>
@@ -1484,6 +1485,18 @@ button.bk-copy-btn:hover{border-color:var(--y)}
 .cs-sponsors a,.lead-p a,.story-block p a{color:#fff;text-decoration:underline;text-decoration-color:var(--y);display:inline-flex;align-items:center;min-height:44px}
 @media (max-width:900px){.cs-split,.cs-split--even{grid-template-columns:minmax(0,1fr)}.gallery--2{grid-template-columns:minmax(0,1fr)!important}}
 .cs-split>*{min-width:0}
+
+/* v1.61 floating feedback button */
+.fb-float{position:fixed;z-index:90;right:max(16px,env(safe-area-inset-right,0px));top:calc(env(safe-area-inset-top,0px) + 88px);
+  display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:10px 16px;border-radius:999px;
+  background:#fff;color:#070430;font-weight:800;font-size:.9rem;text-decoration:none;
+  box-shadow:0 10px 30px rgba(0,0,0,.35),0 0 0 3px rgba(242,197,0,.55);transition:transform .2s,box-shadow .2s}
+.fb-float svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.fb-float:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(0,0,0,.4),0 0 0 3px var(--y)}
+.fb-float:focus-visible{outline:3px solid var(--y);outline-offset:3px}
+@media (max-width:620px){.fb-float{top:calc(env(safe-area-inset-top,0px) + 76px);right:12px;padding:10px 14px;font-size:.82rem}}
+@media print{.fb-float{display:none}}
+@media (prefers-reduced-motion:reduce){.fb-float{transition:none}}
 
 /* ================= MULTI-PAGE (hash routes) ================= */
 .page[hidden]{display:none!important}
@@ -6583,6 +6596,25 @@ button.bk-copy-btn:hover{border-color:var(--y)}
     show('home');
   }
   window.addEventListener('hashchange',route);route();
+})();
+</script>
+<a class="fb-float" id="give-feedback" href="mailto:jumpstart-interns-c5-2026@devcon.ph,ddeleon@devcon.ph,acapucion@devcon.ph,rj@devcon.ph,jfernando@devcon.ph?subject=DEVCON.PH%202026%20Website%20Redesign%20Feedback%20and%20Screenshots" data-to="jumpstart-interns-c5-2026@devcon.ph,ddeleon@devcon.ph,acapucion@devcon.ph,rj@devcon.ph,jfernando@devcon.ph" data-subject="DEVCON.PH 2026 Website Redesign Feedback and Screenshots">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H8l-4 4Z"/><path d="M8 9h8M8 12h5"/></svg><span>Give Feedback</span><span class="sr-only"> (opens your email app)</span>
+</a>
+<script>
+/* Give Feedback: pre-fill the email with the page, version, and device details */
+(function(){
+  var a=document.getElementById('give-feedback'); if(!a) return;
+  function build(){
+    var v=(document.querySelector('meta[name="version"]')||{}).content||'';
+    var body=['Hi DEVCON website team,','',
+      'Page: '+document.title,'Link: '+location.href,'Site version: '+v,
+      'Screen: '+window.innerWidth+' x '+window.innerHeight+' px','Browser: '+navigator.userAgent,'',
+      'What looks wrong, or what could be better:','','',
+      'Screenshots: please attach them to this email.','','Thank you!'].join('\n');
+    a.href='mailto:'+a.getAttribute('data-to')+'?subject='+encodeURIComponent(a.getAttribute('data-subject'))+'&body='+encodeURIComponent(body);
+  }
+  a.addEventListener('pointerdown',build); a.addEventListener('focus',build); a.addEventListener('click',build);
 })();
 </script>
 <script>
