@@ -68,7 +68,7 @@ The site is a static, self-contained HTML build. It is a visual and content blue
 | `/feed/`, `/comments/feed/`, `/author/devconadmin/`, `/news/`, `/blog/` | `/` |
 | `/<page>.html` links from earlier previews | `/<page>/` |
 
-Common aliases also redirect (for example `/sponsors/`, `/partners/`, `/contact/` → `/partner/`; `/case-studies/` → `/devrel-case-studies/`; `/cdo/` → `/cagayandeoro/`). Anything else hits a smart `404.html`, which matches the old path by slug or keyword (chapter names, programs, news topics) and forwards to the closest page. If nothing matches, it shows links to Home, Locations, Programs, Events, and Partner, never a dead end. When a new old URL is reported, add it to `REDIRECTS` in `scripts/restructure.py`.
+Common aliases also redirect (for example `/sponsors/`, `/partners/`, `/contact/` → `/partner/`; `/case-studies/` → `/devrel-case-studies/`; `/cdo/` → `/cagayandeoro/`). Anything else hits a smart `404.html`, which matches the old path by slug or keyword (chapter names, programs, news topics) and forwards to the closest page. If nothing matches, it shows links to Home, Locations, Programs, Events, and Partner, never a dead end. On Cloudflare Pages, `docs/_redirects` turns these into server-side 301s, so search engines transfer rankings. When a new old URL is reported, add it to `REDIRECTS` in `scripts/restructure.py`.
 
 ## 5. Content rules (style guide)
 
@@ -137,7 +137,8 @@ The site is static, has no backend, and stores no personal data. Hardening:
 | XSS and unauthorized scripts | Strict Content-Security-Policy on every page: `default-src 'none'`, scripts limited to `'self'` plus SHA-256 hashes of each inline script (no `unsafe-inline`, no `unsafe-eval`), `object-src 'none'`, `base-uri 'none'`, `form-action 'none'`, frames limited to OpenStreetMap and Google Forms, and `upgrade-insecure-requests`. No inline event handlers, no `javascript:` URLs, no external script files. Devie writes visitor text with `textContent`, never as HTML. |
 | Clickjacking | Pages hide themselves when loaded inside another site's frame. |
 | Tabnabbing and referrer leaks | Every new-tab link has `rel="noopener"`; referrer policy is `strict-origin-when-cross-origin`. |
-| DDoS and traffic spikes | Served as static files from GitHub Pages' global CDN, with HTTPS enforced. When devcon.ph is connected, put it behind Cloudflare with DDoS protection, WAF, and rate limiting. |
+| DDoS and traffic spikes | Served from Cloudflare Pages (project `devcon-ph-2026-website-redesign`, output `docs/`, branch `main`) on Cloudflare's global network with built-in DDoS protection; GitHub Pages remains a mirror. When devcon.ph is connected, enable Bot Fight Mode, WAF managed rules, and rate limiting on the zone. |
+| Missing HTTP security headers | `docs/_headers` (Cloudflare Pages) sends HSTS, `X-Frame-Options: DENY`, `frame-ancestors 'none'`, `nosniff`, referrer policy, Permissions-Policy, and COOP; `*.pages.dev` is `noindex` so only devcon.ph is indexed. |
 | Supply chain and secrets | Secret scanning and push protection, Dependabot updates, CodeQL code scanning, and read-only workflow permissions by default. |
 | Unauthorized changes | Protected `main` (pull request, code-owner approval, passing checks, no force pushes) and deploy approval for the `github-pages` environment. |
 
