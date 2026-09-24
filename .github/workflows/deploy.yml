@@ -45,6 +45,7 @@ jobs:
       url: ${{ steps.gh.outputs.page_url }}
     outputs:
       gh_url: ${{ steps.gh.outputs.page_url }}
+      cf_url: ${{ steps.cf.outputs.url }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -52,6 +53,7 @@ jobs:
 
       # Cloudflare first: if it fails, GitHub Pages is not updated, so the two never drift.
       - name: Deploy to Cloudflare Pages (production)
+        id: cf
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
@@ -62,6 +64,7 @@ jobs:
             --commit-hash "${{ github.sha }}" \
             --commit-message "$(git log -1 --pretty=%s | head -c 300)" \
             --commit-dirty=true
+          echo "url=https://${{ vars.CLOUDFLARE_PROJECT }}.pages.dev/" >> "$GITHUB_OUTPUT"
 
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
@@ -83,7 +86,7 @@ jobs:
       - name: Compare live version and pages
         env:
           GH_URL: ${{ needs.deploy.outputs.gh_url }}
-          CF_URL: https://${{ vars.CLOUDFLARE_PROJECT }}.pages.dev/
+          CF_URL: ${{ needs.deploy.outputs.cf_url }}
         run: |
           expected=$(grep -o '<meta name="version" content="[^"]*"' docs/index.html | head -1 | sed 's/.*content="//;s/"//')
           echo "Expected version: $expected"
