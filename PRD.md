@@ -1,6 +1,6 @@
 # DEVCON.PH 2026 Website Redesign: Product Requirements Document
 
-**Status:** Live on GitHub Pages · **Current version:** v1.71 · **Owner:** DEVCON Philippines National Office (Communications)
+**Status:** Live on GitHub Pages · **Current version:** v1.72 · **Owner:** DEVCON Philippines National Office (Communications)
 **Source of truth:** this file. When the site, a brief, or a chat thread disagrees with this PRD, update this PRD first, then the site.
 
 ---
@@ -92,22 +92,23 @@ These rules are enforced by review and, where possible, by `scripts/check_site.p
 ### 6.1 Volunteer popup
 Every Volunteer CTA opens a centered popup with the DEVCON volunteer Google Form (https://docs.google.com/forms/d/e/1FAIpQLSczVxZPmHIRPphNJNgbuRVzEC5QTponVzjDPPMmkSxP0cIdrg/viewform). The form URL is the no-JavaScript fallback. The popup closes with Esc, the close button, or a click outside, and offers "Open in new tab".
 
-### 6.2 Give Feedback tab
-A yellow vertical tab on the right edge of every page opens a pre-filled email to the website team:
+### 6.2 Feedback
+Feedback is collected through Devie (6.3). The right-edge Give Feedback tab was removed in v1.72. Feedback emails go to:
 
 - **To:** jumpstart-interns-c5-2026@devcon.ph, rj@devcon.ph, acapucion@devcon.ph, ddeleon@devcon.ph, jfernando@devcon.ph
 - **Subject:** DEVCON.PH 2026 Website Redesign Feedback and Screenshots
-- **Body:** page, link, version, screen, browser, and a reminder to attach screenshots.
+- **Body:** the visitor's feedback, page, link, version, screen, browser, and a reminder to attach screenshots.
 
 ### 6.3 Devie, DEVCON AI Assistant
 A rule-based chat at the lower left of every page. It runs entirely in the browser: no AI model, no API, and no data collected.
 
-- **Primary job is feedback:** the welcome asks for feedback, a Submit feedback button sits above the input, and every answer ends with a feedback prompt. Feedback mode turns the visitor's words into the same email as the Give Feedback tab.
+- **Primary job is feedback:** the welcome asks for feedback, a Submit feedback button sits above the input, and every answer ends with a feedback prompt. Feedback mode turns the visitor's words into the feedback email in 6.2.
+- **Motion:** the panel pops in, messages slide in, and a typing indicator shows before each reply (about 0.7 to 1.6 seconds, longer for longer questions). Reduced-motion users get instant replies with no animation.
 - **Local welcome:** the greeting matches the chapter page (Tagalog, Bisaya, Hiligaynon, Bikol, Kapampangan, or Waray) and is random elsewhere.
 - **FAQ answers:** basic questions in English, Filipino, and regional words, with a Gen Z tone. Every answer links to the right page or section.
 
 ### 6.4 Other features
-- **Locations map:** homepage map with pulsing chapter dots; each location page has a Philippines mini-map, an OpenStreetMap preview, and Google Maps links.
+- **Locations map:** homepage map with pulsing chapter dots, where rows and pins link to chapter pages. Each location page has a Philippines mini-map, an OpenStreetMap view framed on the chapter's whole administrative region (for example, Central Visayas for Cebu and Bohol), and an Open in Google Maps link. There is no Get directions button.
 - **FAQ next steps:** every FAQ answer ends with "Next step" links.
 - **Leaders:** board, national office, area program leaders, and chapter presidents, each with a LinkedIn link. Chapter president photos use a standardized head-and-shoulders crop.
 - **Intern quotes:** each name links to Jumpstart intern stories on Medium.
