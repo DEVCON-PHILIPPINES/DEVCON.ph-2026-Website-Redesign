@@ -40,3 +40,4 @@ Key facts:
 - [Privacy and Safe Space Consent](https://devcon.ph/standard-privacy-and-safespace-consent/)
 - [Campus Events Guidelines](https://devcon.ph/campus-events-guidelines/)
 - [Child Protection Policy](https://devcon.ph/child-protection-policy/)
+- [Brand Kit](https://devcon.ph/brand-kit/): logos, colors, key visuals, boilerplate
