@@ -150,7 +150,7 @@ The site is static, has no backend, and stores no personal data. Hardening:
 2. Branch from `main`, change the site, and open a pull request.
 3. **site-checks** must pass: links, anchors, SEO tags, JSON-LD, wording, and security rules.
 4. A code owner approves (`@domdeleondevcon` or `@JFernando-DEVCON`), then squash-merge.
-5. **Deploy to GitHub Pages** runs and waits for an admin to approve the `github-pages` environment.
+5. **Deploy (GitHub Pages + Cloudflare Pages)** runs and waits for an admin to approve the `github-pages` environment. One approval deploys the same commit to Cloudflare Pages first, then GitHub Pages, and a verify job confirms both hosts serve the same version and every page. Cloudflare's Git auto-deploy for production is off, so production only changes through this workflow; pull requests still get Cloudflare preview URLs.
 
 Every release bumps the minor version and updates `CHANGELOG.md`.
 
