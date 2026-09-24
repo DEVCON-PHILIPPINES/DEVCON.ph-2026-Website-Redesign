@@ -1,9 +1,10 @@
 <!doctype html>
 <!--
   DEVCON Philippines website
-  Version v1.70 · Updated Sep 24, 2026, 3:30 PM PHT
+  Version v1.71 · Updated Sep 24, 2026, 5:36 PM PHT
 
   Change log (newest first)
+  v1.71   Sep 24, 2026, 5:36 PM PHT   Homepage chapter links fixed
   v1.70   Sep 24, 2026, 3:30 PM PHT   All legacy URLs redirected to the new structure
   v1.69   Sep 24, 2026, 1:25 PM PHT   Security hardening, content updates, and project documentation
   v1.68   Sep 24, 2026, 12:10 PM PHT  Assistant now leads with feedback
@@ -80,11 +81,11 @@
 <html lang="en-PH">
 <head>
 <meta charset="utf-8"/>
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-+9qxSzQ0G/29ZlAbQlg+kQmcdzQBn+QmkTRUJCUUQEs=' 'sha256-2IpYCtDIjo4d8we+7/wJ4BAQ8LQNh8eCV4difVaOygM=' 'sha256-4zKmhDvBNxq6dKFbL4GzcJQOZLWuZBaAGVvZgdZUk/Q=' 'sha256-8w0YwMV9E9gXCF/kkpVHjYDmZHgzytKF4zFJqVFXYsw=' 'sha256-GPt+JUtupJdmqOQaqS5cJOEQ+qJ4ATaNAuevVY8i3vg=' 'sha256-Kh75R5k/CBR3pbljE+W0LH4CPdZNANrS0e/f6RCCc30=' 'sha256-OGtMSWzwPDu9fqrbRqIWl6zO2bL4KjdYhU52+UKgRN4=' 'sha256-ScVUVPUktJe/UURySxVVLRR4pOu7YCpmem31US/7EJc=' 'sha256-W+XD2LPuZ4Y4kn2hcPpP+22aesfEdYAFWUTYPEABJ/g=' 'sha256-ZUfR4zZckD8zIJtBeKm7536CAnocghPyJupQkMrnKJ0=' 'sha256-ed8TeAnJbXUO5fjplj3lKwqFOmuJAhvtK1fIDyZOwYU=' 'sha256-fVDQTdriVhwr6aHSUX+0PYA9S8LE71I1miUWaSzJXY4=' 'sha256-iIhj48LSNRji0gBLRC1kiw4aua9bmHPKAWC82Cczpwc=' 'sha256-je5XmY3ptwDFvaQmnFblhXoLpiXp3wKDlmEYhTVPsqg=' 'sha256-mqDntEOnH3m4AHAT5e6FV/Ff3vKjqKc2vc5vWgS0yCA=' 'sha256-wUbSmLQN6yy+j64BnXOGMXVM+SU2/eRZlC1JCdQlmFE='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com data:; img-src 'self' data:; frame-src https://www.openstreetmap.org https://docs.google.com https://accounts.google.com; connect-src 'self'; manifest-src 'self'; media-src 'self' data:; base-uri 'none'; form-action 'none'; object-src 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-+9qxSzQ0G/29ZlAbQlg+kQmcdzQBn+QmkTRUJCUUQEs=' 'sha256-2IpYCtDIjo4d8we+7/wJ4BAQ8LQNh8eCV4difVaOygM=' 'sha256-4zKmhDvBNxq6dKFbL4GzcJQOZLWuZBaAGVvZgdZUk/Q=' 'sha256-8w0YwMV9E9gXCF/kkpVHjYDmZHgzytKF4zFJqVFXYsw=' 'sha256-GPt+JUtupJdmqOQaqS5cJOEQ+qJ4ATaNAuevVY8i3vg=' 'sha256-Kh75R5k/CBR3pbljE+W0LH4CPdZNANrS0e/f6RCCc30=' 'sha256-OGtMSWzwPDu9fqrbRqIWl6zO2bL4KjdYhU52+UKgRN4=' 'sha256-ScVUVPUktJe/UURySxVVLRR4pOu7YCpmem31US/7EJc=' 'sha256-W+XD2LPuZ4Y4kn2hcPpP+22aesfEdYAFWUTYPEABJ/g=' 'sha256-XG6tKehomqYtSwCyerKaE5Job50rHKah7owLQJ2QD4A=' 'sha256-ZUfR4zZckD8zIJtBeKm7536CAnocghPyJupQkMrnKJ0=' 'sha256-ed8TeAnJbXUO5fjplj3lKwqFOmuJAhvtK1fIDyZOwYU=' 'sha256-fVDQTdriVhwr6aHSUX+0PYA9S8LE71I1miUWaSzJXY4=' 'sha256-iIhj48LSNRji0gBLRC1kiw4aua9bmHPKAWC82Cczpwc=' 'sha256-je5XmY3ptwDFvaQmnFblhXoLpiXp3wKDlmEYhTVPsqg=' 'sha256-wUbSmLQN6yy+j64BnXOGMXVM+SU2/eRZlC1JCdQlmFE='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com data:; img-src 'self' data:; frame-src https://www.openstreetmap.org https://docs.google.com https://accounts.google.com; connect-src 'self'; manifest-src 'self'; media-src 'self' data:; base-uri 'none'; form-action 'none'; object-src 'none'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <script>/* anti-clickjacking */if(window.top!==window.self){document.documentElement.style.display='none';try{window.top.location.replace(window.location.href);}catch(e){}}</script>
-<meta name="version" content="v1.70"/>
-<meta name="build-date" content="2026-09-24T15:30+08:00"/>
+<meta name="version" content="v1.71"/>
+<meta name="build-date" content="2026-09-24T17:36+08:00"/>
 <script>/* hold #anchor on arrival so it can be scrolled to smoothly */(function(){var h=location.hash;if(h&&h.length>1&&h.indexOf("#/")!==0){window.__pendingAnchor=h;try{history.scrollRestoration="manual";history.replaceState(history.state,"",location.pathname+location.search);}catch(e){}}})();</script>
 
 <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,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"/>
@@ -1978,61 +1979,61 @@ html.vol-lock,html.vol-lock body{overflow:hidden}
     </div>
     <div class="dcc-card dcc-luzon" style="--c:#7808FF">
       <div class="dcc-card-h"><span class="dcc-region">Luzon</span><span class="dcc-count">4 Chapters</span></div>
-        <a class="dcc-row" data-name="Manila" href="#" style="--c:#7808FF">
+        <a class="dcc-row" data-name="Manila" href="manila/" style="--c:#7808FF">
           <span class="dcc-row-l"><i class="dcc-dot2"></i>Manila</span>
           <span class="dcc-row-r"><b>5.4k+</b> <span>Members</span><svg viewBox="0 0 24 24" class="dcc-arrow"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
         </a>
-        <a class="dcc-row" data-name="Laguna" href="#" style="--c:#7808FF">
+        <a class="dcc-row" data-name="Laguna" href="laguna/" style="--c:#7808FF">
           <span class="dcc-row-l"><i class="dcc-dot2"></i>Laguna</span>
           <span class="dcc-row-r"><b>1.4k+</b> <span>Members</span><svg viewBox="0 0 24 24" class="dcc-arrow"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
         </a>
-        <a class="dcc-row" data-name="Legazpi" href="#" style="--c:#7808FF">
+        <a class="dcc-row" data-name="Legazpi" href="legazpi/" style="--c:#7808FF">
           <span class="dcc-row-l"><i class="dcc-dot2"></i>Legazpi</span>
           <span class="dcc-row-r"><b>980+</b> <span>Members</span><svg viewBox="0 0 24 24" class="dcc-arrow"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
         </a>
-        <a class="dcc-row" data-name="Pampanga" href="#" style="--c:#7808FF">
+        <a class="dcc-row" data-name="Pampanga" href="pampanga/" style="--c:#7808FF">
           <span class="dcc-row-l"><i class="dcc-dot2"></i>Pampanga</span>
           <span class="dcc-row-r"><b>630+</b> <span>Members</span><svg viewBox="0 0 24 24" class="dcc-arrow"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
         </a>
     </div>
     <div class="dcc-card dcc-visayas" style="--c:#EA641D">
       <div class="dcc-card-h"><span class="dcc-region">Visayas</span><span class="dcc-count">2 Chapters</span></div>
-        <a class="dcc-row" data-name="Cebu" href="#" style="--c:#EA641D">
+        <a class="dcc-row" data-name="Cebu" href="cebu/" style="--c:#EA641D">
           <span class="dcc-row-l"><i class="dcc-dot2"></i>Cebu</span>
           <span class="dcc-row-r"><b>3.4k+</b> <span>Members</span><svg viewBox="0 0 24 24" class="dcc-arrow"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
         </a>
-        <a class="dcc-row" data-name="Iloilo" href="#" style="--c:#EA641D">
+        <a class="dcc-row" data-name="Iloilo" href="iloilo/" style="--c:#EA641D">
           <span class="dcc-row-l"><i class="dcc-dot2"></i>Iloilo</span>
           <span class="dcc-row-r"><b>2.6k+</b> <span>Members</span><svg viewBox="0 0 24 24" class="dcc-arrow"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
         </a>
-        <a class="dcc-row is-vol" data-name="Bohol" href="#" style="--c:#EA641D">
+        <a class="dcc-row is-vol" data-name="Bohol" href="bohol/" style="--c:#EA641D">
           <span class="dcc-row-l"><i class="dcc-dot2"></i>Bohol<sup class="dcc-ast">*</sup></span>
           <span class="dcc-row-r"><b>560+</b> <span>Members</span><svg viewBox="0 0 24 24" class="dcc-arrow"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
         </a>
-        <a class="dcc-row is-vol" data-name="Bacolod" href="#" style="--c:#EA641D">
+        <a class="dcc-row is-vol" data-name="Bacolod" href="bacolod/" style="--c:#EA641D">
           <span class="dcc-row-l"><i class="dcc-dot2"></i>Bacolod<sup class="dcc-ast">*</sup></span>
           <span class="dcc-row-r"><b>300+</b> <span>Members</span><svg viewBox="0 0 24 24" class="dcc-arrow"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
         </a>
-        <a class="dcc-row is-vol" data-name="Tacloban" href="#" style="--c:#EA641D">
+        <a class="dcc-row is-vol" data-name="Tacloban" href="tacloban/" style="--c:#EA641D">
           <span class="dcc-row-l"><i class="dcc-dot2"></i>Tacloban<sup class="dcc-ast">*</sup></span>
           <span class="dcc-row-r"><b>50+</b> <span>Members</span><svg viewBox="0 0 24 24" class="dcc-arrow"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
         </a>
     </div>
     <div class="dcc-card dcc-mindanao" style="--c:#71B405">
       <div class="dcc-card-h"><span class="dcc-region">Mindanao</span><span class="dcc-count">3 Chapters</span></div>
-        <a class="dcc-row" data-name="Davao" href="#" style="--c:#71B405">
+        <a class="dcc-row" data-name="Davao" href="davao/" style="--c:#71B405">
           <span class="dcc-row-l"><i class="dcc-dot2"></i>Davao</span>
           <span class="dcc-row-r"><b>5.8k+</b> <span>Members</span><svg viewBox="0 0 24 24" class="dcc-arrow"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
         </a>
-        <a class="dcc-row is-vol" data-name="CDO" href="#" style="--c:#71B405">
+        <a class="dcc-row is-vol" data-name="CDO" href="cagayandeoro/" style="--c:#71B405">
           <span class="dcc-row-l"><i class="dcc-dot2"></i>CDO<sup class="dcc-ast">*</sup></span>
           <span class="dcc-row-r"><b>4.0k+</b> <span>Members</span><svg viewBox="0 0 24 24" class="dcc-arrow"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
         </a>
-        <a class="dcc-row" data-name="Iligan" href="#" style="--c:#71B405">
+        <a class="dcc-row" data-name="Iligan" href="iligan/" style="--c:#71B405">
           <span class="dcc-row-l"><i class="dcc-dot2"></i>Iligan</span>
           <span class="dcc-row-r"><b>1.4k+</b> <span>Members</span><svg viewBox="0 0 24 24" class="dcc-arrow"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
         </a>
-        <a class="dcc-row" data-name="Bukidnon" href="#" style="--c:#71B405">
+        <a class="dcc-row" data-name="Bukidnon" href="bukidnon/" style="--c:#71B405">
           <span class="dcc-row-l"><i class="dcc-dot2"></i>Bukidnon</span>
           <span class="dcc-row-r"><b>890+</b> <span>Members</span><svg viewBox="0 0 24 24" class="dcc-arrow"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span>
         </a>
@@ -2055,6 +2056,8 @@ html.vol-lock,html.vol-lock body{overflow:hidden}
     var n=el.getAttribute('data-name');
     el.addEventListener('mouseenter',function(){act(n,true);});
     el.addEventListener('mouseleave',function(){act(n,false);});
+    if(el.classList.contains('dcc-marker')){ el.style.cursor='pointer'; el.addEventListener('click',function(){
+      var r=root.querySelector('.dcc-row[data-name="'+n+'"]'); if(r) r.click(); }); }
   });
 })();
 </script>

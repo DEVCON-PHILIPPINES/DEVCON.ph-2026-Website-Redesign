@@ -1,6 +1,6 @@
 # DEVCON.PH 2026 Website Redesign: Product Requirements Document
 
-**Status:** Live on GitHub Pages · **Current version:** v1.70 · **Owner:** DEVCON Philippines National Office (Communications)
+**Status:** Live on GitHub Pages · **Current version:** v1.71 · **Owner:** DEVCON Philippines National Office (Communications)
 **Source of truth:** this file. When the site, a brief, or a chat thread disagrees with this PRD, update this PRD first, then the site.
 
 ---
@@ -83,7 +83,7 @@ These rules are enforced by review and, where possible, by `scripts/check_site.p
 - **Internships:** Jumpstart runs five months, voluntary or as an academic requirement. Applications go through the Airtable form.
 - **Partners:** "They make our programs free, possible, and life-changing for grassroots communities." Credit Amihan and Avtica (never NMBLR). Sui verified figure is "330+".
 - **Exclusions:** no mention of Michael Lance Domagas. No dates on chapter event lists. No costs in public content.
-- **Links:** no links out to the old devcon.ph site; every page lives in this repo.
+- **Links:** no links out to the old devcon.ph site; every page lives in this repo. When a destination is unknown, link to https://www.facebook.com/devconph (the build replaces any empty link with it).
 - **Changelog:** notes stay generic, with no sponsor, partner, or people names.
 - **Voice:** clear, declarative, grounded. No hedging or reported speech in content adapted from keynotes.
 
