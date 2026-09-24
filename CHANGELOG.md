@@ -4,6 +4,7 @@ Newest first. Times are Philippine Standard Time (PHT).
 
 | Version | Updated | Changes |
 |---|---|---|
+| v1.50 | Sep 24, 2026, 8:24 AM PHT | DEVCON 17 favicon on every page |
 | v1.49 | Sep 23, 2026, 10:59 PM PHT | Homepage: Recent news 2x3 grid, Be part of DEVCON 17 moved lower, punchier hero copy; static map on mobile; version removed from footer |
 | v1.48 | Sep 23, 2026, 10:56 PM PHT | 2025 National Office Leadership Awards and Recognition on chapter pages |
 | v1.47 | Sep 23, 2026, 10:54 PM PHT | HQ wording: DEVCON HQ Office at Makati or Ortigas |
