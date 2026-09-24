@@ -2,13 +2,13 @@
 
 The rebuilt **devcon.ph** for DEVCON 17: *Engineering an AI-Ready Nation*. It is written to replace the current devcon.ph content, so every page lives here and nothing links back to the old site.
 
-**Current version:** v1.57 · Sep 24, 2026, 8:51 AM PHT (see [CHANGELOG.md](CHANGELOG.md))
+**Current version:** v1.68 · Sep 24, 2026, 12:10 PM PHT (see [CHANGELOG.md](CHANGELOG.md))
 
 ## What's in this repo
 
 | Folder | What it is |
 |---|---|
-| `docs/` | The website: 42 self-contained HTML pages, plus `sitemap.xml`, `robots.txt`, and the social share image. Every image, style, and script is inlined, so any page opens on its own. |
+| `docs/` | The website: 47 self-contained HTML pages, plus `sitemap.xml`, `robots.txt`, and the social share image. Every image, style, and script is inlined, so any page opens on its own. |
 | `combined/` | The same site as one HTML file, for quick review. |
 
 Page file names follow the devcon.ph URL format, so `docs/manila.html` maps to `devcon.ph/manila/`. The compliance pages keep their exact devcon.ph slugs.
@@ -21,7 +21,7 @@ Page file names follow the devcon.ph URL format, so `docs/manila.html` maps to `
 - **Locations:** `chapters.html`, plus one page for each of the 13 locations (`manila.html`, `laguna.html`, `legazpi.html`, `pampanga.html`, `cebu.html`, `iloilo.html`, `bohol.html`, `bacolod.html`, `tacloban.html`, `davao.html`, `iligan.html`, `cagayandeoro.html`, `bukidnon.html`)
 - **DevRel case studies:** `devrel-case-studies.html`, `case-study-sui.html`, `case-study-icp.html`, `case-study-hour-of-ai.html`
 - **Get involved:** `attend.html`, `invite.html`, `partner.html`
-- **Community Playbook:** `playbook.html`, `volunteers-guide.html`, `code-of-conduct-for-national-and-chapter-officers-and-volunteers.html`, `standard-privacy-and-safespace-consent.html`, `campus-events-guidelines.html`, `child-protection-policy.html`
+- **Community Playbook:** `playbook.html`, `volunteers-guide.html`, `code-of-conduct-for-national-and-chapter-officers-and-volunteers.html`, `standard-privacy-and-safespace-consent.html`, `campus-events-guidelines.html`, `child-protection-policy.html`, `brand-kit.html`
 
 ## Preview locally
 

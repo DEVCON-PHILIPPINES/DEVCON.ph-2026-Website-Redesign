@@ -1,9 +1,20 @@
 <!doctype html>
 <!--
   DEVCON Philippines website
-  Version v1.57 · Updated Sep 24, 2026, 8:51 AM PHT
+  Version v1.68 · Updated Sep 24, 2026, 12:10 PM PHT
 
   Change log (newest first)
+  v1.68   Sep 24, 2026, 12:10 PM PHT  Assistant now leads with feedback
+  v1.67   Sep 24, 2026, 12:05 PM PHT  FAQ assistant added
+  v1.66   Sep 24, 2026, 11:43 AM PHT  FAQ answers link to next steps
+  v1.65   Sep 24, 2026, 10:32 AM PHT  Invite page guidance updated
+  v1.64   Sep 24, 2026, 10:28 AM PHT  Homepage scroll animations
+  v1.63   Sep 24, 2026, 10:24 AM PHT  New case study and homepage news grid expanded
+  v1.62   Sep 24, 2026, 9:57 AM PHT   Feedback button moved to the right edge
+  v1.61   Sep 24, 2026, 9:46 AM PHT   Floating feedback button added
+  v1.60   Sep 24, 2026, 9:17 AM PHT   New case studies added
+  v1.59   Sep 24, 2026, 9:05 AM PHT   Chapter president links go straight to the presidents section
+  v1.58   Sep 24, 2026, 9:01 AM PHT   Brand Kit page added to the Community Playbook
   v1.57   Sep 24, 2026, 8:51 AM PHT   Leadership cards standardized
   v1.56   Sep 24, 2026, 8:47 AM PHT   Map location preview on every chapter page
   v1.55   Sep 24, 2026, 8:42 AM PHT   Sharper chapter photos and improved photo styling
@@ -67,8 +78,8 @@
 <html lang="en-PH">
 <head>
 <meta charset="utf-8"/>
-<meta name="version" content="v1.57"/>
-<meta name="build-date" content="2026-09-24T08:51+08:00"/>
+<meta name="version" content="v1.68"/>
+<meta name="build-date" content="2026-09-24T12:10+08:00"/>
 <script>/* hold #anchor on arrival so it can be scrolled to smoothly */(function(){var h=location.hash;if(h&&h.length>1&&h.indexOf("#/")!==0){window.__pendingAnchor=h;try{history.scrollRestoration="manual";history.replaceState(history.state,"",location.pathname+location.search);}catch(e){}}})();</script>
 
 <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,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"/>
@@ -1415,6 +1426,179 @@ section[id],article[id],aside[id],div[id]{scroll-margin-top:84px}
   .acard .ring--sm{width:80px!important;height:80px!important}
 }
 
+/* v1.58 brand kit */
+button.bk-copy-btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 22px;border-radius:999px;background:transparent;color:#fff;border:2px solid rgba(255,255,255,.45);font:inherit;font-weight:800;font-size:.95rem;cursor:pointer}
+button.bk-copy-btn:hover{border-color:var(--y)}
+.crumbs a{display:inline-flex;align-items:center;min-height:44px}
+.bk-logos{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.bk-logo{display:flex;flex-direction:column;border-radius:20px;overflow:hidden;border:1px solid var(--line);background:rgba(255,255,255,.04)}
+.bk-logo-art{display:flex;align-items:center;justify-content:center;aspect-ratio:4/3;padding:22px}
+.bk-logo--light .bk-logo-art{background:#fff}
+.bk-logo--dark .bk-logo-art{background:#070430;background-image:radial-gradient(circle at 70% 20%,rgba(120,8,255,.35),transparent 60%)}
+.bk-logo-art img{max-width:100%;max-height:100%;object-fit:contain}
+.bk-logo-meta{display:flex;flex-direction:column;gap:2px;padding:14px 16px}
+.bk-logo-meta b{color:#fff;font-weight:800}.bk-logo-meta span{font-size:.85rem;color:var(--text-secondary)}
+.bk-17{display:grid;grid-template-columns:auto minmax(0,1fr);gap:24px 40px;align-items:center}
+.bk-17-mark{width:clamp(140px,16vw,220px);height:auto}
+.bk-17 h2{margin:10px 0 10px;font-weight:900;font-size:clamp(1.4rem,1.1rem + 1.2vw,2.1rem);color:#fff}
+.bk-17 p,.bk-type-grid p{color:var(--text-secondary);line-height:1.65;margin:0 0 12px}
+.bk-swatches{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.bk-sw{position:relative;display:flex;flex-direction:column;align-items:flex-start;gap:2px;width:100%;padding:0 0 14px;border-radius:18px;overflow:hidden;border:1px solid var(--line);background:rgba(255,255,255,.04);color:#fff;cursor:pointer;text-align:left;font:inherit}
+.bk-sw:hover{border-color:var(--sw)}
+.bk-chip{display:block;width:100%;height:84px;background:var(--sw);margin-bottom:10px;border-bottom:1px solid var(--line)}
+.bk-sw b{padding:0 14px;font-weight:800}.bk-sw code{padding:0 14px;font-family:ui-monospace,Menlo,monospace;color:var(--y)}
+.bk-sw small{padding:0 14px;color:var(--text-muted);font-size:.8rem}
+.bk-copied{position:absolute;top:10px;right:10px;font-style:normal;font-size:.72rem;font-weight:800;padding:3px 8px;border-radius:999px;background:#fff;color:#070430;opacity:0;transition:opacity .2s}
+.bk-sw.is-copied .bk-copied{opacity:1}
+.bk-type-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:24px 48px;align-items:center}
+.bk-type-grid h2{margin:10px 0 12px;font-weight:900;font-size:clamp(1.4rem,1.1rem + 1.2vw,2.1rem);color:#fff}
+.bk-type-demo{padding:24px 28px;border-radius:22px;background:rgba(255,255,255,.05);border:1px solid var(--line);color:#fff}
+.bk-type-demo span{display:block;font-size:4.5rem;line-height:1;color:var(--y);margin-bottom:8px}
+.bk-type-demo p{margin:4px 0;font-size:1.15rem}
+.bk-visuals{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:14px}
+.bk-v{display:flex;align-items:center;justify-content:center;border-radius:20px;overflow:hidden;border:1px solid var(--line);background:radial-gradient(circle at 50% 40%,rgba(120,8,255,.35),transparent 65%),#070430;aspect-ratio:1/1;padding:14px}
+.bk-v--wide{aspect-ratio:auto}
+.bk-v img{max-width:100%;max-height:100%;object-fit:contain}
+.bk-copy{margin-bottom:20px;padding:20px 22px;border-radius:18px;background:rgba(255,255,255,.04);border:1px solid var(--line)}
+.bk-text{margin:0 0 14px;color:#fff;line-height:1.7}
+.bk-entity{padding:20px 22px;border-radius:18px;border:1px solid rgba(242,197,0,.35);background:rgba(242,197,0,.05)}
+.bk-entity dl{margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 24px}
+.bk-entity dt{font-size:.75rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted)}
+.bk-entity dd{margin:2px 0 0;color:#fff;font-weight:600}
+.bk-entity a{color:#fff;display:inline-flex;min-height:44px;align-items:center;text-decoration:underline;text-decoration-color:var(--y)}
+@media (max-width:980px){.bk-logos,.bk-swatches{grid-template-columns:repeat(2,minmax(0,1fr))}.bk-visuals{grid-template-columns:1fr 1fr}.bk-v--wide{grid-column:1/-1}.bk-type-grid{grid-template-columns:1fr}}
+@media (max-width:560px){.bk-17{grid-template-columns:1fr}.bk-entity dl{grid-template-columns:1fr}}
+
+/* v1.60 new case studies */
+.page-hero--zoho{background:radial-gradient(800px 420px at 90% 0%,rgba(228,37,39,.28),transparent 70%),radial-gradient(600px 360px at 0% 100%,rgba(242,197,0,.12),transparent 70%),var(--navy)}
+.page-hero--campus-cs{background:radial-gradient(800px 420px at 90% 0%,rgba(113,180,5,.25),transparent 70%),radial-gradient(600px 360px at 0% 100%,rgba(120,8,255,.25),transparent 70%),var(--navy)}
+.page-hero--pro-cs{background:radial-gradient(800px 420px at 90% 0%,rgba(165,123,255,.35),transparent 70%),radial-gradient(600px 360px at 0% 100%,rgba(234,100,29,.15),transparent 70%),var(--navy)}
+.cs-fig{margin:0}
+.cs-fig img{display:block;width:100%;height:auto;border-radius:22px;border:1px solid var(--line)}
+.cs-fig figcaption{margin-top:10px;font-size:.88rem;color:var(--text-muted)}
+.cs-fig--poster img{max-width:440px;margin:0 auto}
+.cs-fig--dark img{background:#0b0b0b}
+.cs-split{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(24px,4vw,56px);align-items:center}
+.cs-split--even{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:start}
+.cs-h2{margin:10px 0 14px;font-weight:900;font-size:clamp(1.5rem,1.1rem + 1.4vw,2.2rem);line-height:1.1;color:#fff}
+.gallery--2{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+.gallery--2 img{aspect-ratio:auto!important;height:100%!important;object-fit:cover}
+.gallery img.cs-tall{object-position:center}
+.cs-survey th[scope=row]{font-weight:600;text-align:left}
+.cs-survey td{font-weight:900;color:var(--y);text-align:right;white-space:nowrap}
+.cs-survey .cs-avg th,.cs-survey .cs-avg td{font-weight:900;color:#fff;border-top:2px solid var(--y)}
+.cs-sponsors p{margin:0 0 14px;padding:14px 18px;border-radius:14px;background:rgba(255,255,255,.04);border:1px solid var(--line);color:var(--text-secondary);line-height:1.6}
+.cs-sponsors b{display:block;color:var(--y);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:2px}
+.cs-sponsors a,.lead-p a,.story-block p a{color:#fff;text-decoration:underline;text-decoration-color:var(--y);display:inline-flex;align-items:center;min-height:44px}
+@media (max-width:900px){.cs-split,.cs-split--even{grid-template-columns:minmax(0,1fr)}.gallery--2{grid-template-columns:minmax(0,1fr)!important}}
+.cs-split>*{min-width:0}
+
+/* v1.62 feedback tab: flush to the right edge, vertically centered */
+.fb-float{position:fixed;z-index:90;right:0;top:50%;transform:translateY(-50%);
+  display:flex;flex-direction:column;align-items:center;gap:8px;min-width:44px;padding:16px 11px;
+  border-radius:14px 0 0 14px;background:var(--y);color:#070430;font-weight:900;font-size:.85rem;letter-spacing:.02em;text-decoration:none;
+  box-shadow:-6px 8px 26px rgba(0,0,0,.4);transition:padding .2s,box-shadow .2s}
+.fb-float span:not(.sr-only){writing-mode:vertical-rl;transform:rotate(180deg);white-space:nowrap}
+.fb-float svg{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.fb-float:hover{padding-right:16px;box-shadow:-8px 10px 30px rgba(0,0,0,.45)}
+.fb-float:focus-visible{outline:3px solid #fff;outline-offset:-5px}
+@media (max-width:620px){.fb-float{padding:12px 9px;font-size:.78rem}}
+@media print{.fb-float{display:none}}
+@media (prefers-reduced-motion:reduce){.fb-float{transition:none}}
+
+/* v1.63 Mindanao AI Caravan */
+.page-hero--mac{background:radial-gradient(800px 420px at 90% 0%,rgba(242,197,0,.2),transparent 70%),radial-gradient(700px 400px at 0% 100%,rgba(113,180,5,.18),transparent 70%),var(--navy)}
+.mac-table th[scope=row]{white-space:nowrap;color:var(--y);font-weight:800;text-align:left}
+.mac-table td{vertical-align:top}
+.mac-people{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.mac-people--local{grid-template-columns:repeat(2,minmax(0,1fr))}
+.mac-person{display:flex;flex-direction:column;gap:4px;padding:16px 18px;border-radius:18px;background:rgba(255,255,255,.04);border:1px solid var(--line)}
+.mac-people--local .mac-person{border-color:rgba(242,197,0,.45);background:rgba(242,197,0,.06)}
+.mac-person b{color:#fff;font-weight:900}
+.mac-person span{color:var(--text-secondary);font-size:.9rem;line-height:1.45}
+.mac-person small{margin-top:auto;padding-top:6px;color:var(--y);font-weight:800;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase}
+.news-card--major{border-color:rgba(242,197,0,.6);box-shadow:0 0 0 1px rgba(242,197,0,.35),0 18px 40px rgba(242,197,0,.12)}
+.news-card--major .news-tag{background:#fff}
+.faq-item p a{display:inline-flex;align-items:center;min-height:44px;color:#fff;text-decoration:underline;text-decoration-color:var(--y)}
+@media (max-width:980px){.mac-people{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.mac-people,.mac-people--local{grid-template-columns:minmax(0,1fr)}.mac-table th[scope=row]{white-space:normal}}
+
+/* v1.64 homepage scroll animations */
+.reveal-on .reveal.reveal--zoom{transform:scale(.92)}
+.reveal-on .reveal.reveal--zoom.is-in{transform:none}
+
+/* v1.65 invite notes */
+.inv-notes{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:18px;align-items:stretch}
+.inv-note{position:relative;display:flex;flex-direction:column;gap:10px;padding:26px 26px 22px;border-radius:22px;background:rgba(255,255,255,.04);border:1px solid var(--line)}
+.inv-note h3{margin:0;font-weight:900;font-size:1.2rem;line-height:1.25;color:#fff}
+.inv-note p{margin:0;color:var(--text-secondary);line-height:1.65}
+.inv-note p b{color:#fff}
+.inv-note .pp-link{margin-top:auto}
+.inv-note--critical{border:2px solid var(--y);background:linear-gradient(180deg,rgba(242,197,0,.12),rgba(242,197,0,.03))}
+.inv-note-tag{align-self:flex-start;padding:4px 12px;border-radius:999px;background:var(--y);color:#070430;font-weight:900;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}
+.inv-note-ic{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:14px;background:rgba(165,123,255,.16);color:#A57BFF}
+.inv-note-ic svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+@media (max-width:860px){.inv-notes{grid-template-columns:minmax(0,1fr)}}
+
+/* v1.66 FAQ next-step links */
+.faq-next{display:flex;flex-wrap:wrap;align-items:center;gap:0 6px;margin:4px 0 0!important;padding-top:10px;border-top:1px dashed var(--line)}
+.faq-next > span:first-child{font-size:.72rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:var(--y);margin-right:6px}
+.faq-next a{display:inline-flex;align-items:center;min-height:44px;color:#fff;font-weight:800;text-decoration:underline;text-decoration-color:var(--y);text-underline-offset:4px}
+.faq-next a:hover{color:var(--y)}
+.faq-next-sep{color:var(--text-muted)}
+
+/* v1.67 Devie, DEVCON AI Assistant */
+.devie{position:fixed;z-index:95;left:max(16px,env(safe-area-inset-left,0px));bottom:calc(env(safe-area-inset-bottom,0px) + 16px);font-family:inherit}
+.devie-fab{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:6px 18px 6px 6px;border:0;border-radius:999px;cursor:pointer;
+  background:linear-gradient(135deg,#7808FF,#A57BFF);color:#fff;font:inherit;font-weight:900;font-size:.95rem;box-shadow:0 12px 30px rgba(120,8,255,.45)}
+.devie-fab:hover{filter:brightness(1.08)}
+.devie-fab:focus-visible,.devie-x:focus-visible,.devie-chip:focus-visible,.devie-send:focus-visible,.devie-go:focus-visible{outline:3px solid var(--y);outline-offset:2px}
+.devie-av{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background:var(--y);color:#070430;font-weight:900;font-size:1.1rem;box-shadow:inset 0 0 0 3px rgba(255,255,255,.7)}
+.devie-av--lg{width:44px;height:44px;flex:none}
+.devie.is-open .devie-fab{display:none}
+.devie-panel{display:flex;flex-direction:column;width:min(370px,calc(100vw - 32px));height:min(560px,calc(100vh - 120px));border-radius:22px;overflow:hidden;
+  background:#0b0740;border:1px solid rgba(165,123,255,.45);box-shadow:0 24px 60px rgba(0,0,0,.55)}
+.devie-panel[hidden]{display:none}
+.devie-head{display:flex;align-items:center;gap:12px;padding:12px 12px 12px 14px;background:linear-gradient(135deg,#7808FF,#4b1fb8)}
+.devie-head > div{flex:1;min-width:0}
+.devie-name{margin:0;font-weight:900;color:#fff;font-size:1.05rem}
+.devie-role{margin:0;color:rgba(255,255,255,.8);font-size:.78rem}
+.devie-x{width:44px;height:44px;border:0;border-radius:12px;background:rgba(255,255,255,.14);color:#fff;font-size:1.5rem;line-height:1;cursor:pointer}
+.devie-log{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:10px;overscroll-behavior:contain}
+.devie-msg{max-width:88%;padding:10px 13px;border-radius:16px;font-size:.92rem;line-height:1.5}
+.devie-msg p{margin:0}
+.devie-msg--bot{align-self:flex-start;background:rgba(255,255,255,.07);color:#fff;border-bottom-left-radius:6px}
+.devie-msg--me{align-self:flex-end;background:var(--y);color:#070430;font-weight:700;border-bottom-right-radius:6px}
+.devie-lang{color:var(--y);font-size:.8rem}
+.devie-links{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.devie-go{display:inline-flex;align-items:center;min-height:44px;padding:8px 12px;border-radius:12px;background:#fff;color:#070430;font-weight:800;font-size:.85rem;text-decoration:none}
+.devie-go:hover{background:var(--y)}
+.devie-chips{display:flex;gap:6px;overflow-x:auto;padding:0 12px 8px;scrollbar-width:thin}
+.devie-chip{flex:none;min-height:44px;padding:8px 12px;border-radius:999px;border:1px solid rgba(165,123,255,.6);background:transparent;color:#fff;font:inherit;font-weight:700;font-size:.82rem;cursor:pointer}
+.devie-chip:hover{border-color:var(--y);color:var(--y)}
+.devie-form{display:flex;gap:8px;padding:10px 12px;border-top:1px solid var(--line)}
+.devie-form input{flex:1;min-width:0;min-height:44px;padding:0 14px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,.06);color:#fff;font:inherit;font-size:16px}
+.devie-form input::placeholder{color:var(--text-muted)}
+.devie-form input:focus{outline:2px solid var(--y);outline-offset:1px}
+.devie-send{width:44px;height:44px;flex:none;border:0;border-radius:12px;background:var(--y);color:#070430;font-size:1.1rem;cursor:pointer}
+.devie-note{margin:0;padding:0 12px 10px;font-size:.72rem;color:var(--text-muted);line-height:1.4}
+@media (max-width:620px){
+  .devie{left:12px;bottom:calc(env(safe-area-inset-bottom,0px) + 12px)}
+  .devie-fab-t{display:none}.devie-fab{padding:6px}
+  .devie.is-open{left:8px;right:8px}
+  .devie-panel{width:100%;height:min(78vh,calc(100vh - 90px))}
+}
+@media print{.devie{display:none}}
+
+/* v1.68 Devie feedback-first */
+.devie-fb{margin:0 12px 8px;min-height:48px;border:0;border-radius:14px;background:var(--y);color:#070430;font:inherit;font-weight:900;font-size:.92rem;cursor:pointer;box-shadow:0 6px 18px rgba(242,197,0,.25)}
+.devie-fb:hover{filter:brightness(1.05)}
+.devie-fb:focus-visible,.devie-nudge-b:focus-visible{outline:3px solid #fff;outline-offset:2px}
+.devie-chip--fb{border-color:var(--y);color:var(--y)}
+.devie-go--fb{background:var(--y)}
+.devie-nudge{margin-top:8px!important}
+.devie-nudge-b{min-height:44px;padding:6px 0;border:0;background:none;color:var(--y);font:inherit;font-weight:800;font-size:.82rem;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+
 /* ================= MULTI-PAGE (hash routes) ================= */
 .page[hidden]{display:none!important}
 .narrow{max-width:880px}
@@ -1592,7 +1776,7 @@ section[id],article[id],aside[id],div[id]{scroll-margin-top:84px}
         <a class="nav-dd-trigger" href="playbook.html" data-nav="playbook" aria-haspopup="true" aria-expanded="false" aria-controls="dd-pb">Community Playbook<svg class="dd-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
         <button class="nav-dd-toggle" type="button" aria-expanded="false" aria-controls="dd-pb"><span class="sr-only">Show Community Playbook</span><svg class="dd-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
         <div class="nav-dd-panel nav-dd-panel--sm nav-dd-panel--right" id="dd-pb">
-          <ul class="dd-simple" role="list"><li><a href="playbook.html" style="--c:#EA641D"><b>Community Playbook home</b><span>Guidelines, loopers, and the Playbook AI</span></a></li><li><a href="volunteers-guide.html" style="--c:#F2C500"><b>Volunteering Basics</b></a></li><li><a href="code-of-conduct-for-national-and-chapter-officers-and-volunteers.html" style="--c:#A57BFF"><b>Code of Conduct for Officers and Volunteers</b></a></li><li><a href="standard-privacy-and-safespace-consent.html" style="--c:#4DA2FF"><b>Events Privacy and Safe Space Consent</b></a></li><li><a href="campus-events-guidelines.html" style="--c:#71B405"><b>Campus DEVCON Events Guidelines</b></a></li><li><a href="child-protection-policy.html" style="--c:#EC4899"><b>Child Protection Policy</b></a></li></ul>
+          <ul class="dd-simple" role="list"><li><a href="playbook.html" style="--c:#EA641D"><b>Community Playbook home</b><span>Guidelines, loopers, and the Playbook AI</span></a></li><li><a href="volunteers-guide.html" style="--c:#F2C500"><b>Volunteering Basics</b></a></li><li><a href="code-of-conduct-for-national-and-chapter-officers-and-volunteers.html" style="--c:#A57BFF"><b>Code of Conduct for Officers and Volunteers</b></a></li><li><a href="standard-privacy-and-safespace-consent.html" style="--c:#4DA2FF"><b>Events Privacy and Safe Space Consent</b></a></li><li><a href="campus-events-guidelines.html" style="--c:#71B405"><b>Campus DEVCON Events Guidelines</b></a></li><li><a href="child-protection-policy.html" style="--c:#EC4899"><b>Child Protection Policy</b></a></li><li><a href="brand-kit.html" style="--c:#F2C500"><b>Brand Kit</b></a></li></ul>
         </div>
       </div>
       <a class="nav-cta" href="chapters.html#volunteer">Volunteer</a>
@@ -1615,7 +1799,7 @@ section[id],article[id],aside[id],div[id]{scroll-margin-top:84px}
           <a class="btn-outline" href="https://www.facebook.com/devconpampanga" target="_blank" rel="noopener">Follow DEVCON Pampanga<span class="sr-only"> (opens in a new tab)</span></a>
         </div>
       </div>
-      <aside class="ch-side" style="--c:#7808FF"><span class="ring"><img src="data:image/webp;base64,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" alt="Joash Requiez" width="240" height="240"/></span><p class="bcard-role" style="--c:#B99BFF">Chapter President 2026–2027</p><h3>Joash Requiez</h3><p>Leads DEVCON Pampanga&#8217;s officers and local ecosystem partnerships.</p><a class="pp-link" href="leadership.html">Meet all chapter presidents</a></aside>
+      <aside class="ch-side" style="--c:#7808FF"><span class="ring"><img src="data:image/webp;base64,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" alt="Joash Requiez" width="240" height="240"/></span><p class="bcard-role" style="--c:#B99BFF">Chapter President 2026–2027</p><h3>Joash Requiez</h3><p>Leads DEVCON Pampanga&#8217;s officers and local ecosystem partnerships.</p><a class="pp-link" href="leadership.html#chapter-presidents">Meet all chapter presidents</a></aside>
     </div>
   </header>
   <section class="numbers" aria-labelledby="pampanga-num"><div class="wrap"><h2 id="pampanga-num" class="sr-only">DEVCON Pampanga in numbers</h2><ul class="numbers-grid" role="list"><li class="num-item" style="--c:var(--p2)"><span class="num-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><b>630+</b><span>Community members</span></li><li class="num-item" style="--c:var(--y)"><span class="num-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></span><b>14</b><span>Events in 2025</span></li><li class="num-item" style="--c:var(--g)"><span class="num-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><b>580+</b><span>Attendees in 2025</span></li></ul></div></section>
@@ -2035,11 +2219,11 @@ section[id],article[id],aside[id],div[id]{scroll-margin-top:84px}
   if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
   var sel=['[data-page="story"] .sec-head','[data-page="story"] .page-hero .wrap > *','[data-page="story"] .about-points li','[data-page="story"] .about-art',
            '[data-page="story"] .num-item','[data-page="story"] .story-line li','[data-page="story"] .pillar','[data-page="story"] .formula li',
-           '[data-page="story"] .page-cta .wrap > *','.about-home .about-home-grid > div','.about-home .about-chips li','[data-page="internships"] .sec-head','[data-page="internships"] .num-item','[data-page="internships"] .pp','[data-page="internships"] .steps li','[data-page="internships"] .struct li','[data-page="internships"] .voices li','[data-page="internships"] .faq-item','[data-page="internships"] .int-past','[data-page="internships"] .facts li','[data-page="internships"] .int-17-inner > *','[data-page="internships"] .way'].join(',');
+           '[data-page="story"] .page-cta .wrap > *','.about-home .about-home-grid > div','.about-home .about-chips li','[data-page="internships"] .sec-head','[data-page="internships"] .num-item','[data-page="internships"] .pp','[data-page="internships"] .steps li','[data-page="internships"] .struct li','[data-page="internships"] .voices li','[data-page="internships"] .faq-item','[data-page="internships"] .int-past','[data-page="internships"] .facts li','[data-page="internships"] .int-17-inner > *','[data-page="internships"] .way','[data-page=\"home\"] .sec-head','[data-page=\"home\"] .home-map .wrap > *:not(.sec-head)','[data-page=\"home\"] .numbers .num-item','[data-page=\"home\"] .anniv-copy','[data-page=\"home\"] .anniv-mark','[data-page=\"home\"] .teaser','[data-page=\"home\"] .news-grid > li','[data-page=\"home\"] .cta-hub .wrap > *','[data-page=\"home\"] .faq-item','[data-page=\"home\"] .partner-tier','[data-page=\"home\"] .dplus-card'].join(',');
   var els=[].slice.call(document.querySelectorAll(sel));if(!els.length)return;
   document.documentElement.classList.add('reveal-on');
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('is-in');io.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
-  els.forEach(function(el){var sib=el.parentElement?[].indexOf.call(el.parentElement.children,el):0;el.classList.add('reveal');el.style.transitionDelay=Math.min(sib,5)*90+'ms';io.observe(el);});
+  els.forEach(function(el){var sib=el.parentElement?[].indexOf.call(el.parentElement.children,el):0;el.classList.add('reveal');if(el.matches('.anniv-mark'))el.classList.add('reveal--zoom');el.style.transitionDelay=Math.min(sib,5)*90+'ms';io.observe(el);});
 })();
 </script>
 <script>
@@ -2086,6 +2270,229 @@ section[id],article[id],aside[id],div[id]{scroll-margin-top:84px}
     try{history.replaceState(history.state,'',location.pathname+location.search+h);}catch(e){}
     if(!el)return;window.scrollTo(0,0);setTimeout(function(){window.__smoothTo(el);},reduce?0:160);}
   if(document.readyState==='complete')arrive();else window.addEventListener('load',arrive,{once:true});
+})();
+</script>
+<script>
+/* Brand Kit: copy hex codes and boilerplate */
+(function(){
+  function copy(t,cb){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(cb,cb);}else{var a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();try{document.execCommand('copy');}catch(e){}a.remove();cb();}}
+  document.addEventListener('click',function(e){
+    var sw=e.target.closest&&e.target.closest('.bk-sw');
+    if(sw){copy(sw.getAttribute('data-hex'),function(){var m=sw.querySelector('.bk-copied');m.textContent='Copied';sw.classList.add('is-copied');setTimeout(function(){sw.classList.remove('is-copied');m.textContent='';},1400);});return;}
+    var b=e.target.closest&&e.target.closest('.bk-copy-btn');
+    if(b){var t=b.parentNode.querySelector('.bk-text').textContent;var o=b.textContent;copy(t,function(){b.textContent='Copied';setTimeout(function(){b.textContent=o;},1400);});}
+  });
+})();
+</script>
+<a class="fb-float" id="give-feedback" href="mailto:jumpstart-interns-c5-2026@devcon.ph,rj@devcon.ph,acapucion@devcon.ph,ddeleon@devcon.ph,jfernando@devcon.ph?subject=DEVCON.PH%202026%20Website%20Redesign%20Feedback%20and%20Screenshots" data-to="jumpstart-interns-c5-2026@devcon.ph,rj@devcon.ph,acapucion@devcon.ph,ddeleon@devcon.ph,jfernando@devcon.ph" data-subject="DEVCON.PH 2026 Website Redesign Feedback and Screenshots">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H8l-4 4Z"/><path d="M8 9h8M8 12h5"/></svg><span>Give Feedback</span><span class="sr-only"> (opens your email app)</span>
+</a>
+<script>
+/* Give Feedback: pre-fill the email with the page, version, and device details */
+(function(){
+  var a=document.getElementById('give-feedback'); if(!a) return;
+  function build(){
+    var v=(document.querySelector('meta[name="version"]')||{}).content||'';
+    var body=['Hi DEVCON website team,','',
+      'Page: '+document.title,'Link: '+location.href,'Site version: '+v,
+      'Screen: '+window.innerWidth+' x '+window.innerHeight+' px','Browser: '+navigator.userAgent,'',
+      'What looks wrong, or what could be better:','','',
+      'Screenshots: please attach them to this email.','','Thank you!'].join('\n');
+    a.href='mailto:'+a.getAttribute('data-to')+'?subject='+encodeURIComponent(a.getAttribute('data-subject'))+'&body='+encodeURIComponent(body);
+  }
+  a.addEventListener('pointerdown',build); a.addEventListener('focus',build); a.addEventListener('click',build);
+})();
+</script>
+<div class="devie" id="devie">
+  <button class="devie-fab" id="devie-fab" type="button" aria-expanded="false" aria-controls="devie-panel" aria-label="Ask Devie, the DEVCON AI Assistant">
+    <span class="devie-av" aria-hidden="true">D</span><span class="devie-fab-t">Ask Devie</span>
+  </button>
+  <section class="devie-panel" id="devie-panel" role="dialog" aria-modal="false" aria-labelledby="devie-name" hidden>
+    <header class="devie-head">
+      <span class="devie-av devie-av--lg" aria-hidden="true">D</span>
+      <div><p class="devie-name" id="devie-name">Devie</p><p class="devie-role">DEVCON AI Assistant · Feedback and FAQ</p></div>
+      <button class="devie-x" type="button" id="devie-close" aria-label="Close Devie">&#215;</button>
+    </header>
+    <div class="devie-log" id="devie-log" role="log" aria-live="polite" aria-relevant="additions"></div>
+    <button class="devie-fb" id="devie-fb" type="button">&#128172; Submit feedback</button>
+    <div class="devie-chips" id="devie-chips"></div>
+    <form class="devie-form" id="devie-form" autocomplete="off">
+      <label class="sr-only" for="devie-in">Ask Devie a question</label>
+      <input id="devie-in" type="text" maxlength="200" placeholder="Ask in English, Filipino, Bisaya, and more"/>
+      <button type="submit" class="devie-send" aria-label="Send">&#10148;</button>
+    </form>
+    <p class="devie-note">Devie collects feedback on the new website and answers basic questions. Feedback opens in your email app, so nothing is sent until you hit send.</p>
+  </section>
+</div>
+<script>
+/* Devie: rule-based FAQ assistant. No data leaves the browser. */
+(function(){
+  var FILES = {"home": "index.html", "story": "about.html", "programs": "programs.html", "chapters": "chapters.html", "case-studies": "devrel-case-studies.html", "sui": "case-study-sui.html", "attend": "attend.html", "invite": "invite.html", "partner": "partner.html", "leadership": "leadership.html", "icp": "case-study-icp.html", "playbook": "playbook.html", "ai-code-camps": "ai-code-camps.html", "internships": "jumpstart-internships.html", "hour-of-ai": "case-study-hour-of-ai.html", "volunteers-guide": "volunteers-guide.html", "code-of-conduct-for-national-and-chapter-officers-and-volunteers": "code-of-conduct-for-national-and-chapter-officers-and-volunteers.html", "standard-privacy-and-safespace-consent": "standard-privacy-and-safespace-consent.html", "campus-events-guidelines": "campus-events-guidelines.html", "child-protection-policy": "child-protection-policy.html", "devcon-kids": "devcon-kids.html", "campus": "campus.html", "sheisdevcon": "sheisdevcon.html", "pro-summit": "pro-summit.html", "crest": "crest.html", "dctx": "dctx.html", "educators": "educators.html", "ai-fluency": "ai-fluency-masterclass.html", "ai": "ai.html", "brand-kit": "brand-kit.html", "zoho-creator": "case-study-zoho-creator.html", "campus-summit": "case-study-campus-devcon-summit.html", "pro-summit-2023": "case-study-pro-summit.html", "mindanao-ai-caravan": "case-study-mindanao-ai-caravan.html"};
+  var root=document.getElementById('devie'); if(!root) return;
+  var fab=document.getElementById('devie-fab'), panel=document.getElementById('devie-panel'), log=document.getElementById('devie-log'),
+      chips=document.getElementById('devie-chips'), form=document.getElementById('devie-form'), inp=document.getElementById('devie-in');
+  var SPA = document.querySelectorAll('[data-page]').length > 1;
+  var here = (location.pathname.split('/').pop() || 'index.html');
+  function href(r, a){
+    if(r.indexOf('http')===0 || r.indexOf('mailto:')===0) return r;
+    if(SPA) return a ? '#'+a : '#/'+r;
+    var f = r.indexOf('chapter/')===0 ? r.slice(8)+'.html' : (FILES[r] || 'index.html');
+    return (f===here && a) ? '#'+a : f + (a ? '#'+a : '');
+  }
+  /* ---------- local greetings per chapter ---------- */
+  var G = {
+    tl:{hi:'Kumusta, ka-DEVCON!', lang:'Tagalog'},
+    ceb:{hi:'Maayong adlaw, bai!', lang:'Bisaya'},
+    hil:{hi:'Maayong adlaw! Kamusta ka dira?', lang:'Hiligaynon'},
+    bik:{hi:'Marhay na aldaw!', lang:'Bikol'},
+    pam:{hi:'Mayap a aldo!', lang:'Kapampangan'},
+    war:{hi:'Maupay nga adlaw!', lang:'Waray'}
+  };
+  var CH = {manila:['Manila','tl'],laguna:['Laguna','tl'],legazpi:['Legazpi','bik'],pampanga:['Pampanga','pam'],cebu:['Cebu','ceb'],iloilo:['Iloilo','hil'],
+            bohol:['Bohol','ceb'],bacolod:['Bacolod','hil'],tacloban:['Tacloban','war'],davao:['Davao','ceb'],iligan:['Iligan','ceb'],cagayandeoro:['Cagayan de Oro','ceb'],bukidnon:['Bukidnon','ceb']};
+  function currentChapter(){
+    var m;
+    if(SPA){ var v=[].filter.call(document.querySelectorAll('[data-page]'),function(p){return !p.hidden;})[0]; m=v && /^chapter-(.+)$/.exec(v.getAttribute('data-page')); return m&&CH[m[1]]?m[1]:null; }
+    m=/^([a-z]+)\.html$/.exec(here); return m&&CH[m[1]]?m[1]:null;
+  }
+  /* ---------- intents ---------- */
+  var ALIAS = {
+    manila:['manila','metro manila','ncr','maynila'],laguna:['laguna','calamba','santa rosa','sta rosa','los banos'],legazpi:['legazpi','albay','bicol','bikol'],
+    pampanga:['pampanga','angeles','san fernando','kapampangan'],cebu:['cebu','sugbo'],iloilo:['iloilo','ilonggo'],bohol:['bohol','tagbilaran','boholano'],
+    bacolod:['bacolod','negros'],tacloban:['tacloban','leyte','waray'],davao:['davao','dabaw'],iligan:['iligan'],cagayandeoro:['cagayan de oro','cdo','kagay'],bukidnon:['bukidnon','malaybalay','valencia']
+  };
+  var I = [
+    {k:['thank','thanks','salamat','ty','mabalos','dakal','daghang salamat','salamat gid'], t:'thanks'},
+    {k:['hello','hi','hey','yo','kumusta','kamusta','musta','maayong','mayap','marhay','maupay','oy','uy','good morning','good day','sup'], t:'hi'},
+    {k:['what is devcon','about','who are you','devcon ba','unsa ang devcon','ano ang devcon','nanu ing devcon','story','history','founded','2009','mission'], go:['story'], t:'about'},
+    {k:['event','events','attend','join','register','registration','sali','apil','intra','upcoming','meetup','schedule','devcon+','devcon plus','ticket','free','libre','magkano','pila','pira','pilan','bayad','cost','price','how much'], go:['attend'], t:'events'},
+    {k:['volunteer','boluntaryo','help out','tumulong','tabang','mutabang'], go:['home','volunteer'], t:'volunteer'},
+    {k:['partner','sponsor','sponsorship','devrel','collab','company','brand activation','kolab'], go:['partner'], t:'partner'},
+    {k:['invite','bring devcon','start a chapter','new chapter','own chapter','my city','our city','my school','our school','lgu','dalhin','dad-a'], go:['invite'], t:'invite'},
+    {k:['program','programs','offer','track','tracks'], go:['programs'], t:'programs'},
+    {k:['scholarship','certification','claude','anthropic','certified','exam','mock exam','reviewer'], go:['ai'], t:'ai'},
+    {k:['intern','internship','ojt','jumpstart','practicum','on the job'], go:['internships'], t:'intern'},
+    {k:['kids','kid','children','bata','bata-bata','hour of ai','micro:bit','microbit','teacher','teachers','educator','maestra','titser'], go:['devcon-kids'], t:'kids'},
+    {k:['code camp','codecamp','sui','move','smart contract','blockchain','icp','web3','hackathon'], go:['ai-code-camps'], t:'camps'},
+    {k:['case study','case studies','results','impact','proof','portfolio'], go:['case-studies'], t:'cases'},
+    {k:['caravan','mindanao','ai angat','nexus','hello code','hello, code'], go:['mindanao-ai-caravan'], t:'caravan'},
+    {k:['brand','logo','logos','brand kit','colors','colours','font','boilerplate','tin'], go:['brand-kit'], t:'brand'},
+    {k:['playbook','code of conduct','privacy','child protection','guidelines','policy','rules','safe space'], go:['playbook'], t:'playbook'},
+    {k:['leader','leaders','leadership','president','presidents','officer','officers','board','team','who runs'], go:['leadership'], t:'leaders'},
+    {k:['summit','pro summit','campus summit','conference','campus devcon','campus'], go:['pro-summit'], t:'summit'},
+    {k:['sheisdevcon','women','she is devcon','kababaihan'], go:['sheisdevcon'], t:'she'},
+    {k:['feedback','bug','broken','error','suggestion','report'], t:'feedback'},
+    {k:['contact','email','reach','call','message','hotline','address','office','hq','makati','ortigas'], go:['partner'], t:'contact'},
+    {k:['chapter','chapters','location','locations','near me','nearby','where','saan','asa','diin','hain','saen','nokarin','hain ka','region','city','province'], go:['chapters'], t:'where'}
+  ];
+  var R = {
+    hi:'Heyyy! 👋 I&#8217;m Devie, your DEVCON bestie. Ask me about events, chapters, volunteering, internships, AI scholarships, or partnering. I&#8217;ll send you to the right page, no cap.',
+    thanks:'Anytime, bestie! 💛 Anything else? I&#8217;m lowkey always here.',
+    about:'DEVCON Philippines is the country&#8217;s largest volunteer tech community: a non-profit since 2009, with 13 locations nationwide. This year it&#8217;s DEVCON 17: Engineering an AI-Ready Nation. ✨',
+    events:'Most DEVCON events are free, fr! 🎉 Code camps, campus talks, meetups, and Hour of AI. Find one near you and register on DEVCON+.',
+    volunteer:'Love that for you! 🙌 Volunteers keep DEVCON running. Start with your nearest chapter, then level up with our Volunteering Basics.',
+    partner:'Let&#8217;s build something big together. 🤝 Partners run DevRel code camps, sponsor summits, and fund AI Certification Scholarships, with results you can actually verify.',
+    invite:'No DEVCON in your city yet? Invite us! 📍 Heads up: outside our chapter locations, your office or local partners cover travel and lodging for our speakers. We can also connect you to other tech communities.',
+    programs:'We&#8217;ve got something for every stage: Hour of AI for Kids, open-source AI code camps, AI Fluency for Builders, Campus DEVCON, #SHEISDEVCON, and more. 🚀',
+    ai:'Slay your AI era. 🤖 Our AI Certification Scholarships start with a free Claude review track. Pass the mock exam, then apply for a fully paid attempt.',
+    intern:'Jumpstart Internships run five months: online, self-paced learning plus in-person sessions at the DEVCON HQ Office at Makati or Ortigas. Voluntary or for school credit. 💼',
+    kids:'DEVCON Kids brings coding, robotics, and AI to young learners, plus Hour of AI training so teachers keep teaching it. 🧒💻',
+    camps:'Our code camps are hands-on and every project gets verified. The Sui series hit 330+ verified Move smart contracts. 🔥',
+    cases:'Receipts? We got them. 📈 Read our DevRel case studies, from code camps to summits and the Mindanao AI Caravan.',
+    caravan:'DEVCON AI Angat was Mindanao&#8217;s first AI caravan: free Hello, Code! days for kids and teachers, and NEXUS AI training and hackathons in Bukidnon and Iligan. 🚐✨',
+    brand:'Need logos or colors? The Brand Kit has official logos, the palette, Montserrat, key visuals, and copy-ready boilerplate. 🎨',
+    playbook:'The Community Playbook has our volunteer guide, Code of Conduct, privacy and safe space consent, campus guidelines, and child protection policy. 📘',
+    leaders:'Meet the people behind DEVCON: the board, the national office, area program leaders, and all chapter presidents. 🌟',
+    summit:'DEVCON summits are where the magic happens: the PRO Summit for professional devs, and Campus DEVCON for student leaders. 🎤',
+    she:'#SHEISDEVCON celebrates and grows women in tech across the country. 💜',
+    feedback:'Spotted something off? Tell the website team with the Give Feedback tab on the right edge of the screen, and attach a screenshot. 🙏',
+    contact:'You can reach the DEVCON team at hello@devcon.ph. For partnerships, start on the Partner page. 📬',
+    where:'DEVCON has 13 locations across Luzon, Visayas, and Mindanao. Find yours on the map! 🗺️',
+    none:'Hmm, di ko pa gets yan, sorry! 😅 I&#8217;m a basic FAQ bot. Try one of these, or email hello@devcon.ph.'
+  };
+  var GO = {story:'Read our story',attend:'Find an event',volunteer:'Volunteer',partner:'Partner with DEVCON',invite:'Invite DEVCON',programs:'Explore programs',ai:'AI Scholarships',
+            internships:'Jumpstart Internships','devcon-kids':'DEVCON Kids','ai-code-camps':'AI code camps','case-studies':'DevRel case studies','mindanao-ai-caravan':'Mindanao AI Caravan',
+            'brand-kit':'Open the Brand Kit',playbook:'Community Playbook',leadership:'Meet the leadership','pro-summit':'PRO Summit',sheisdevcon:'#SHEISDEVCON',chapters:'See all 13 locations'};
+  var EXTRA = {events:[['https://www.devcon.plus','Register on DEVCON+']], volunteer:[['volunteers-guide','Volunteering Basics']], ai:[['https://claude-foundations-reviewer.vercel.app/sources','Free review track']],
+               summit:[['campus','Campus DEVCON']], contact:[['mailto:hello@devcon.ph','Email hello@devcon.ph']], invite:[['chapters','See our 13 locations']], leaders:[['leadership','Chapter presidents','chapter-presidents']]};
+  var SUGGEST = [['Events near me','events'],['Volunteer','volunteer'],['AI Scholarships','scholarship'],['Internships','internship'],['Partner with us','partner'],['Invite DEVCON','invite']];
+
+  function norm(s){ return (' '+s.toLowerCase().replace(/[^a-z0-9+:#\s-]/g,' ').replace(/\s+/g,' ')+' '); }
+  function has(t,k){ return t.indexOf(' '+k+' ')>-1 || (k.length>4 && t.indexOf(k)>-1); }
+  function el(tag,cls,html){ var e=document.createElement(tag); if(cls)e.className=cls; if(html!=null)e.innerHTML=html; return e; }
+  function linkBtn(r,label,a){ var x=el('a','devie-go'); x.href=href(r,a); x.textContent=label+' →';
+    if(/^https?:/.test(x.href)&&r.indexOf('http')===0){x.target='_blank';x.rel='noopener';}
+    x.addEventListener('click',function(){ if(SPA && r.indexOf('http')!==0 && r.indexOf('mailto:')!==0) setTimeout(close,120); }); return x; }
+  function bot(html, links){ var m=el('div','devie-msg devie-msg--bot'); m.appendChild(el('p',null,html));
+    if(links&&links.length){ var w=el('div','devie-links'); links.forEach(function(l){ w.appendChild(linkBtn(l[0],l[1],l[2])); }); m.appendChild(w); }
+    log.appendChild(m); log.scrollTop=log.scrollHeight; }
+  function me(text){ var m=el('div','devie-msg devie-msg--me'); var p=el('p'); p.textContent=text; m.appendChild(p); log.appendChild(m); log.scrollTop=log.scrollHeight; }
+  function renderChips(){ chips.innerHTML=''; SUGGEST.forEach(function(s){ var b=el('button','devie-chip'); b.type='button'; b.textContent=s[0]; if(s[1]==='__fb__'){ b.className+=' devie-chip--fb'; b.addEventListener('click',function(){ me('Submit feedback'); setTimeout(startFeedback,250); }); } else b.addEventListener('click',function(){ ask(s[1], s[0]); }); chips.appendChild(b); }); }
+  function answer(q){
+    var t=norm(q);
+    // a named chapter wins
+    for(var slug in ALIAS){ for(var i=0;i<ALIAS[slug].length;i++){ if(has(t,ALIAS[slug][i])){
+      var c=CH[slug], g=G[c[1]];
+      return bot('DEVCON '+c[0]+' is in the house! 🙌 '+g.hi+' ('+g.lang+') Check their page for the chapter president, events, and how to join.',
+                 [['chapter/'+slug,'Go to DEVCON '+c[0]],['chapters','See all 13 locations']]); } } }
+    var best=null, score=0;
+    I.forEach(function(it){ var s=0; it.k.forEach(function(k){ if(has(t,k)) s+=k.split(' ').length; }); if(s>score){score=s;best=it;} });
+    if(!best){ bot(R.none, [['home','Back to home'],['chapters','Find a chapter'],['attend','Find an event']]); return; }
+    var links=[]; if(best.go) links.push([best.go[0], GO[best.go[best.go.length-1]]||GO[best.go[0]]||'Open', best.go[1]]);
+    (EXTRA[best.t]||[]).forEach(function(x){ links.push(x); });
+    if(best.t==='hi'||best.t==='thanks'){ bot(R[best.t]); return; }
+    if(best.t==='feedback'){ startFeedback(); return; }
+    bot(R[best.t], links);
+  }
+  /* ---------- feedback: the primary job ---------- */
+  var FB_TO = 'jumpstart-interns-c5-2026@devcon.ph,rj@devcon.ph,acapucion@devcon.ph,ddeleon@devcon.ph,jfernando@devcon.ph', FB_SUBJECT = 'DEVCON.PH 2026 Website Redesign Feedback and Screenshots', fbMode=false;
+  function fbHref(text){
+    var v=(document.querySelector('meta[name="version"]')||{}).content||'';
+    var body=['Hi DEVCON website team,','', 'Feedback: '+(text||''),'',
+      'Page: '+document.title,'Link: '+location.href,'Site version: '+v,
+      'Screen: '+window.innerWidth+' x '+window.innerHeight+' px','Browser: '+navigator.userAgent,'',
+      'Screenshots: please attach them to this email.','','Sent via Devie, DEVCON AI Assistant'].join('\n');
+    return 'mailto:'+FB_TO+'?subject='+encodeURIComponent(FB_SUBJECT)+'&body='+encodeURIComponent(body);
+  }
+  function fbButton(text){ var a=el('a','devie-go devie-go--fb'); a.href=fbHref(text); a.textContent='Open email to send \u2192'; return a; }
+  function startFeedback(){
+    fbMode=true;
+    bot('Yesss, feedback era! \uD83D\uDE4C What looks off, confusing, or could be better on this page? Type it below and I&#8217;ll draft the email to the website team for you. You can attach screenshots before sending.');
+    var m=log.lastChild, w=el('div','devie-links'), a=fbButton(''); a.textContent='Skip, just open the email \u2192'; w.appendChild(a); m.appendChild(w); log.scrollTop=log.scrollHeight;
+    inp.placeholder='Type your feedback here'; inp.focus();
+  }
+  function sendFeedback(text){
+    fbMode=false; inp.placeholder='Ask in English, Filipino, Bisaya, and more';
+    var m=el('div','devie-msg devie-msg--bot');
+    m.appendChild(el('p',null,'Salamat, bestie! \uD83D\uDC9B Your feedback is ready. Tap below to open your email app, attach a screenshot if you have one, then hit send.'));
+    var w=el('div','devie-links'); w.appendChild(fbButton(text)); m.appendChild(w); log.appendChild(m); log.scrollTop=log.scrollHeight;
+    setTimeout(function(){ bot('Anything else? Ask me about DEVCON, or send more feedback anytime. \u2728'); renderChips(); }, 500);
+  }
+  function feedbackNudge(){
+    var m=log.lastChild; if(!m || !m.classList.contains('devie-msg--bot')) return;
+    var p=el('p','devie-nudge'); var b=el('button','devie-nudge-b'); b.type='button'; b.textContent='Got feedback on this page? Tell us \u2192';
+    b.addEventListener('click',startFeedback); p.appendChild(b); m.appendChild(p); log.scrollTop=log.scrollHeight;
+  }
+  function ask(q, shown){ me(shown||q); setTimeout(function(){
+    if(fbMode){ sendFeedback(q); return; }
+    if(/\b(feedback|bug|broken|error|suggest|suggestion|report|sira|guba|daot)\b/i.test(q)){ startFeedback(); return; }
+    answer(q); feedbackNudge(); }, 280); }
+  var greeted=false;
+  function welcome(){
+    var slug=currentChapter(), g;
+    if(slug){ g=G[CH[slug][1]]; }
+    else { var keys=Object.keys(G); g=G[keys[Math.floor(Math.random()*keys.length)]]; }
+    bot('<b>'+g.hi+'</b> <span class="devie-lang">('+g.lang+')</span><br>I&#8217;m <b>Devie</b>, your DEVCON AI Assistant. ✨ I can answer basic questions about this site and point you to the right page, bestie. Ask in English, Filipino, Bisaya, Ilonggo, and more!');
+    bot('<b>Quick favor:</b> this is the new DEVCON.PH 2026 website, and we&#8217;d love your feedback. 💬 Anything confusing, broken, or missing? Tap <b>Submit feedback</b> and I&#8217;ll draft the email for you. Or just ask me anything!');
+    renderChips(); greeted=true;
+  }
+  function open(){ panel.hidden=false; fab.setAttribute('aria-expanded','true'); root.classList.add('is-open'); if(!greeted) welcome(); setTimeout(function(){ inp.focus(); },50); }
+  function close(){ panel.hidden=true; fab.setAttribute('aria-expanded','false'); root.classList.remove('is-open'); fab.focus(); }
+  fab.addEventListener('click',function(){ panel.hidden?open():close(); });
+  document.getElementById('devie-close').addEventListener('click',close);
+  document.getElementById('devie-fb').addEventListener('click',function(){ me('Submit feedback'); setTimeout(startFeedback,250); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape' && !panel.hidden) close(); });
+  form.addEventListener('submit',function(e){ e.preventDefault(); var q=inp.value.trim(); if(!q) return; inp.value=''; ask(q); });
 })();
 </script>
 <script>
