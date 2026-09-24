@@ -27,6 +27,9 @@ Key facts:
 - [Smart contract code camps, Year 1](https://devcon.ph/case-study-sui/)
 - [Nationwide smart contracts code camp series](https://devcon.ph/case-study-icp/)
 - [Hour of AI for Kids](https://devcon.ph/case-study-hour-of-ai/)
+- [Low-code code camps nationwide](https://devcon.ph/case-study-zoho-creator/)
+- [Campus DEVCON Summit 2023](https://devcon.ph/case-study-campus-devcon-summit/)
+- [DEVCON Pro Summit 2023](https://devcon.ph/case-study-pro-summit/)
 
 ## Get involved
 - [Attend an event](https://devcon.ph/attend/)

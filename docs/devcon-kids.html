@@ -1,9 +1,10 @@
 <!doctype html>
 <!--
   DEVCON Philippines website
-  Version v1.59 · Updated Sep 24, 2026, 9:05 AM PHT
+  Version v1.60 · Updated Sep 24, 2026, 9:17 AM PHT
 
   Change log (newest first)
+  v1.60   Sep 24, 2026, 9:17 AM PHT   New case studies added
   v1.59   Sep 24, 2026, 9:05 AM PHT   Chapter president links go straight to the presidents section
   v1.58   Sep 24, 2026, 9:01 AM PHT   Brand Kit page added to the Community Playbook
   v1.57   Sep 24, 2026, 8:51 AM PHT   Leadership cards standardized
@@ -69,8 +70,8 @@
 <html lang="en-PH">
 <head>
 <meta charset="utf-8"/>
-<meta name="version" content="v1.59"/>
-<meta name="build-date" content="2026-09-24T09:05+08:00"/>
+<meta name="version" content="v1.60"/>
+<meta name="build-date" content="2026-09-24T09:17+08:00"/>
 <script>/* hold #anchor on arrival so it can be scrolled to smoothly */(function(){var h=location.hash;if(h&&h.length>1&&h.indexOf("#/")!==0){window.__pendingAnchor=h;try{history.scrollRestoration="manual";history.replaceState(history.state,"",location.pathname+location.search);}catch(e){}}})();</script>
 
 <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAGAUlEQVR4nO2VW2wc1RnH/985c9ubHXvX1/gW44RLHCeN2woBAUci5aWEIuFFeaCiiIJIBA+gQNWH7K76QGkfqgr1IXlAAkra7iBBIaitVKidplhV7CTgxHGsOJDitTO2s7v2+rI7OzNfH9ZJNtiRQqVKVZWfNJqZM3P0/b/rAW5xi/9XmEEAMHCytW3obHNj+Vo54r8loK8PEgAixcwLVUuZJ8rXylFusJ9iMVAcAOJgIjAzKB5f7UE8Ab72VnqMx+LU05fwnhl8RjWcN6MEugTmX8yYxF/fv4q1wvSfcvx4zb2ZUxpPD2n2iTPrNwLA6dPQkklIrNi5LgLMIKKSG7OfVTcBQJHVTMM2a3F8oLau0u+o6fMAJnzwpZexnPLhX8Na0cq0uF967WRN7RIDi3soB9CB1/dQHX2wX4JZKlBrCtmfvHdy60udnZ9ly21eFRCLQQDgg4Pd6m7vrCl5YZemkPAK2j4Ab/hlztTgfasyqDsUcqSSmScN7EY04/R8IT+5joKKaL+kP337L8Obvn0q0rHtT5VBWYws5Uu+BXX7qbvd0Qe/Ggp8lIf8IEf+oe3bL80oAMAxCMTB8b4H5F7thFld4zySycKp8ENZKvCKSG4MVXPQNy+g+AgwXNiqxKTDdQTpuo7urd/yuXPfk0daazfM1hsscTktQAQwQEUbqKtyW0jh56w57nFU9wCAdxUAoAS85Oak3Jd/IVm1kR65nGFXgNhxwczwAICk+ptcmhsLGaUo5x2SS5rIF9SCZ4tJZmMBGjWM9T+0e/joK5m2TRdzu3/++Ke6shyFy4YggCXlrGXtHVv3H27dtvdTUMK7moLBwW619b0nDkc6go9mJw1Qtee6voIEXSvI+u7cr0pPC2UZnFq5n8fP2r/3I6lTQGW91Trx0G+bvzv37Ll/hi82+ecPuAzMwre/vWvuELAIIHG13hQACL2afruqRTyGdBaeHXmLKZhbR8o+d74I2GopAWPQkYILAOgrmR060k25YJAHrJZKziuPFSksBOv5+o7x1/k4xLFjjW+uE7mfeky5VF2LyclhiRoQ9cC9UuwCAApZ7cNpK1xcsLSj1c9aT/IEF+SUAZoIQUwGSr2bgks74dBOOJQoXa8NveLt7O932G7d5aK61uPaiCTj472DHaf74jGxY8fwhbwnTjqK/PuO1uEMANBOOKBrs0MBgK6Pz70z+vCmqYWZtuFNOMbTVsYvFh3A0FmyQeVel0Emer1fdzyv57zwwwVqkJKrQ35VOwgAM4BggM6pvkNCUpZ5ac35Iq50wR0fjn2y8Y1jswxQMRVedlIVEBMgTHlr7UMvkgIgzrr199te/Z0emmtUBM68PBb8G4MpmkjYBPDnWsNbqa4t7xOBiVZSWMa1LuiFRA+IAGfgrD+V8fm+MALsI4ksMAeM4LoxmkSvB4AOcNvjrmgLaG5Dk573xQjkxUq15QBAtHPEXtODcgEAEDXhJtErARNfWfULPs5/oVIBmkYZADDN67yXBHj72w93S265X/Ha6ikbSK2f0/8AMCWw2tMbseZpOCW2ipTolilsx0XnO1fNXuEu9DJATGLjjxVsaA5crg9xQTn0Q9BiDJDATRw6awsoGUl7nepl7tKnsdWY8TolAJgr32JgkQD4xe5/3GEst+8xrEYjLd0Z+57ZgwwmIL520dyArx3HJSN52RW0mWuJi0UVpJX/sRkggLzgWPalgFsZGg8tZUfD468d/aTLOo+kNJG46fCvEnAGpcmnLt9Wo5LR4grHkapdAQB3oYZiYBEFubGO2aa5rPGDYd/UqZMNfxy1Wo/8HiNMJuI3HfobRKBEMVel6J6uqAzFNeArrfZgBCYBwJ+XJu5LRyYGcpvfXmzeMnzhy/hICjESSOAbhX+VgARMBoC/dnw05rPDp4xiUFOFYiEN9D3Qh/7+qHv7U/eEFrT9329qv9jUsSGzpS4iHj0OoHczyFzTxDcQgFiUkQDS97561l4OJO3FCldKuoBRAD1xoB/ounvmtqrIuB6uyE8T5O+aQy1/ASyY0ZtvvVvc4n+KfwMU+pBVFaZWwgAAAABJRU5ErkJggg=="/>
@@ -1459,6 +1460,30 @@ button.bk-copy-btn:hover{border-color:var(--y)}
 .bk-entity a{color:#fff;display:inline-flex;min-height:44px;align-items:center;text-decoration:underline;text-decoration-color:var(--y)}
 @media (max-width:980px){.bk-logos,.bk-swatches{grid-template-columns:repeat(2,minmax(0,1fr))}.bk-visuals{grid-template-columns:1fr 1fr}.bk-v--wide{grid-column:1/-1}.bk-type-grid{grid-template-columns:1fr}}
 @media (max-width:560px){.bk-17{grid-template-columns:1fr}.bk-entity dl{grid-template-columns:1fr}}
+
+/* v1.60 new case studies */
+.page-hero--zoho{background:radial-gradient(800px 420px at 90% 0%,rgba(228,37,39,.28),transparent 70%),radial-gradient(600px 360px at 0% 100%,rgba(242,197,0,.12),transparent 70%),var(--navy)}
+.page-hero--campus-cs{background:radial-gradient(800px 420px at 90% 0%,rgba(113,180,5,.25),transparent 70%),radial-gradient(600px 360px at 0% 100%,rgba(120,8,255,.25),transparent 70%),var(--navy)}
+.page-hero--pro-cs{background:radial-gradient(800px 420px at 90% 0%,rgba(165,123,255,.35),transparent 70%),radial-gradient(600px 360px at 0% 100%,rgba(234,100,29,.15),transparent 70%),var(--navy)}
+.cs-fig{margin:0}
+.cs-fig img{display:block;width:100%;height:auto;border-radius:22px;border:1px solid var(--line)}
+.cs-fig figcaption{margin-top:10px;font-size:.88rem;color:var(--text-muted)}
+.cs-fig--poster img{max-width:440px;margin:0 auto}
+.cs-fig--dark img{background:#0b0b0b}
+.cs-split{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(24px,4vw,56px);align-items:center}
+.cs-split--even{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:start}
+.cs-h2{margin:10px 0 14px;font-weight:900;font-size:clamp(1.5rem,1.1rem + 1.4vw,2.2rem);line-height:1.1;color:#fff}
+.gallery--2{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+.gallery--2 img{aspect-ratio:auto!important;height:100%!important;object-fit:cover}
+.gallery img.cs-tall{object-position:center}
+.cs-survey th[scope=row]{font-weight:600;text-align:left}
+.cs-survey td{font-weight:900;color:var(--y);text-align:right;white-space:nowrap}
+.cs-survey .cs-avg th,.cs-survey .cs-avg td{font-weight:900;color:#fff;border-top:2px solid var(--y)}
+.cs-sponsors p{margin:0 0 14px;padding:14px 18px;border-radius:14px;background:rgba(255,255,255,.04);border:1px solid var(--line);color:var(--text-secondary);line-height:1.6}
+.cs-sponsors b{display:block;color:var(--y);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:2px}
+.cs-sponsors a,.lead-p a,.story-block p a{color:#fff;text-decoration:underline;text-decoration-color:var(--y);display:inline-flex;align-items:center;min-height:44px}
+@media (max-width:900px){.cs-split,.cs-split--even{grid-template-columns:minmax(0,1fr)}.gallery--2{grid-template-columns:minmax(0,1fr)!important}}
+.cs-split>*{min-width:0}
 
 /* ================= MULTI-PAGE (hash routes) ================= */
 .page[hidden]{display:none!important}
