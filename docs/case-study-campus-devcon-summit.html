@@ -1,9 +1,10 @@
 <!doctype html>
 <!--
   DEVCON Philippines website
-  Version v1.66 · Updated Sep 24, 2026, 11:43 AM PHT
+  Version v1.67 · Updated Sep 24, 2026, 12:05 PM PHT
 
   Change log (newest first)
+  v1.67   Sep 24, 2026, 12:05 PM PHT  FAQ assistant added
   v1.66   Sep 24, 2026, 11:43 AM PHT  FAQ answers link to next steps
   v1.65   Sep 24, 2026, 10:32 AM PHT  Invite page guidance updated
   v1.64   Sep 24, 2026, 10:28 AM PHT  Homepage scroll animations
@@ -76,8 +77,8 @@
 <html lang="en-PH">
 <head>
 <meta charset="utf-8"/>
-<meta name="version" content="v1.66"/>
-<meta name="build-date" content="2026-09-24T11:43+08:00"/>
+<meta name="version" content="v1.67"/>
+<meta name="build-date" content="2026-09-24T12:05+08:00"/>
 <script>/* hold #anchor on arrival so it can be scrolled to smoothly */(function(){var h=location.hash;if(h&&h.length>1&&h.indexOf("#/")!==0){window.__pendingAnchor=h;try{history.scrollRestoration="manual";history.replaceState(history.state,"",location.pathname+location.search);}catch(e){}}})();</script>
 
 <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,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"/>
@@ -1545,6 +1546,49 @@ button.bk-copy-btn:hover{border-color:var(--y)}
 .faq-next a:hover{color:var(--y)}
 .faq-next-sep{color:var(--text-muted)}
 
+/* v1.67 Devie, DEVCON AI Assistant */
+.devie{position:fixed;z-index:95;left:max(16px,env(safe-area-inset-left,0px));bottom:calc(env(safe-area-inset-bottom,0px) + 16px);font-family:inherit}
+.devie-fab{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:6px 18px 6px 6px;border:0;border-radius:999px;cursor:pointer;
+  background:linear-gradient(135deg,#7808FF,#A57BFF);color:#fff;font:inherit;font-weight:900;font-size:.95rem;box-shadow:0 12px 30px rgba(120,8,255,.45)}
+.devie-fab:hover{filter:brightness(1.08)}
+.devie-fab:focus-visible,.devie-x:focus-visible,.devie-chip:focus-visible,.devie-send:focus-visible,.devie-go:focus-visible{outline:3px solid var(--y);outline-offset:2px}
+.devie-av{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background:var(--y);color:#070430;font-weight:900;font-size:1.1rem;box-shadow:inset 0 0 0 3px rgba(255,255,255,.7)}
+.devie-av--lg{width:44px;height:44px;flex:none}
+.devie.is-open .devie-fab{display:none}
+.devie-panel{display:flex;flex-direction:column;width:min(370px,calc(100vw - 32px));height:min(560px,calc(100vh - 120px));border-radius:22px;overflow:hidden;
+  background:#0b0740;border:1px solid rgba(165,123,255,.45);box-shadow:0 24px 60px rgba(0,0,0,.55)}
+.devie-panel[hidden]{display:none}
+.devie-head{display:flex;align-items:center;gap:12px;padding:12px 12px 12px 14px;background:linear-gradient(135deg,#7808FF,#4b1fb8)}
+.devie-head > div{flex:1;min-width:0}
+.devie-name{margin:0;font-weight:900;color:#fff;font-size:1.05rem}
+.devie-role{margin:0;color:rgba(255,255,255,.8);font-size:.78rem}
+.devie-x{width:44px;height:44px;border:0;border-radius:12px;background:rgba(255,255,255,.14);color:#fff;font-size:1.5rem;line-height:1;cursor:pointer}
+.devie-log{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:10px;overscroll-behavior:contain}
+.devie-msg{max-width:88%;padding:10px 13px;border-radius:16px;font-size:.92rem;line-height:1.5}
+.devie-msg p{margin:0}
+.devie-msg--bot{align-self:flex-start;background:rgba(255,255,255,.07);color:#fff;border-bottom-left-radius:6px}
+.devie-msg--me{align-self:flex-end;background:var(--y);color:#070430;font-weight:700;border-bottom-right-radius:6px}
+.devie-lang{color:var(--y);font-size:.8rem}
+.devie-links{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.devie-go{display:inline-flex;align-items:center;min-height:44px;padding:8px 12px;border-radius:12px;background:#fff;color:#070430;font-weight:800;font-size:.85rem;text-decoration:none}
+.devie-go:hover{background:var(--y)}
+.devie-chips{display:flex;gap:6px;overflow-x:auto;padding:0 12px 8px;scrollbar-width:thin}
+.devie-chip{flex:none;min-height:44px;padding:8px 12px;border-radius:999px;border:1px solid rgba(165,123,255,.6);background:transparent;color:#fff;font:inherit;font-weight:700;font-size:.82rem;cursor:pointer}
+.devie-chip:hover{border-color:var(--y);color:var(--y)}
+.devie-form{display:flex;gap:8px;padding:10px 12px;border-top:1px solid var(--line)}
+.devie-form input{flex:1;min-width:0;min-height:44px;padding:0 14px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,.06);color:#fff;font:inherit;font-size:16px}
+.devie-form input::placeholder{color:var(--text-muted)}
+.devie-form input:focus{outline:2px solid var(--y);outline-offset:1px}
+.devie-send{width:44px;height:44px;flex:none;border:0;border-radius:12px;background:var(--y);color:#070430;font-size:1.1rem;cursor:pointer}
+.devie-note{margin:0;padding:0 12px 10px;font-size:.72rem;color:var(--text-muted);line-height:1.4}
+@media (max-width:620px){
+  .devie{left:12px;bottom:calc(env(safe-area-inset-bottom,0px) + 12px)}
+  .devie-fab-t{display:none}.devie-fab{padding:6px}
+  .devie.is-open{left:8px;right:8px}
+  .devie-panel{width:100%;height:min(78vh,calc(100vh - 90px))}
+}
+@media print{.devie{display:none}}
+
 /* ================= MULTI-PAGE (hash routes) ================= */
 .page[hidden]{display:none!important}
 .narrow{max-width:880px}
@@ -2150,6 +2194,163 @@ button.bk-copy-btn:hover{border-color:var(--y)}
     a.href='mailto:'+a.getAttribute('data-to')+'?subject='+encodeURIComponent(a.getAttribute('data-subject'))+'&body='+encodeURIComponent(body);
   }
   a.addEventListener('pointerdown',build); a.addEventListener('focus',build); a.addEventListener('click',build);
+})();
+</script>
+<div class="devie" id="devie">
+  <button class="devie-fab" id="devie-fab" type="button" aria-expanded="false" aria-controls="devie-panel" aria-label="Ask Devie, the DEVCON AI Assistant">
+    <span class="devie-av" aria-hidden="true">D</span><span class="devie-fab-t">Ask Devie</span>
+  </button>
+  <section class="devie-panel" id="devie-panel" role="dialog" aria-modal="false" aria-labelledby="devie-name" hidden>
+    <header class="devie-head">
+      <span class="devie-av devie-av--lg" aria-hidden="true">D</span>
+      <div><p class="devie-name" id="devie-name">Devie</p><p class="devie-role">DEVCON AI Assistant · FAQ bot</p></div>
+      <button class="devie-x" type="button" id="devie-close" aria-label="Close Devie">&#215;</button>
+    </header>
+    <div class="devie-log" id="devie-log" role="log" aria-live="polite" aria-relevant="additions"></div>
+    <div class="devie-chips" id="devie-chips"></div>
+    <form class="devie-form" id="devie-form" autocomplete="off">
+      <label class="sr-only" for="devie-in">Ask Devie a question</label>
+      <input id="devie-in" type="text" maxlength="200" placeholder="Ask in English, Filipino, Bisaya, and more"/>
+      <button type="submit" class="devie-send" aria-label="Send">&#10148;</button>
+    </form>
+    <p class="devie-note">Devie answers basic questions about this website and points you to the right page. For anything else, email hello@devcon.ph.</p>
+  </section>
+</div>
+<script>
+/* Devie: rule-based FAQ assistant. No data leaves the browser. */
+(function(){
+  var FILES = {"home": "index.html", "story": "about.html", "programs": "programs.html", "chapters": "chapters.html", "case-studies": "devrel-case-studies.html", "sui": "case-study-sui.html", "attend": "attend.html", "invite": "invite.html", "partner": "partner.html", "leadership": "leadership.html", "icp": "case-study-icp.html", "playbook": "playbook.html", "ai-code-camps": "ai-code-camps.html", "internships": "jumpstart-internships.html", "hour-of-ai": "case-study-hour-of-ai.html", "volunteers-guide": "volunteers-guide.html", "code-of-conduct-for-national-and-chapter-officers-and-volunteers": "code-of-conduct-for-national-and-chapter-officers-and-volunteers.html", "standard-privacy-and-safespace-consent": "standard-privacy-and-safespace-consent.html", "campus-events-guidelines": "campus-events-guidelines.html", "child-protection-policy": "child-protection-policy.html", "devcon-kids": "devcon-kids.html", "campus": "campus.html", "sheisdevcon": "sheisdevcon.html", "pro-summit": "pro-summit.html", "crest": "crest.html", "dctx": "dctx.html", "educators": "educators.html", "ai-fluency": "ai-fluency-masterclass.html", "ai": "ai.html", "brand-kit": "brand-kit.html", "zoho-creator": "case-study-zoho-creator.html", "campus-summit": "case-study-campus-devcon-summit.html", "pro-summit-2023": "case-study-pro-summit.html", "mindanao-ai-caravan": "case-study-mindanao-ai-caravan.html"};
+  var root=document.getElementById('devie'); if(!root) return;
+  var fab=document.getElementById('devie-fab'), panel=document.getElementById('devie-panel'), log=document.getElementById('devie-log'),
+      chips=document.getElementById('devie-chips'), form=document.getElementById('devie-form'), inp=document.getElementById('devie-in');
+  var SPA = document.querySelectorAll('[data-page]').length > 1;
+  var here = (location.pathname.split('/').pop() || 'index.html');
+  function href(r, a){
+    if(r.indexOf('http')===0 || r.indexOf('mailto:')===0) return r;
+    if(SPA) return a ? '#'+a : '#/'+r;
+    var f = r.indexOf('chapter/')===0 ? r.slice(8)+'.html' : (FILES[r] || 'index.html');
+    return (f===here && a) ? '#'+a : f + (a ? '#'+a : '');
+  }
+  /* ---------- local greetings per chapter ---------- */
+  var G = {
+    tl:{hi:'Kumusta, ka-DEVCON!', lang:'Tagalog'},
+    ceb:{hi:'Maayong adlaw, bai!', lang:'Bisaya'},
+    hil:{hi:'Maayong adlaw! Kamusta ka dira?', lang:'Hiligaynon'},
+    bik:{hi:'Marhay na aldaw!', lang:'Bikol'},
+    pam:{hi:'Mayap a aldo!', lang:'Kapampangan'},
+    war:{hi:'Maupay nga adlaw!', lang:'Waray'}
+  };
+  var CH = {manila:['Manila','tl'],laguna:['Laguna','tl'],legazpi:['Legazpi','bik'],pampanga:['Pampanga','pam'],cebu:['Cebu','ceb'],iloilo:['Iloilo','hil'],
+            bohol:['Bohol','ceb'],bacolod:['Bacolod','hil'],tacloban:['Tacloban','war'],davao:['Davao','ceb'],iligan:['Iligan','ceb'],cagayandeoro:['Cagayan de Oro','ceb'],bukidnon:['Bukidnon','ceb']};
+  function currentChapter(){
+    var m;
+    if(SPA){ var v=[].filter.call(document.querySelectorAll('[data-page]'),function(p){return !p.hidden;})[0]; m=v && /^chapter-(.+)$/.exec(v.getAttribute('data-page')); return m&&CH[m[1]]?m[1]:null; }
+    m=/^([a-z]+)\.html$/.exec(here); return m&&CH[m[1]]?m[1]:null;
+  }
+  /* ---------- intents ---------- */
+  var ALIAS = {
+    manila:['manila','metro manila','ncr','maynila'],laguna:['laguna','calamba','santa rosa','sta rosa','los banos'],legazpi:['legazpi','albay','bicol','bikol'],
+    pampanga:['pampanga','angeles','san fernando','kapampangan'],cebu:['cebu','sugbo'],iloilo:['iloilo','ilonggo'],bohol:['bohol','tagbilaran','boholano'],
+    bacolod:['bacolod','negros'],tacloban:['tacloban','leyte','waray'],davao:['davao','dabaw'],iligan:['iligan'],cagayandeoro:['cagayan de oro','cdo','kagay'],bukidnon:['bukidnon','malaybalay','valencia']
+  };
+  var I = [
+    {k:['thank','thanks','salamat','ty','mabalos','dakal','daghang salamat','salamat gid'], t:'thanks'},
+    {k:['hello','hi','hey','yo','kumusta','kamusta','musta','maayong','mayap','marhay','maupay','oy','uy','good morning','good day','sup'], t:'hi'},
+    {k:['what is devcon','about','who are you','devcon ba','unsa ang devcon','ano ang devcon','nanu ing devcon','story','history','founded','2009','mission'], go:['story'], t:'about'},
+    {k:['event','events','attend','join','register','registration','sali','apil','intra','upcoming','meetup','schedule','devcon+','devcon plus','ticket','free','libre','magkano','pila','pira','pilan','bayad','cost','price','how much'], go:['attend'], t:'events'},
+    {k:['volunteer','boluntaryo','help out','tumulong','tabang','mutabang'], go:['home','volunteer'], t:'volunteer'},
+    {k:['partner','sponsor','sponsorship','devrel','collab','company','brand activation','kolab'], go:['partner'], t:'partner'},
+    {k:['invite','bring devcon','start a chapter','new chapter','own chapter','my city','our city','my school','our school','lgu','dalhin','dad-a'], go:['invite'], t:'invite'},
+    {k:['program','programs','offer','track','tracks'], go:['programs'], t:'programs'},
+    {k:['scholarship','certification','claude','anthropic','certified','exam','mock exam','reviewer'], go:['ai'], t:'ai'},
+    {k:['intern','internship','ojt','jumpstart','practicum','on the job'], go:['internships'], t:'intern'},
+    {k:['kids','kid','children','bata','bata-bata','hour of ai','micro:bit','microbit','teacher','teachers','educator','maestra','titser'], go:['devcon-kids'], t:'kids'},
+    {k:['code camp','codecamp','sui','move','smart contract','blockchain','icp','web3','hackathon'], go:['ai-code-camps'], t:'camps'},
+    {k:['case study','case studies','results','impact','proof','portfolio'], go:['case-studies'], t:'cases'},
+    {k:['caravan','mindanao','ai angat','nexus','hello code','hello, code'], go:['mindanao-ai-caravan'], t:'caravan'},
+    {k:['brand','logo','logos','brand kit','colors','colours','font','boilerplate','tin'], go:['brand-kit'], t:'brand'},
+    {k:['playbook','code of conduct','privacy','child protection','guidelines','policy','rules','safe space'], go:['playbook'], t:'playbook'},
+    {k:['leader','leaders','leadership','president','presidents','officer','officers','board','team','who runs'], go:['leadership'], t:'leaders'},
+    {k:['summit','pro summit','campus summit','conference','campus devcon','campus'], go:['pro-summit'], t:'summit'},
+    {k:['sheisdevcon','women','she is devcon','kababaihan'], go:['sheisdevcon'], t:'she'},
+    {k:['feedback','bug','broken','error','suggestion','report'], t:'feedback'},
+    {k:['contact','email','reach','call','message','hotline','address','office','hq','makati','ortigas'], go:['partner'], t:'contact'},
+    {k:['chapter','chapters','location','locations','near me','nearby','where','saan','asa','diin','hain','saen','nokarin','hain ka','region','city','province'], go:['chapters'], t:'where'}
+  ];
+  var R = {
+    hi:'Heyyy! 👋 I&#8217;m Devie, your DEVCON bestie. Ask me about events, chapters, volunteering, internships, AI scholarships, or partnering. I&#8217;ll send you to the right page, no cap.',
+    thanks:'Anytime, bestie! 💛 Anything else? I&#8217;m lowkey always here.',
+    about:'DEVCON Philippines is the country&#8217;s largest volunteer tech community: a non-profit since 2009, with 13 locations nationwide. This year it&#8217;s DEVCON 17: Engineering an AI-Ready Nation. ✨',
+    events:'Most DEVCON events are free, fr! 🎉 Code camps, campus talks, meetups, and Hour of AI. Find one near you and register on DEVCON+.',
+    volunteer:'Love that for you! 🙌 Volunteers keep DEVCON running. Start with your nearest chapter, then level up with our Volunteering Basics.',
+    partner:'Let&#8217;s build something big together. 🤝 Partners run DevRel code camps, sponsor summits, and fund AI Certification Scholarships, with results you can actually verify.',
+    invite:'No DEVCON in your city yet? Invite us! 📍 Heads up: outside our chapter locations, your office or local partners cover travel and lodging for our speakers. We can also connect you to other tech communities.',
+    programs:'We&#8217;ve got something for every stage: Hour of AI for Kids, open-source AI code camps, AI Fluency for Builders, Campus DEVCON, #SHEISDEVCON, and more. 🚀',
+    ai:'Slay your AI era. 🤖 Our AI Certification Scholarships start with a free Claude review track. Pass the mock exam, then apply for a fully paid attempt.',
+    intern:'Jumpstart Internships run five months: online, self-paced learning plus in-person sessions at the DEVCON HQ Office at Makati or Ortigas. Voluntary or for school credit. 💼',
+    kids:'DEVCON Kids brings coding, robotics, and AI to young learners, plus Hour of AI training so teachers keep teaching it. 🧒💻',
+    camps:'Our code camps are hands-on and every project gets verified. The Sui series hit 330+ verified Move smart contracts. 🔥',
+    cases:'Receipts? We got them. 📈 Read our DevRel case studies, from code camps to summits and the Mindanao AI Caravan.',
+    caravan:'DEVCON AI Angat was Mindanao&#8217;s first AI caravan: free Hello, Code! days for kids and teachers, and NEXUS AI training and hackathons in Bukidnon and Iligan. 🚐✨',
+    brand:'Need logos or colors? The Brand Kit has official logos, the palette, Montserrat, key visuals, and copy-ready boilerplate. 🎨',
+    playbook:'The Community Playbook has our volunteer guide, Code of Conduct, privacy and safe space consent, campus guidelines, and child protection policy. 📘',
+    leaders:'Meet the people behind DEVCON: the board, the national office, area program leaders, and all chapter presidents. 🌟',
+    summit:'DEVCON summits are where the magic happens: the PRO Summit for professional devs, and Campus DEVCON for student leaders. 🎤',
+    she:'#SHEISDEVCON celebrates and grows women in tech across the country. 💜',
+    feedback:'Spotted something off? Tell the website team with the Give Feedback tab on the right edge of the screen, and attach a screenshot. 🙏',
+    contact:'You can reach the DEVCON team at hello@devcon.ph. For partnerships, start on the Partner page. 📬',
+    where:'DEVCON has 13 locations across Luzon, Visayas, and Mindanao. Find yours on the map! 🗺️',
+    none:'Hmm, di ko pa gets yan, sorry! 😅 I&#8217;m a basic FAQ bot. Try one of these, or email hello@devcon.ph.'
+  };
+  var GO = {story:'Read our story',attend:'Find an event',volunteer:'Volunteer',partner:'Partner with DEVCON',invite:'Invite DEVCON',programs:'Explore programs',ai:'AI Scholarships',
+            internships:'Jumpstart Internships','devcon-kids':'DEVCON Kids','ai-code-camps':'AI code camps','case-studies':'DevRel case studies','mindanao-ai-caravan':'Mindanao AI Caravan',
+            'brand-kit':'Open the Brand Kit',playbook:'Community Playbook',leadership:'Meet the leadership','pro-summit':'PRO Summit',sheisdevcon:'#SHEISDEVCON',chapters:'See all 13 locations'};
+  var EXTRA = {events:[['https://www.devcon.plus','Register on DEVCON+']], volunteer:[['volunteers-guide','Volunteering Basics']], ai:[['https://claude-foundations-reviewer.vercel.app/sources','Free review track']],
+               summit:[['campus','Campus DEVCON']], contact:[['mailto:hello@devcon.ph','Email hello@devcon.ph']], invite:[['chapters','See our 13 locations']], leaders:[['leadership','Chapter presidents','chapter-presidents']]};
+  var SUGGEST = [['Events near me','events'],['Volunteer','volunteer'],['AI Scholarships','scholarship'],['Internships','internship'],['Partner with us','partner'],['Invite DEVCON','invite']];
+
+  function norm(s){ return (' '+s.toLowerCase().replace(/[^a-z0-9+:#\s-]/g,' ').replace(/\s+/g,' ')+' '); }
+  function has(t,k){ return t.indexOf(' '+k+' ')>-1 || (k.length>4 && t.indexOf(k)>-1); }
+  function el(tag,cls,html){ var e=document.createElement(tag); if(cls)e.className=cls; if(html!=null)e.innerHTML=html; return e; }
+  function linkBtn(r,label,a){ var x=el('a','devie-go'); x.href=href(r,a); x.textContent=label+' →';
+    if(/^https?:/.test(x.href)&&r.indexOf('http')===0){x.target='_blank';x.rel='noopener';}
+    x.addEventListener('click',function(){ if(SPA && r.indexOf('http')!==0 && r.indexOf('mailto:')!==0) setTimeout(close,120); }); return x; }
+  function bot(html, links){ var m=el('div','devie-msg devie-msg--bot'); m.appendChild(el('p',null,html));
+    if(links&&links.length){ var w=el('div','devie-links'); links.forEach(function(l){ w.appendChild(linkBtn(l[0],l[1],l[2])); }); m.appendChild(w); }
+    log.appendChild(m); log.scrollTop=log.scrollHeight; }
+  function me(text){ var m=el('div','devie-msg devie-msg--me'); var p=el('p'); p.textContent=text; m.appendChild(p); log.appendChild(m); log.scrollTop=log.scrollHeight; }
+  function renderChips(){ chips.innerHTML=''; SUGGEST.forEach(function(s){ var b=el('button','devie-chip'); b.type='button'; b.textContent=s[0]; b.addEventListener('click',function(){ ask(s[1], s[0]); }); chips.appendChild(b); }); }
+  function answer(q){
+    var t=norm(q);
+    // a named chapter wins
+    for(var slug in ALIAS){ for(var i=0;i<ALIAS[slug].length;i++){ if(has(t,ALIAS[slug][i])){
+      var c=CH[slug], g=G[c[1]];
+      return bot('DEVCON '+c[0]+' is in the house! 🙌 '+g.hi+' ('+g.lang+') Check their page for the chapter president, events, and how to join.',
+                 [['chapter/'+slug,'Go to DEVCON '+c[0]],['chapters','See all 13 locations']]); } } }
+    var best=null, score=0;
+    I.forEach(function(it){ var s=0; it.k.forEach(function(k){ if(has(t,k)) s+=k.split(' ').length; }); if(s>score){score=s;best=it;} });
+    if(!best){ bot(R.none, [['home','Back to home'],['chapters','Find a chapter'],['attend','Find an event']]); return; }
+    var links=[]; if(best.go) links.push([best.go[0], GO[best.go[best.go.length-1]]||GO[best.go[0]]||'Open', best.go[1]]);
+    (EXTRA[best.t]||[]).forEach(function(x){ links.push(x); });
+    if(best.t==='hi'||best.t==='thanks'){ bot(R[best.t]); return; }
+    if(best.t==='feedback'){ var fb=document.getElementById('give-feedback'); bot(R.feedback, fb?[[fb.getAttribute('href'),'Send feedback']]:null); return; }
+    bot(R[best.t], links);
+  }
+  function ask(q, shown){ me(shown||q); setTimeout(function(){ answer(q); }, 280); }
+  var greeted=false;
+  function welcome(){
+    var slug=currentChapter(), g;
+    if(slug){ g=G[CH[slug][1]]; }
+    else { var keys=Object.keys(G); g=G[keys[Math.floor(Math.random()*keys.length)]]; }
+    bot('<b>'+g.hi+'</b> <span class="devie-lang">('+g.lang+')</span><br>I&#8217;m <b>Devie</b>, your DEVCON AI Assistant. ✨ I can answer basic questions about this site and point you to the right page, bestie. Ask in English, Filipino, Bisaya, Ilonggo, and more!');
+    renderChips(); greeted=true;
+  }
+  function open(){ panel.hidden=false; fab.setAttribute('aria-expanded','true'); root.classList.add('is-open'); if(!greeted) welcome(); setTimeout(function(){ inp.focus(); },50); }
+  function close(){ panel.hidden=true; fab.setAttribute('aria-expanded','false'); root.classList.remove('is-open'); fab.focus(); }
+  fab.addEventListener('click',function(){ panel.hidden?open():close(); });
+  document.getElementById('devie-close').addEventListener('click',close);
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape' && !panel.hidden) close(); });
+  form.addEventListener('submit',function(e){ e.preventDefault(); var q=inp.value.trim(); if(!q) return; inp.value=''; ask(q); });
 })();
 </script>
 <script>
