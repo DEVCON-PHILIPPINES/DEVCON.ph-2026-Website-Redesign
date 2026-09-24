@@ -1,0 +1,21 @@
+name: Add issues and pull requests to the project board
+
+on:
+  issues:
+    types: [opened, reopened]
+  pull_request_target:
+    types: [opened, reopened, ready_for_review]
+
+permissions: {}
+
+jobs:
+  add:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Add to "DEVCON 2026 Website Design"
+        uses: actions/add-to-project@v1.0.2
+        with:
+          project-url: https://github.com/orgs/DEVCON-PHILIPPINES/projects/2
+          github-token: ${{ secrets.ADD_TO_PROJECT_PAT }}
+        continue-on-error: true

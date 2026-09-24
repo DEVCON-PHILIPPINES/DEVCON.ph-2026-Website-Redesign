@@ -29,11 +29,18 @@ Open `docs/index.html` in a browser. The pages link to each other by file name, 
 
 ## Publish with GitHub Pages
 
-1. Go to **Settings → Pages**.
-2. Under **Build and deployment**, choose **Deploy from a branch**, then select `main` and the `/docs` folder.
-3. Save. The site goes live at `https://devcon-philippines.github.io/DEVCON.ph-2026-Website-Redesign/`.
+The site deploys through the **Deploy to GitHub Pages** workflow and is live at `https://devcon-philippines.github.io/DEVCON.ph-2026-Website-Redesign/`.
 
 To serve it on devcon.ph instead, add the domain under **Custom domain** on the same Settings page.
+
+## Contributing and approvals
+
+Changes go through a pull request, a review by a website admin, and an approved deploy. See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+- **site-checks** runs on every pull request and checks links, SEO tags, structured data, and wording.
+- `main` is protected: pull request required, one approval from a code owner, passing checks, no force pushes.
+- Merges into `main` deploy to GitHub Pages after an admin approves the `github-pages` environment.
+- Issues and pull requests are added to the [DEVCON 2026 Website Design](https://github.com/orgs/DEVCON-PHILIPPINES/projects/2) project board.
 
 ## SEO
 

@@ -1,0 +1,24 @@
+name: Content update
+description: Request a text, number, photo, or link change on the website
+title: "[Content] "
+labels: [content]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Page
+      description: Which page? (e.g. cebu.html or "Homepage")
+    validations:
+      required: true
+  - type: textarea
+    id: change
+    attributes:
+      label: What should change?
+      description: Paste the current text and the new text, or attach the new photo.
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source
+      description: Where does the new information come from? (report, slide, post)
