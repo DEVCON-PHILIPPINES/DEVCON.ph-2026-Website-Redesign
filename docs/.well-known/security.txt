@@ -1,0 +1,6 @@
+Contact: mailto:hello@devcon.ph
+Contact: https://github.com/DEVCON-PHILIPPINES/DEVCON.ph-2026-Website-Redesign/security/advisories/new
+Expires: 2027-09-24T00:00:00.000Z
+Preferred-Languages: en, fil
+Policy: https://github.com/DEVCON-PHILIPPINES/DEVCON.ph-2026-Website-Redesign/blob/main/SECURITY.md
+Canonical: https://devcon-philippines.github.io/DEVCON.ph-2026-Website-Redesign/.well-known/security.txt
