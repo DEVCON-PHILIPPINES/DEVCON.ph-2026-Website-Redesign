@@ -1,9 +1,10 @@
 <!doctype html>
 <!--
   DEVCON Philippines website
-  Version v1.55 · Updated Sep 24, 2026, 8:42 AM PHT
+  Version v1.56 · Updated Sep 24, 2026, 8:47 AM PHT
 
   Change log (newest first)
+  v1.56   Sep 24, 2026, 8:47 AM PHT   Map location preview on every chapter page
   v1.55   Sep 24, 2026, 8:42 AM PHT   Sharper chapter photos and improved photo styling
   v1.54   Sep 24, 2026, 8:36 AM PHT   AI search optimization: FAQ sections, AI-friendly robots.txt, llms.txt, richer structured data
   v1.53   Sep 24, 2026, 8:32 AM PHT   Smooth scrolling to sections on the same page and across pages
@@ -65,8 +66,8 @@
 <html lang="en-PH">
 <head>
 <meta charset="utf-8"/>
-<meta name="version" content="v1.55"/>
-<meta name="build-date" content="2026-09-24T08:42+08:00"/>
+<meta name="version" content="v1.56"/>
+<meta name="build-date" content="2026-09-24T08:47+08:00"/>
 <script>/* hold #anchor on arrival so it can be scrolled to smoothly */(function(){var h=location.hash;if(h&&h.length>1&&h.indexOf("#/")!==0){window.__pendingAnchor=h;try{history.scrollRestoration="manual";history.replaceState(history.state,"",location.pathname+location.search);}catch(e){}}})();</script>
 
 <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,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"/>
@@ -1370,6 +1371,25 @@ section[id],article[id],aside[id],div[id]{scroll-margin-top:84px}
 .ch-photo--sm{max-width:620px!important}
 @media (max-width:620px){.ch-photo{border-radius:20px}.ch-photo figcaption{padding:12px 16px;font-size:.9rem!important}}
 @media (prefers-reduced-motion:reduce){.ch-photo img{transition:none}.ch-photo:hover img{transform:scale(1.01)}}
+
+/* v1.56 chapter location preview */
+.ch-loc-grid{display:grid;grid-template-columns:minmax(0,.62fr) minmax(0,1.38fr);gap:18px;align-items:stretch}
+.ch-mini{position:relative;display:flex;align-items:center;justify-content:center;border-radius:24px;overflow:hidden;
+  background:radial-gradient(circle at 60% 55%,color-mix(in srgb,var(--c) 22%,transparent),transparent 60%),rgba(255,255,255,.04);border:1px solid var(--line);padding:22px 14px;height:420px}
+.lm-frame{position:relative;height:100%;aspect-ratio:702.39/1209.44;max-width:100%}
+.lm-frame svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.lm-dot{position:absolute;width:6px;height:6px;margin:-3px 0 0 -3px;border-radius:50%;background:rgba(255,255,255,.4)}
+.lm-here{position:absolute;width:0;height:0}
+.lm-here i{position:absolute;left:-8px;top:-8px;width:16px;height:16px;border-radius:50%;background:var(--c);box-shadow:0 0 0 4px rgba(255,255,255,.9),0 0 22px 6px var(--c)}
+.lm-here i::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:2px solid var(--c);animation:lmPulse 2.4s ease-out infinite}
+.lm-here b{position:absolute;right:16px;top:-12px;white-space:nowrap;padding:3px 10px;border-radius:999px;background:#fff;color:#070430;font-weight:900;font-size:.78rem}
+@keyframes lmPulse{0%{transform:scale(1);opacity:.9}80%{transform:scale(3);opacity:0}100%{opacity:0}}
+.ch-osm{position:relative;display:flex;flex-direction:column;border-radius:24px;overflow:hidden;border:1px solid var(--line);background:rgba(255,255,255,.04);min-height:360px}
+.ch-osm iframe{display:block;width:100%;flex:1;min-height:300px;border:0;filter:saturate(.9) contrast(1.02)}
+.ch-loc-meta{display:flex;align-items:center;justify-content:space-between;gap:12px 20px;flex-wrap:wrap;padding:16px 20px;border-top:1px solid var(--line);background:rgba(7,4,48,.6)}
+.ch-loc-meta h3{margin:2px 0 0;font-weight:900;font-size:1.1rem;color:#fff}
+@media (max-width:860px){.ch-loc-grid{grid-template-columns:1fr}.ch-mini{height:340px}.ch-osm iframe{min-height:260px}}
+@media (prefers-reduced-motion:reduce){.lm-here i::after{animation:none}}
 
 /* ================= MULTI-PAGE (hash routes) ================= */
 .page[hidden]{display:none!important}
