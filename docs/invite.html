@@ -1,9 +1,10 @@
 <!doctype html>
 <!--
   DEVCON Philippines website
-  Version v1.63 · Updated Sep 24, 2026, 10:24 AM PHT
+  Version v1.64 · Updated Sep 24, 2026, 10:28 AM PHT
 
   Change log (newest first)
+  v1.64   Sep 24, 2026, 10:28 AM PHT  Homepage scroll animations
   v1.63   Sep 24, 2026, 10:24 AM PHT  New case study and homepage news grid expanded
   v1.62   Sep 24, 2026, 9:57 AM PHT   Feedback button moved to the right edge
   v1.61   Sep 24, 2026, 9:46 AM PHT   Floating feedback button added
@@ -73,8 +74,8 @@
 <html lang="en-PH">
 <head>
 <meta charset="utf-8"/>
-<meta name="version" content="v1.63"/>
-<meta name="build-date" content="2026-09-24T10:24+08:00"/>
+<meta name="version" content="v1.64"/>
+<meta name="build-date" content="2026-09-24T10:28+08:00"/>
 <script>/* hold #anchor on arrival so it can be scrolled to smoothly */(function(){var h=location.hash;if(h&&h.length>1&&h.indexOf("#/")!==0){window.__pendingAnchor=h;try{history.scrollRestoration="manual";history.replaceState(history.state,"",location.pathname+location.search);}catch(e){}}})();</script>
 
 <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,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"/>
@@ -1518,6 +1519,10 @@ button.bk-copy-btn:hover{border-color:var(--y)}
 @media (max-width:980px){.mac-people{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:560px){.mac-people,.mac-people--local{grid-template-columns:minmax(0,1fr)}.mac-table th[scope=row]{white-space:normal}}
 
+/* v1.64 homepage scroll animations */
+.reveal-on .reveal.reveal--zoom{transform:scale(.92)}
+.reveal-on .reveal.reveal--zoom.is-in{transform:none}
+
 /* ================= MULTI-PAGE (hash routes) ================= */
 .page[hidden]{display:none!important}
 .narrow{max-width:880px}
@@ -2031,11 +2036,11 @@ button.bk-copy-btn:hover{border-color:var(--y)}
   if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
   var sel=['[data-page="story"] .sec-head','[data-page="story"] .page-hero .wrap > *','[data-page="story"] .about-points li','[data-page="story"] .about-art',
            '[data-page="story"] .num-item','[data-page="story"] .story-line li','[data-page="story"] .pillar','[data-page="story"] .formula li',
-           '[data-page="story"] .page-cta .wrap > *','.about-home .about-home-grid > div','.about-home .about-chips li','[data-page="internships"] .sec-head','[data-page="internships"] .num-item','[data-page="internships"] .pp','[data-page="internships"] .steps li','[data-page="internships"] .struct li','[data-page="internships"] .voices li','[data-page="internships"] .faq-item','[data-page="internships"] .int-past','[data-page="internships"] .facts li','[data-page="internships"] .int-17-inner > *','[data-page="internships"] .way'].join(',');
+           '[data-page="story"] .page-cta .wrap > *','.about-home .about-home-grid > div','.about-home .about-chips li','[data-page="internships"] .sec-head','[data-page="internships"] .num-item','[data-page="internships"] .pp','[data-page="internships"] .steps li','[data-page="internships"] .struct li','[data-page="internships"] .voices li','[data-page="internships"] .faq-item','[data-page="internships"] .int-past','[data-page="internships"] .facts li','[data-page="internships"] .int-17-inner > *','[data-page="internships"] .way','[data-page=\"home\"] .sec-head','[data-page=\"home\"] .home-map .wrap > *:not(.sec-head)','[data-page=\"home\"] .numbers .num-item','[data-page=\"home\"] .anniv-copy','[data-page=\"home\"] .anniv-mark','[data-page=\"home\"] .teaser','[data-page=\"home\"] .news-grid > li','[data-page=\"home\"] .cta-hub .wrap > *','[data-page=\"home\"] .faq-item','[data-page=\"home\"] .partner-tier','[data-page=\"home\"] .dplus-card'].join(',');
   var els=[].slice.call(document.querySelectorAll(sel));if(!els.length)return;
   document.documentElement.classList.add('reveal-on');
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('is-in');io.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
-  els.forEach(function(el){var sib=el.parentElement?[].indexOf.call(el.parentElement.children,el):0;el.classList.add('reveal');el.style.transitionDelay=Math.min(sib,5)*90+'ms';io.observe(el);});
+  els.forEach(function(el){var sib=el.parentElement?[].indexOf.call(el.parentElement.children,el):0;el.classList.add('reveal');if(el.matches('.anniv-mark'))el.classList.add('reveal--zoom');el.style.transitionDelay=Math.min(sib,5)*90+'ms';io.observe(el);});
 })();
 </script>
 <script>
