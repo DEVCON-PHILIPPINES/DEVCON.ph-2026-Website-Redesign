@@ -23,6 +23,30 @@ def visible_text(s):
     s = re.sub(r'data:[^"\')\s]+', ' ', s)
     return html.unescape(re.sub(r'<[^>]+>', ' ', s))
 
+def security_checks(f, s):
+    """Hardening rules: strict CSP with hash-pinned inline scripts, no inline handlers, safe links."""
+    import hashlib, base64
+    e = []
+    m = re.search(r'<meta http-equiv="Content-Security-Policy" content="([^"]+)"', s)
+    if not m: return [f'{f}: missing Content-Security-Policy meta tag']
+    csp = m.group(1)
+    for need in ("default-src 'none'", "object-src 'none'", "base-uri 'none'", "form-action 'none'"):
+        if need not in csp: e.append(f'{f}: CSP is missing {need}')
+    if "'unsafe-inline'" in csp.split('script-src', 1)[1].split(';', 1)[0] or "'unsafe-eval'" in csp:
+        e.append(f'{f}: CSP must not allow unsafe-inline/unsafe-eval scripts')
+    for sm in re.finditer(r'<script([^>]*)>(.*?)</script>', s, re.S):
+        a, body = sm.group(1), sm.group(2)
+        if 'src=' in a: e.append(f'{f}: external script tags are not allowed'); continue
+        if 'application/ld+json' in a: continue
+        h = base64.b64encode(hashlib.sha256(body.encode('utf-8')).digest()).decode()
+        if f"'sha256-{h}'" not in csp: e.append(f'{f}: inline script not pinned in CSP (run harden.py)')
+    if re.search(r'<[a-z][^>]*\son[a-z]+\s*=', s): e.append(f'{f}: inline event handler attribute found')
+    if re.search(r'(href|src)\s*=\s*"\s*javascript:', s, re.I): e.append(f'{f}: javascript: URL found')
+    if re.search(r'(?:src|href)="http://', s): e.append(f'{f}: insecure http:// resource or link')
+    for a in re.findall(r'<a\s[^>]*target="_blank"[^>]*>', s):
+        if 'noopener' not in a: e.append(f'{f}: target=_blank link without rel=noopener')
+    return e
+
 def main():
     files = sorted(f for f in os.listdir(DOCS) if f.endswith('.html'))
     if not files:
@@ -39,6 +63,8 @@ def main():
             if re.match(r'https?://(www\.)?devcon\.ph', h): errors.append(f'{f}: links out to the old site ({h})'); continue
             if h.startswith(('http:', 'https:', 'mailto:', 'tel:', 'data:')): continue
             fn, _, frag = h.partition('#'); fn = fn or f
+            if fn in ('./', '/'): fn = 'index.html'
+            if fn and '.' not in fn and fn + '.html' in ids: fn = fn + '.html'   # clean URLs (GitHub Pages)
             if fn not in ids: errors.append(f'{f}: broken link to {h}')
             elif frag and frag not in ids[fn]: errors.append(f'{f}: missing anchor #{frag} in {fn}')
         for block in re.findall(r'<script type="application/ld\+json">(.*?)</script>', s, re.S):
@@ -50,6 +76,7 @@ def main():
         else: titles.setdefault(t[0], []).append(f)
         if len(d) != 1: errors.append(f'{f}: expected one meta description, found {len(d)}')
         else: descs.setdefault(d[0], []).append(f)
+        errors += security_checks(f, s)
         text = visible_text(s)
         for pat, fix in BANNED:
             if re.search(pat, text): errors.append(f'{f}: banned wording /{pat}/ ({fix})')

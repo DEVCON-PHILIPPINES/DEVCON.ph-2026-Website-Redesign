@@ -2,7 +2,7 @@
 
 The rebuilt **devcon.ph** for DEVCON 17: *Engineering an AI-Ready Nation*. It is written to replace the current devcon.ph content, so every page lives here and nothing links back to the old site.
 
-**Current version:** v1.68 · Sep 24, 2026, 12:10 PM PHT (see [CHANGELOG.md](CHANGELOG.md))
+**Current version:** v1.69 · Sep 24, 2026, 1:18 PM PHT (see [CHANGELOG.md](CHANGELOG.md))
 
 ## What's in this repo
 
@@ -32,6 +32,10 @@ Open `docs/index.html` in a browser. The pages link to each other by file name, 
 The site deploys through the **Deploy to GitHub Pages** workflow and is live at `https://devcon-philippines.github.io/DEVCON.ph-2026-Website-Redesign/`.
 
 To serve it on devcon.ph instead, add the domain under **Custom domain** on the same Settings page.
+
+## Source of truth
+
+[PRD.md](PRD.md) is the product requirements document and single source of truth for goals, pages, content rules, features, security, and workflow.
 
 ## Contributing and approvals
 
