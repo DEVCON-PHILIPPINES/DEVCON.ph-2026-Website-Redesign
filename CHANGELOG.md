@@ -4,6 +4,7 @@ Newest first. Times are Philippine Standard Time (PHT).
 
 | Version | Updated | Changes |
 |---|---|---|
+| v1.57 | Sep 24, 2026, 8:51 AM PHT | Leadership cards standardized |
 | v1.56 | Sep 24, 2026, 8:47 AM PHT | Map location preview on every chapter page |
 | v1.55 | Sep 24, 2026, 8:42 AM PHT | Sharper chapter photos and improved photo styling |
 | v1.54 | Sep 24, 2026, 8:36 AM PHT | AI search optimization: FAQ sections, AI-friendly robots.txt, llms.txt, richer structured data |

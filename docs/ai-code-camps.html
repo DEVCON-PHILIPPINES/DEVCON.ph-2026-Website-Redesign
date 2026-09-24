@@ -1,9 +1,10 @@
 <!doctype html>
 <!--
   DEVCON Philippines website
-  Version v1.56 · Updated Sep 24, 2026, 8:47 AM PHT
+  Version v1.57 · Updated Sep 24, 2026, 8:51 AM PHT
 
   Change log (newest first)
+  v1.57   Sep 24, 2026, 8:51 AM PHT   Leadership cards standardized
   v1.56   Sep 24, 2026, 8:47 AM PHT   Map location preview on every chapter page
   v1.55   Sep 24, 2026, 8:42 AM PHT   Sharper chapter photos and improved photo styling
   v1.54   Sep 24, 2026, 8:36 AM PHT   AI search optimization: FAQ sections, AI-friendly robots.txt, llms.txt, richer structured data
@@ -66,8 +67,8 @@
 <html lang="en-PH">
 <head>
 <meta charset="utf-8"/>
-<meta name="version" content="v1.56"/>
-<meta name="build-date" content="2026-09-24T08:47+08:00"/>
+<meta name="version" content="v1.57"/>
+<meta name="build-date" content="2026-09-24T08:51+08:00"/>
 <script>/* hold #anchor on arrival so it can be scrolled to smoothly */(function(){var h=location.hash;if(h&&h.length>1&&h.indexOf("#/")!==0){window.__pendingAnchor=h;try{history.scrollRestoration="manual";history.replaceState(history.state,"",location.pathname+location.search);}catch(e){}}})();</script>
 
 <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,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"/>
@@ -1390,6 +1391,29 @@ section[id],article[id],aside[id],div[id]{scroll-margin-top:84px}
 .ch-loc-meta h3{margin:2px 0 0;font-weight:900;font-size:1.1rem;color:#fff}
 @media (max-width:860px){.ch-loc-grid{grid-template-columns:1fr}.ch-mini{height:340px}.ch-osm iframe{min-height:260px}}
 @media (prefers-reduced-motion:reduce){.lm-here i::after{animation:none}}
+
+/* v1.57 area program leaders: fixed, uniform cards */
+.area-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px 20px;align-items:stretch}
+.area-col{display:flex;flex-direction:column}
+.area-col h3{margin:0 0 14px!important;min-height:1.6em}
+.area-col ul{list-style:none;margin:0;padding:0;display:grid!important;grid-template-columns:1fr!important;grid-auto-rows:1fr;gap:14px;flex:1}
+.acard{display:grid!important;grid-template-columns:96px minmax(0,1fr);gap:16px;align-items:start;height:100%;min-height:236px;box-sizing:border-box;padding:20px!important}
+.acard .ring--sm{width:96px!important;height:96px!important;flex:none!important;padding:4px}
+.acard > div{display:flex;flex-direction:column;height:100%}
+.acard h4{min-height:1.3em}
+.acard .bcard-role{min-height:1.2em}
+.acard p:not(.bcard-role):not(.acard-cover){display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.acard-cover{margin-top:auto!important;padding-top:10px}
+@media (max-width:1100px){
+  .area-grid{grid-template-columns:1fr}
+  .area-col ul{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+}
+@media (max-width:620px){
+  .area-col ul{grid-template-columns:1fr!important}
+  .acard{grid-template-columns:80px minmax(0,1fr);min-height:300px}
+  .acard p:not(.bcard-role):not(.acard-cover){-webkit-line-clamp:unset;display:block}
+  .acard .ring--sm{width:80px!important;height:80px!important}
+}
 
 /* ================= MULTI-PAGE (hash routes) ================= */
 .page[hidden]{display:none!important}
