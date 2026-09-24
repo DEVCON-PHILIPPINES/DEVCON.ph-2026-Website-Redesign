@@ -1,9 +1,10 @@
 <!doctype html>
 <!--
   DEVCON Philippines website
-  Version v1.64 · Updated Sep 24, 2026, 10:28 AM PHT
+  Version v1.65 · Updated Sep 24, 2026, 10:32 AM PHT
 
   Change log (newest first)
+  v1.65   Sep 24, 2026, 10:32 AM PHT  Invite page guidance updated
   v1.64   Sep 24, 2026, 10:28 AM PHT  Homepage scroll animations
   v1.63   Sep 24, 2026, 10:24 AM PHT  New case study and homepage news grid expanded
   v1.62   Sep 24, 2026, 9:57 AM PHT   Feedback button moved to the right edge
@@ -74,8 +75,8 @@
 <html lang="en-PH">
 <head>
 <meta charset="utf-8"/>
-<meta name="version" content="v1.64"/>
-<meta name="build-date" content="2026-09-24T10:28+08:00"/>
+<meta name="version" content="v1.65"/>
+<meta name="build-date" content="2026-09-24T10:32+08:00"/>
 <script>/* hold #anchor on arrival so it can be scrolled to smoothly */(function(){var h=location.hash;if(h&&h.length>1&&h.indexOf("#/")!==0){window.__pendingAnchor=h;try{history.scrollRestoration="manual";history.replaceState(history.state,"",location.pathname+location.search);}catch(e){}}})();</script>
 
 <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,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"/>
@@ -1523,6 +1524,19 @@ button.bk-copy-btn:hover{border-color:var(--y)}
 .reveal-on .reveal.reveal--zoom{transform:scale(.92)}
 .reveal-on .reveal.reveal--zoom.is-in{transform:none}
 
+/* v1.65 invite notes */
+.inv-notes{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:18px;align-items:stretch}
+.inv-note{position:relative;display:flex;flex-direction:column;gap:10px;padding:26px 26px 22px;border-radius:22px;background:rgba(255,255,255,.04);border:1px solid var(--line)}
+.inv-note h3{margin:0;font-weight:900;font-size:1.2rem;line-height:1.25;color:#fff}
+.inv-note p{margin:0;color:var(--text-secondary);line-height:1.65}
+.inv-note p b{color:#fff}
+.inv-note .pp-link{margin-top:auto}
+.inv-note--critical{border:2px solid var(--y);background:linear-gradient(180deg,rgba(242,197,0,.12),rgba(242,197,0,.03))}
+.inv-note-tag{align-self:flex-start;padding:4px 12px;border-radius:999px;background:var(--y);color:#070430;font-weight:900;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}
+.inv-note-ic{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:14px;background:rgba(165,123,255,.16);color:#A57BFF}
+.inv-note-ic svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+@media (max-width:860px){.inv-notes{grid-template-columns:minmax(0,1fr)}}
+
 /* ================= MULTI-PAGE (hash routes) ================= */
 .page[hidden]{display:none!important}
 .narrow{max-width:880px}
@@ -1715,8 +1729,8 @@ button.bk-copy-btn:hover{border-color:var(--y)}
       <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><span aria-current="page">Invite DEVCON</span></nav>
       <span class="eyebrow" style="color:var(--y)">Bring DEVCON to your city</span>
       <h1 id="invite-title">No DEVCON in your city yet? Invite us.</h1>
-      <p class="page-lead">Schools, companies, local governments, and tech groups can bring DEVCON programs to their community.</p>
-      <div class="hero-btns"><a class="btn-primary btn-xl" href="mailto:hello@devcon.ph?subject=Invite%20DEVCON%20to%20our%20city&amp;body=Hi%20DEVCON%20team,%0D%0A%0D%0AWe'd%20like%20to%20bring%20DEVCON%20to%20our%20area.%0D%0A%0D%0ACity%20or%20province:%0D%0ASchool,%20company,%20or%20community:%0D%0AContact%20person:%0D%0A">Invite DEVCON</a><a class="btn-outline" href="chapters.html">See where we are now</a></div>
+      <p class="page-lead">Schools, companies, local governments, and tech groups can bring DEVCON programs to their community, or get connected to other tech communities who can help.</p>
+      <div class="hero-btns"><a class="btn-primary btn-xl" href="mailto:hello@devcon.ph?subject=Invite%20DEVCON%20to%20our%20city&amp;body=Hi%20DEVCON%20team,%0D%0A%0D%0AWe'd%20like%20to%20bring%20DEVCON%20to%20our%20area.%0D%0A%0D%0ACity%20or%20province:%0D%0ASchool,%20company,%20or%20community:%0D%0AContact%20person:%0D%0ACan%20your%20office%20or%20local%20partners%20cover%20transportation%20and%20accommodations%20for%20our%20speakers%3F%20(Yes%20%2F%20No%20%2F%20Partly)%3A%0D%0A">Invite DEVCON</a><a class="btn-outline" href="chapters.html">See where we are now</a></div>
     </div>
   </header>
 
@@ -1742,11 +1756,31 @@ button.bk-copy-btn:hover{border-color:var(--y)}
       </ul>
     </div>
   </section>
+  <section class="section" aria-labelledby="inv-know">
+    <div class="wrap">
+      <header class="sec-head"><span class="eyebrow" style="color:var(--y)">Good to know before you invite</span><h2 id="inv-know">How we can help, and what we need from you</h2></header>
+      <div class="inv-notes">
+        <article class="inv-note inv-note--critical" aria-labelledby="inv-travel">
+          <span class="inv-note-tag">Important</span>
+          <h3 id="inv-travel">Outside our chapter locations, travel and lodging are on the host</h3>
+          <p>If your city is outside an existing DEVCON chapter location, <b>transportation and accommodations for our speakers and facilitators need to be covered by your office or your local partners.</b></p>
+          <p>DEVCON is a volunteer-led non-profit, so we can&#8217;t visit every location on our own. Hosts who cover travel and lodging help us keep programs free for participants and sustainable for our volunteers.</p>
+          <a class="pp-link" href="chapters.html">Check our 13 locations</a>
+        </article>
+        <article class="inv-note" aria-labelledby="inv-connect">
+          <span class="inv-note-ic" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+          <h3 id="inv-connect">We can connect you to other tech communities</h3>
+          <p>As open-source champions, we work with tech communities across the country, not just our own chapters. Tell us what your audience needs, and we can introduce you to groups and organizers who can help, from AI and cloud to design and data.</p>
+          <a class="pp-link" href="playbook.html">See our open-source Community Playbook</a>
+        </article>
+      </div>
+    </div>
+  </section>
   <section class="section">
     <div class="wrap narrow">
       <header class="sec-head"><span class="eyebrow" style="color:var(--y)">How it works</span><h2>From one event to a local chapter</h2></header>
-      <ol class="steps" role="list"><li><span class="step-n" aria-hidden="true">1</span><div><h3>Send your invite</h3><p>Tell us your city, your organization, and a contact person.</p></div></li><li><span class="step-n" aria-hidden="true">2</span><div><h3>Meet our chapters team</h3><p>We match you with the nearest chapter and the right program.</p></div></li><li><span class="step-n" aria-hidden="true">3</span><div><h3>Co-plan your first event</h3><p>Pick a date, a venue, and an audience. We bring the program and speakers.</p></div></li><li><span class="step-n" aria-hidden="true">4</span><div><h3>Grow your community</h3><p>Keep the momentum as a volunteer community, then apply to become a chapter.</p></div></li></ol>
-      <div class="programs-cta"><a class="btn-primary btn-xl" href="mailto:hello@devcon.ph?subject=Invite%20DEVCON%20to%20our%20city&amp;body=Hi%20DEVCON%20team,%0D%0A%0D%0AWe'd%20like%20to%20bring%20DEVCON%20to%20our%20area.%0D%0A%0D%0ACity%20or%20province:%0D%0ASchool,%20company,%20or%20community:%0D%0AContact%20person:%0D%0A">Invite DEVCON</a></div>
+      <ol class="steps" role="list"><li><span class="step-n" aria-hidden="true">1</span><div><h3>Send your invite</h3><p>Tell us your city, your organization, and a contact person.</p></div></li><li><span class="step-n" aria-hidden="true">2</span><div><h3>Meet our chapters team</h3><p>We match you with the nearest chapter, the right program, or another tech community that fits.</p></div></li><li><span class="step-n" aria-hidden="true">3</span><div><h3>Co-plan your first event</h3><p>Pick a date, a venue, and an audience. We bring the program and speakers. Outside our chapter locations, your office or local partners cover their transportation and accommodations.</p></div></li><li><span class="step-n" aria-hidden="true">4</span><div><h3>Grow your community</h3><p>Keep the momentum as a volunteer community, then apply to become a chapter.</p></div></li></ol>
+      <div class="programs-cta"><a class="btn-primary btn-xl" href="mailto:hello@devcon.ph?subject=Invite%20DEVCON%20to%20our%20city&amp;body=Hi%20DEVCON%20team,%0D%0A%0D%0AWe'd%20like%20to%20bring%20DEVCON%20to%20our%20area.%0D%0A%0D%0ACity%20or%20province:%0D%0ASchool,%20company,%20or%20community:%0D%0AContact%20person:%0D%0ACan%20your%20office%20or%20local%20partners%20cover%20transportation%20and%20accommodations%20for%20our%20speakers%3F%20(Yes%20%2F%20No%20%2F%20Partly)%3A%0D%0A">Invite DEVCON</a></div>
     </div>
   </section>
   <section class="section band2" id="start-a-chapter">

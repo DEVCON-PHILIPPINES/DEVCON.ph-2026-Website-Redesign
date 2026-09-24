@@ -4,6 +4,7 @@ Newest first. Times are Philippine Standard Time (PHT).
 
 | Version | Updated | Changes |
 |---|---|---|
+| v1.65 | Sep 24, 2026, 10:32 AM PHT | Invite page guidance updated |
 | v1.64 | Sep 24, 2026, 10:28 AM PHT | Homepage scroll animations |
 | v1.63 | Sep 24, 2026, 10:24 AM PHT | New case study and homepage news grid expanded |
 | v1.62 | Sep 24, 2026, 9:57 AM PHT | Feedback button moved to the right edge |
