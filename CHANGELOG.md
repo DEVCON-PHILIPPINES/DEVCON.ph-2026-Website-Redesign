@@ -4,6 +4,7 @@ Newest first. Times are Philippine Standard Time (PHT).
 
 | Version | Updated | Changes |
 |---|---|---|
+| v1.62 | Sep 24, 2026, 9:57 AM PHT | Feedback button moved to the right edge |
 | v1.61 | Sep 24, 2026, 9:46 AM PHT | Floating feedback button added |
 | v1.60 | Sep 24, 2026, 9:17 AM PHT | New case studies added |
 | v1.59 | Sep 24, 2026, 9:05 AM PHT | Chapter president links go straight to the presidents section |
