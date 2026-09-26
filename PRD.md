@@ -1,6 +1,6 @@
 # DEVCON.PH 2026 Website Redesign: Product Requirements Document
 
-**Status:** Live on GitHub Pages · **Current version:** v1.73 · **Owner:** DEVCON Philippines National Office (Communications)
+**Status:** Live on GitHub Pages · **Current version:** v1.74 · **Owner:** DEVCON Philippines National Office (Communications)
 **Source of truth:** this file. When the site, a brief, or a chat thread disagrees with this PRD, update this PRD first, then the site.
 
 ---
@@ -102,7 +102,7 @@ Feedback is collected through Devie (6.3). The right-edge Give Feedback tab was 
 - **Body:** the visitor's feedback, page, link, version, screen, browser, and a reminder to attach screenshots.
 
 ### 6.3 Devie, DEVCON AI Assistant
-A rule-based chat at the lower left of every page. It runs entirely in the browser: no AI model, no API, and no data collected.
+A rule-based chat at the lower right of every page. Devie is a **basic FAQ bot, not an AI or LLM**: it matches keywords to set answers written by the DEVCON team and runs entirely in the browser, with no AI model, no API, and no data collected. The header, welcome message, footer note, and an "are you AI?" answer all say so. The panel is up to 420 × 720 px (full width on phones) with 16 px message text, sized so the welcome fits without scrolling.
 
 - **Primary job is feedback:** the welcome asks for feedback, a Submit feedback button sits above the input, and every answer ends with a feedback prompt. Feedback mode turns the visitor's words into the feedback email in 6.2.
 - **Motion:** the panel pops in, messages slide in, and a typing indicator shows before each reply (about 0.7 to 1.6 seconds, longer for longer questions). Reduced-motion users get instant replies with no animation.
