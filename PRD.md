@@ -1,6 +1,6 @@
 # DEVCON.PH 2026 Website Redesign: Product Requirements Document
 
-**Status:** Live on GitHub Pages · **Current version:** v1.74 · **Owner:** DEVCON Philippines National Office (Communications)
+**Status:** Live on GitHub Pages · **Current version:** v1.75 · **Owner:** DEVCON Philippines National Office (Communications)
 **Source of truth:** this file. When the site, a brief, or a chat thread disagrees with this PRD, update this PRD first, then the site.
 
 ---
@@ -39,6 +39,8 @@ The site is a static, self-contained HTML build. It is a visual and content blue
 
 **Top menu:** Our Story, Programs, Locations, DevRel Case Studies, Community Playbook, Volunteer.
 
+**Homepage hero CTAs:** "Attend free events" (scrolls to the DEVCON+ banner) and "Discover a chapter near you" (opens the Locations map).
+
 **Homepage order:** hero, logo carousel ("Trusted by leaders and pioneers"), locations map (static on mobile), numbers, about, 17 years, explore, Recent news 3×3 ("What we've been building", led by the Mindanao AI Caravan as major news), Be part of DEVCON 17 hub, FAQ, partners, DEVCON+ banner.
 
 **Pages (47):**
@@ -74,7 +76,7 @@ Common aliases also redirect (for example `/sponsors/`, `/partners/`, `/contact/
 
 These rules are enforced by review and, where possible, by `scripts/check_site.py`.
 
-- **Locations:** say "13 locations", never "13 chapters". Nine are active chapters; Bohol, Bacolod, Tacloban, and Cagayan de Oro are volunteer communities.
+- **Locations:** say "13 locations", never "13 chapters". The map header reads "13 grassroots locations nationwide". Strategic growth areas (Ilocos Region, MIMAROPA with the pin in Palawan, Zamboanga, GenSan) appear on the homepage and Locations maps as dashed cyan circles that animate in last. They have no local partners or applications yet, are not part of the 13, and are not in any menu or list. Nine are active chapters; Bohol, Bacolod, Tacloban, and Cagayan de Oro are volunteer communities.
 - **Chapter status:** volunteer communities have no active or renewed chapter officers. Promotion to active chapter status follows a stringent process that tests commitment, readiness, and long-term alignment with DEVCON as a non-profit, beyond seed funds and tech hype. Volunteer-community pages use Volunteer CTAs.
 - **Who we are:** DEVCON is a volunteer tech community, not an events company. Speakers, mentors, officers, and organizers volunteer to pay it forward and give back to the community, and every program is a public good. Homepage, Locations, every chapter page, Leadership, and Invite carry this message.
 - **Chapter capacity:** as a volunteer community, DEVCON has limited capacity. To date, 4 chapters were not renewed for non-compliance and inactivity. DEVCON always prioritizes quality over quantity, of both events and impact. Requirements are listed on the Invite page (`/invite/#chapter-requirements`).
@@ -107,6 +109,7 @@ A rule-based chat at the lower right of every page. Devie is a **basic FAQ bot, 
 - **Primary job is feedback:** the welcome asks for feedback, a Submit feedback button sits above the input, and every answer ends with a feedback prompt. Feedback mode turns the visitor's words into the feedback email in 6.2.
 - **Motion:** the panel pops in, messages slide in, and a typing indicator shows before each reply (about 0.7 to 1.6 seconds, longer for longer questions). Reduced-motion users get instant replies with no animation.
 - **Local welcome:** the greeting matches the chapter page (Tagalog, Bisaya, Hiligaynon, Bikol, Kapampangan, or Waray) and is random elsewhere.
+- **Fallback:** unknown questions get "Oops, I'm not yet trained for that question!" plus suggestions.
 - **FAQ answers:** basic questions in English, Filipino, and regional words, with a Gen Z tone. Every answer links to the right page or section.
 
 ### 6.4 Other features
