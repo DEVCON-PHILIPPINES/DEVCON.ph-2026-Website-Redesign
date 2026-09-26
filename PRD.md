@@ -1,6 +1,6 @@
 # DEVCON.PH 2026 Website Redesign: Product Requirements Document
 
-**Status:** Live on GitHub Pages · **Current version:** v1.72 · **Owner:** DEVCON Philippines National Office (Communications)
+**Status:** Live on GitHub Pages · **Current version:** v1.73 · **Owner:** DEVCON Philippines National Office (Communications)
 **Source of truth:** this file. When the site, a brief, or a chat thread disagrees with this PRD, update this PRD first, then the site.
 
 ---
@@ -76,7 +76,9 @@ These rules are enforced by review and, where possible, by `scripts/check_site.p
 
 - **Locations:** say "13 locations", never "13 chapters". Nine are active chapters; Bohol, Bacolod, Tacloban, and Cagayan de Oro are volunteer communities.
 - **Chapter status:** volunteer communities have no active or renewed chapter officers. Promotion to active chapter status follows a stringent process that tests commitment, readiness, and long-term alignment with DEVCON as a non-profit, beyond seed funds and tech hype. Volunteer-community pages use Volunteer CTAs.
-- **How chapters start:** every chapter starts with a DEVCON speaker paying it forward at a free event. Outside existing chapter locations, the host's office or local partners cover speakers' transportation and accommodations; DEVCON is volunteer-led and can't visit every location.
+- **Who we are:** DEVCON is a volunteer tech community, not an events company. Speakers, mentors, officers, and organizers volunteer to pay it forward and give back to the community, and every program is a public good. Homepage, Locations, every chapter page, Leadership, and Invite carry this message.
+- **Chapter capacity:** as a volunteer community, DEVCON has limited capacity. To date, 4 chapters were not renewed for non-compliance and inactivity. DEVCON always prioritizes quality over quantity, of both events and impact. Requirements are listed on the Invite page (`/invite/#chapter-requirements`).
+- **How chapters start:** every chapter starts with a DEVCON speaker paying it forward at a free event. Hosts cover each volunteer speaker's transportation, meals, a token of appreciation, and accommodations (as applicable); this is required outside existing chapter locations. Invitations go to hello@devcon.ph using the pre-filled invitation email on the Invite page.
 - **Office:** "DEVCON HQ Office at Makati or Ortigas".
 - **Programs and names:** "AI Fluency for Builders"; "Beyond the capital" (chapter presidents section); mention AI Certification Scholarships; AI tools are "OpenCode, Anthropic Claude, Ollama, and more".
 - **AI Scholarships:** scholarships and exam attempts are granted on an approval basis and are not guaranteed.
