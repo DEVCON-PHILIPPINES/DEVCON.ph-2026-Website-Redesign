@@ -4,7 +4,7 @@ Newest first. Times are Philippine Standard Time (PHT).
 
 | Version | Updated | Changes |
 |---|---|---|
-| v1.78 | Sep 27, 2026, 8:06 PM PHT | Location pages restructured |
+| v1.78 | Sep 27, 2026, 8:28 PM PHT | Location pages restructured |
 | v1.77 | Sep 27, 2026, 9:16 AM PHT | Chapter page additions and case study partner credits |
 | v1.76 | Sep 27, 2026, 9:03 AM PHT | Hosting labels updated and old addresses redirected |
 | v1.75 | Sep 26, 2026, 5:13 PM PHT | Homepage CTAs, map growth areas, and educator stories |
