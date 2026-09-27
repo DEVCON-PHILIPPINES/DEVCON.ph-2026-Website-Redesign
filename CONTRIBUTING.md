@@ -7,8 +7,8 @@ Thanks for helping. DEVCON is a volunteer tech community, and this site is open 
 | Branch | Environment | URL | Who merges |
 |---|---|---|---|
 | `feature/*`, `content/*`, `fix/*`, `docs/*`, `chore/*` | Pull request preview | Cloudflare posts a preview link on each PR | Nobody; these are short-lived |
-| `staging` (default branch) | **Staging** | https://staging.devcon-ph-2026-website-redesign.pages.dev | HQ leaders, after review |
-| `main` | **Production** | https://devcon-philippines.github.io/DEVCON.ph-2026-Website-Redesign/ and https://devcon-ph-2026-website-redesign.pages.dev | HQ leaders, release PRs only |
+| `staging` (default branch) | **staging-** (GitHub Pages) | https://devcon-philippines.github.io/staging-devcon-ph-2026-website-redesign/ | HQ leaders, after review |
+| `main` | **prod-** (Cloudflare Pages) | https://prod-devcon-ph-2026-website-redesign.pages.dev | HQ leaders, release PRs only |
 | `hotfix/*` | Emergency fix | Preview link | HQ leaders, straight into `main` |
 
 ## How a change goes live
@@ -17,9 +17,9 @@ Thanks for helping. DEVCON is a volunteer tech community, and this site is open 
 2. **Branch from `staging`** using a prefix: `content/cebu-photos`, `fix/map-pins`, `feature/devie-faq`. External contributors fork the repo and branch the same way.
 3. **Open a pull request into `staging`.** It's the default base. Checks run automatically: **site-checks** (links, SEO, structured data, wording, security) and **CodeQL**. Cloudflare posts a preview link.
 4. **An HQ leader reviews and approves.** Code owners in `.github/CODEOWNERS` are the only approvers. New pushes reset the approval, all review comments must be resolved, and the approver can't be the person who pushed last.
-5. **Squash-merge into `staging`.** The staging site updates automatically for a final look.
+5. **Squash-merge into `staging`.** **Deploy staging (GitHub Pages)** updates staging- automatically for a final look.
 6. **Release to production.** An HQ leader opens a pull request from `staging` into `main`, gets approval from another HQ leader, and merges it with a merge commit, which keeps both branches in sync.
-7. **Approve the production deploy.** The **Deploy (GitHub Pages + Cloudflare Pages)** workflow waits for an HQ leader to approve the `github-pages` environment, deploys the same commit to both hosts, and verifies they match.
+7. **Approve the production deploy.** The **Deploy production (Cloudflare Pages)** workflow waits for an HQ leader to approve the `production` environment, deploys to prod-, and verifies every page.
 
 **Hotfixes:** branch `hotfix/<name>` from `main`, open a PR into `main`, get HQ approval, release, then open a PR from `main` back into `staging` so the fix isn't lost.
 

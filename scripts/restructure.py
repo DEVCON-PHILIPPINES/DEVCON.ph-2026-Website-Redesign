@@ -175,7 +175,8 @@ nav a.primary{background:#F2C500;border-color:#F2C500;color:#070430}
 (function(){
   var A=__ALIAS__;
   var parts=location.pathname.split('/').filter(Boolean), base='/';
-  var k=parts.indexOf('DEVCON.ph-2026-Website-Redesign'); if(k>-1){ base='/'+parts.slice(0,k+1).join('/')+'/'; parts=parts.slice(k+1); }
+  var k=-1; ['staging-devcon-ph-2026-website-redesign','DEVCON.ph-2026-Website-Redesign'].forEach(function(n){ if(k<0) k=parts.indexOf(n); });
+  if(k>-1){ base='/'+parts.slice(0,k+1).join('/')+'/'; parts=parts.slice(k+1); }
   var p=parts.join('/').toLowerCase().replace(/\\.(html?|php)$/,'').replace(/\\/(feed|amp|page\\/\\d+)$/,'');
   function go(slug){ location.replace(base+(slug?slug+'/':'')+location.hash); }
   if(Object.prototype.hasOwnProperty.call(A,p)){ go(A[p]); return; }

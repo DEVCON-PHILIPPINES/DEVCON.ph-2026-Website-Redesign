@@ -1,6 +1,6 @@
 # DEVCON.PH 2026 Website Redesign: Product Requirements Document
 
-**Status:** Live on GitHub Pages · **Current version:** v1.75 · Workflow: staging → production · **Owner:** DEVCON Philippines National Office (Communications)
+**Status:** Live on GitHub Pages · **Current version:** v1.76 · Workflow: staging → production · **Owner:** DEVCON Philippines National Office (Communications)
 **Source of truth:** this file. When the site, a brief, or a chat thread disagrees with this PRD, update this PRD first, then the site.
 
 ---
@@ -9,7 +9,7 @@
 
 The DEVCON.PH 2026 website is the public home of DEVCON Philippines (DevConnect Philippines Inc.), the country's largest volunteer tech community: a non-profit founded in 2009 with 13 locations nationwide. The 2026 redesign launches with DEVCON 17 and its theme, **Engineering an AI-Ready Nation**.
 
-The site is a static, self-contained HTML build. It is a visual and content blueprint for the eventual production site at devcon.ph, and it is live today at https://devcon-philippines.github.io/DEVCON.ph-2026-Website-Redesign/.
+The site is a static, self-contained HTML build. It is a visual and content blueprint for the eventual production site at devcon.ph, and it runs in two environments: **staging-** on GitHub Pages (https://devcon-philippines.github.io/staging-devcon-ph-2026-website-redesign/) and **prod-** on Cloudflare Pages (https://prod-devcon-ph-2026-website-redesign.pages.dev).
 
 ## 2. Goals
 
@@ -152,6 +152,8 @@ The site is static, has no backend, and stores no personal data. Hardening:
 
 ## 10. Workflow and governance
 
+**Environment labels:** GitHub Pages is **staging-**, Cloudflare Pages is **prod-**. Old addresses redirect with no 404s: the previous GitHub Pages path is forwarded by the `devcon-philippines.github.io` redirect repo to staging (same path), and the previous `devcon-ph-2026-website-redesign.pages.dev` project 301-redirects to prod- (its old staging alias goes to staging-). Keep both redirect sources in place.
+
 The site is open source and welcomes outside contributors; **approval is centralized to HQ leaders** (`@domdeleondevcon`, `@JFernando-DEVCON`, later the `hq-leaders` team).
 
 **Branches and environments**
@@ -159,8 +161,8 @@ The site is open source and welcomes outside contributors; **approval is central
 | Branch | Environment | Deploys to | Protection |
 |---|---|---|---|
 | `feature/*`, `content/*`, `fix/*`, `docs/*`, `chore/*` | PR preview | Cloudflare preview URL per pull request | None; short-lived, deleted after merge |
-| `staging` (default) | Staging | https://staging.devcon-ph-2026-website-redesign.pages.dev (noindex) | PR required, 1 code-owner (HQ) approval, last-push approval, conversations resolved, site-checks and CodeQL required, squash only, no bypass, no force push or deletion |
-| `main` | Production | GitHub Pages and Cloudflare Pages production | Same as staging, plus the release-source check (PRs from `staging` or `hotfix/*` only), merge commits only, and an HQ-approved `github-pages` environment (no admin bypass, no self-review) |
+| `staging` (default) | staging- (GitHub Pages) | https://devcon-philippines.github.io/staging-devcon-ph-2026-website-redesign/ (noindex) | PR required, 1 code-owner (HQ) approval, last-push approval, conversations resolved, site-checks and CodeQL required, squash only, no bypass, no force push or deletion |
+| `main` | prod- (Cloudflare Pages) | https://prod-devcon-ph-2026-website-redesign.pages.dev | Same as staging, plus the release-source check (PRs from `staging` or `hotfix/*` only), merge commits only, and an HQ-approved `github-pages` environment (no admin bypass, no self-review) |
 
 **Flow**
 
@@ -168,7 +170,7 @@ The site is open source and welcomes outside contributors; **approval is central
 2. Checks run and Cloudflare posts a preview link; an HQ leader approves and squash-merges.
 3. `staging` auto-deploys to the staging URL.
 4. An HQ leader opens a release PR from `staging` into `main`; another HQ leader approves it; merge with a merge commit.
-5. **Deploy (GitHub Pages + Cloudflare Pages)** waits for HQ approval, deploys the same commit to both production hosts, and verifies they match. Cloudflare's own Git production deploys are off.
+5. **Deploy production (Cloudflare Pages)** waits for HQ approval in the `production` environment, deploys to prod-, and verifies every page. Staging deploys to GitHub Pages automatically on each merge into `staging`. Cloudflare's own Git production deploys are off.
 6. Hotfixes: `hotfix/*` from `main` into `main`, then back-merge `main` into `staging`.
 
 **Other controls:** outside-contributor workflow runs need approval, only GitHub-owned actions are allowed, workflow tokens are read-only, Cloudflare credentials are environment secrets (production and staging) that only approved deploy jobs can read, and Dependabot targets `staging`. Every release bumps the minor version and updates `CHANGELOG.md`.

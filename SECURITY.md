@@ -12,7 +12,7 @@ The site is static: no backend, no accounts, no stored personal data.
 - **No inline event handlers or `javascript:` URLs, and no external script files.**
 - **Anti-clickjacking:** pages hide themselves when framed by another site.
 - **Links:** every new-tab link uses `rel="noopener"`, and the referrer policy is `strict-origin-when-cross-origin`.
-- **Delivery:** GitHub Pages' CDN with HTTPS enforced. For devcon.ph, use Cloudflare for DDoS protection, WAF, and rate limiting.
+- **Delivery:** production on Cloudflare Pages (DDoS protection, security headers), staging on GitHub Pages with HTTPS enforced and noindex. For devcon.ph, add WAF and rate limiting on the zone.
 - **Repo:** protected `main`, code-owner review, deploy approval, secret scanning with push protection, Dependabot, CodeQL, and read-only workflow permissions.
 
 `scripts/check_site.py` enforces these rules on every pull request. After editing a page, regenerate the CSP hashes with the build's `harden.py` step.

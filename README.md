@@ -2,7 +2,7 @@
 
 The rebuilt **devcon.ph** for DEVCON 17: *Engineering an AI-Ready Nation*. It is written to replace the current devcon.ph content, so every page lives here and nothing links back to the old site.
 
-**Current version:** v1.75 · Sep 26, 2026, 5:13 PM PHT (see [CHANGELOG.md](CHANGELOG.md))
+**Current version:** v1.76 · Sep 27, 2026, 9:03 AM PHT (see [CHANGELOG.md](CHANGELOG.md))
 
 ## What's in this repo
 
@@ -29,7 +29,7 @@ Open `docs/index.html` in a browser. The pages link to each other by file name, 
 
 ## Publish with GitHub Pages
 
-The site deploys through the **Deploy to GitHub Pages** workflow and is live at `https://devcon-philippines.github.io/DEVCON.ph-2026-Website-Redesign/`.
+Merges into `staging` deploy to **staging-** (GitHub Pages) automatically. Release merges into `main` deploy to **prod-** (Cloudflare Pages) after HQ approval.
 
 To serve it on devcon.ph instead, add the domain under **Custom domain** on the same Settings page.
 
@@ -39,8 +39,10 @@ To serve it on devcon.ph instead, add the domain under **Custom domain** on the 
 
 ## Environments
 
-- **Staging:** https://staging.devcon-ph-2026-website-redesign.pages.dev (branch `staging`, the default)
-- **Production:** https://devcon-philippines.github.io/DEVCON.ph-2026-Website-Redesign/ and https://devcon-ph-2026-website-redesign.pages.dev (branch `main`)
+- **staging-** (GitHub Pages, branch `staging`, noindex): https://devcon-philippines.github.io/staging-devcon-ph-2026-website-redesign/
+- **prod-** (Cloudflare Pages, branch `main`): https://prod-devcon-ph-2026-website-redesign.pages.dev
+
+Old addresses redirect automatically: the previous GitHub Pages URL goes to staging, and the previous Cloudflare URL goes to production.
 
 Open pull requests against `staging`. HQ leaders review, merge, and release to `main`. See [CONTRIBUTING.md](CONTRIBUTING.md).
 

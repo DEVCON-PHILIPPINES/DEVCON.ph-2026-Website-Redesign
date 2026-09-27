@@ -1,6 +1,7 @@
-name: Deploy staging (Cloudflare Pages preview)
+name: Deploy staging (GitHub Pages)
 
-# Every merge into `staging` publishes to the stable staging URL for HQ review before release.
+# staging-: https://devcon-philippines.github.io/staging-devcon-ph-2026-website-redesign/
+# Every merge into `staging` publishes here for HQ review before release. Staging is kept out of search results.
 on:
   push:
     branches: [staging]
@@ -12,8 +13,8 @@ permissions:
   contents: read
 
 concurrency:
-  group: staging-deploy
-  cancel-in-progress: true
+  group: pages
+  cancel-in-progress: false
 
 jobs:
   check:
@@ -34,31 +35,37 @@ jobs:
     needs: check
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
     environment:
-      name: staging
-      url: https://staging.${{ vars.CLOUDFLARE_PROJECT }}.pages.dev/
+      name: github-pages
+      url: ${{ steps.gh.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
         with:
           persist-credentials: false
-      - name: Deploy to Cloudflare Pages (staging alias)
-        env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+      - name: Prepare staging copy (noindex)
         run: |
-          npx --yes wrangler@3 pages deploy docs \
-            --project-name "${{ vars.CLOUDFLARE_PROJECT }}" \
-            --branch staging \
-            --commit-hash "${{ github.sha }}" \
-            --commit-message "$(git log -1 --pretty=%s | head -c 300)" \
-            --commit-dirty=true
-      - name: Verify staging serves this version
+          rm -rf _site && cp -r docs _site
+          printf 'User-agent: *\nDisallow: /\n' > _site/robots.txt
+          find _site -name '*.html' -print0 | xargs -0 sed -i 's#<meta charset="utf-8"/>#<meta charset="utf-8"/>\n<meta name="robots" content="noindex, nofollow"/>#'
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: gh
+        name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
+      - name: Verify staging
+        env:
+          STG_URL: ${{ steps.gh.outputs.page_url }}
         run: |
           expected=$(grep -o '<meta name="version" content="[^"]*"' docs/index.html | head -1 | sed 's/.*content="//;s/"//')
-          url="https://staging.${{ vars.CLOUDFLARE_PROJECT }}.pages.dev/"
           for i in $(seq 1 20); do
-            v=$(curl -s -A "Mozilla/5.0 (DEVCON staging check)" "$url?v=$RANDOM" | grep -o '<meta name="version" content="[^"]*"' | head -1 | sed 's/.*content="//;s/"//')
-            [ "$v" = "$expected" ] && { echo "Staging is live: $url ($v)"; exit 0; }
-            sleep 10
+            v=$(curl -s -A "Mozilla/5.0 (DEVCON staging check)" "${STG_URL}?v=$RANDOM" | grep -o '<meta name="version" content="[^"]*"' | head -1 | sed 's/.*content="//;s/"//')
+            [ "$v" = "$expected" ] && { echo "Staging is live: $STG_URL ($v)"; exit 0; }
+            sleep 15
           done
-          echo "::error::Staging is serving '$v', expected '$expected'"; exit 1
+          echo "::error::Staging serves '$v', expected '$expected'"; exit 1
