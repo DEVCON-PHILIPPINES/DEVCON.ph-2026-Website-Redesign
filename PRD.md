@@ -1,6 +1,6 @@
 # DEVCON.PH 2026 Website Redesign: Product Requirements Document
 
-**Status:** Live on GitHub Pages · **Current version:** v1.75 · **Owner:** DEVCON Philippines National Office (Communications)
+**Status:** Live on GitHub Pages · **Current version:** v1.75 · Workflow: staging → production · **Owner:** DEVCON Philippines National Office (Communications)
 **Source of truth:** this file. When the site, a brief, or a chat thread disagrees with this PRD, update this PRD first, then the site.
 
 ---
@@ -152,13 +152,26 @@ The site is static, has no backend, and stores no personal data. Hardening:
 
 ## 10. Workflow and governance
 
-1. Open an issue (Content update or Bug report); it lands on the project board (org project #2).
-2. Branch from `main`, change the site, and open a pull request.
-3. **site-checks** must pass: links, anchors, SEO tags, JSON-LD, wording, and security rules.
-4. A code owner approves (`@domdeleondevcon` or `@JFernando-DEVCON`), then squash-merge.
-5. **Deploy (GitHub Pages + Cloudflare Pages)** runs and waits for an admin to approve the `github-pages` environment. One approval deploys the same commit to Cloudflare Pages first, then GitHub Pages, and a verify job confirms both hosts serve the same version and every page. Cloudflare's Git auto-deploy for production is off, so production only changes through this workflow; pull requests still get Cloudflare preview URLs.
+The site is open source and welcomes outside contributors; **approval is centralized to HQ leaders** (`@domdeleondevcon`, `@JFernando-DEVCON`, later the `hq-leaders` team).
 
-Every release bumps the minor version and updates `CHANGELOG.md`.
+**Branches and environments**
+
+| Branch | Environment | Deploys to | Protection |
+|---|---|---|---|
+| `feature/*`, `content/*`, `fix/*`, `docs/*`, `chore/*` | PR preview | Cloudflare preview URL per pull request | None; short-lived, deleted after merge |
+| `staging` (default) | Staging | https://staging.devcon-ph-2026-website-redesign.pages.dev (noindex) | PR required, 1 code-owner (HQ) approval, last-push approval, conversations resolved, site-checks and CodeQL required, squash only, no bypass, no force push or deletion |
+| `main` | Production | GitHub Pages and Cloudflare Pages production | Same as staging, plus the release-source check (PRs from `staging` or `hotfix/*` only), merge commits only, and an HQ-approved `github-pages` environment (no admin bypass, no self-review) |
+
+**Flow**
+
+1. Branch from `staging` (or fork) and open a PR into `staging`.
+2. Checks run and Cloudflare posts a preview link; an HQ leader approves and squash-merges.
+3. `staging` auto-deploys to the staging URL.
+4. An HQ leader opens a release PR from `staging` into `main`; another HQ leader approves it; merge with a merge commit.
+5. **Deploy (GitHub Pages + Cloudflare Pages)** waits for HQ approval, deploys the same commit to both production hosts, and verifies they match. Cloudflare's own Git production deploys are off.
+6. Hotfixes: `hotfix/*` from `main` into `main`, then back-merge `main` into `staging`.
+
+**Other controls:** outside-contributor workflow runs need approval, only GitHub-owned actions are allowed, workflow tokens are read-only, Cloudflare credentials are environment secrets (production and staging) that only approved deploy jobs can read, and Dependabot targets `staging`. Every release bumps the minor version and updates `CHANGELOG.md`.
 
 ## 11. Acceptance criteria for any release
 

@@ -1,24 +1,39 @@
 # Contributing to the DEVCON.ph 2026 website
 
-Thanks for helping. Every change goes through a pull request, a review, and an approved deploy.
+Thanks for helping. DEVCON is a volunteer tech community, and this site is open source. Anyone can propose a change; **HQ leaders approve every merge and every production release.**
 
-## How changes go live
+## Branches and environments
 
-1. **Open an issue** (Content update or Bug report). It is added to the [DEVCON 2026 Website Design](https://github.com/orgs/DEVCON-PHILIPPINES/projects/2) project board automatically.
-2. **Create a branch** from `main`, such as `content/cebu-photos`, and make your change in `docs/`.
-3. **Open a pull request.** The **site-checks** job runs automatically and checks links, SEO tags, structured data, and style-guide wording.
-4. **Get a review.** A website admin (see `.github/CODEOWNERS`) must approve before the pull request can merge. Pushing new commits resets the approval.
-5. **Approve the deploy.** After the merge, the **Deploy (GitHub Pages + Cloudflare Pages)** workflow waits for an admin to approve the `github-pages` environment, then publishes the same commit to both hosts and verifies they match.
+| Branch | Environment | URL | Who merges |
+|---|---|---|---|
+| `feature/*`, `content/*`, `fix/*`, `docs/*`, `chore/*` | Pull request preview | Cloudflare posts a preview link on each PR | Nobody; these are short-lived |
+| `staging` (default branch) | **Staging** | https://staging.devcon-ph-2026-website-redesign.pages.dev | HQ leaders, after review |
+| `main` | **Production** | https://devcon-philippines.github.io/DEVCON.ph-2026-Website-Redesign/ and https://devcon-ph-2026-website-redesign.pages.dev | HQ leaders, release PRs only |
+| `hotfix/*` | Emergency fix | Preview link | HQ leaders, straight into `main` |
 
-Direct pushes to `main`, force pushes, and branch deletion are blocked for everyone.
+## How a change goes live
+
+1. **Open an issue** (Content update or Bug report). It lands on the [project board](https://github.com/orgs/DEVCON-PHILIPPINES/projects/2).
+2. **Branch from `staging`** using a prefix: `content/cebu-photos`, `fix/map-pins`, `feature/devie-faq`. External contributors fork the repo and branch the same way.
+3. **Open a pull request into `staging`.** It's the default base. Checks run automatically: **site-checks** (links, SEO, structured data, wording, security) and **CodeQL**. Cloudflare posts a preview link.
+4. **An HQ leader reviews and approves.** Code owners in `.github/CODEOWNERS` are the only approvers. New pushes reset the approval, all review comments must be resolved, and the approver can't be the person who pushed last.
+5. **Squash-merge into `staging`.** The staging site updates automatically for a final look.
+6. **Release to production.** An HQ leader opens a pull request from `staging` into `main`, gets approval from another HQ leader, and merges it with a merge commit, which keeps both branches in sync.
+7. **Approve the production deploy.** The **Deploy (GitHub Pages + Cloudflare Pages)** workflow waits for an HQ leader to approve the `github-pages` environment, deploys the same commit to both hosts, and verifies they match.
+
+**Hotfixes:** branch `hotfix/<name>` from `main`, open a PR into `main`, get HQ approval, release, then open a PR from `main` back into `staging` so the fix isn't lost.
+
+## Rules that are enforced
+
+- No direct pushes, force pushes, or branch deletion on `staging` or `main`, for anyone, including admins.
+- `main` only accepts pull requests from `staging` or `hotfix/*` (the **release-source** check).
+- Production deploys need an HQ leader's approval, and admins can't bypass it.
+- Pull requests from first-time and outside contributors need approval before workflows run.
+- Workflows are read-only by default; secrets are only available to approved deploy jobs.
 
 ## Style guide
 
-- Say **13 locations**, never "13 chapters".
-- Say **AI Fluency for Builders** and **Beyond the capital**.
-- Say **DEVCON HQ Office at Makati or Ortigas**.
-- No links to the old devcon.ph site. Every page lives in this repo.
-- Keep changelog notes generic, with no sponsor, partner, or people names.
+See section 5 of [PRD.md](PRD.md). The basics: say **13 locations** (never "13 chapters"), **AI Fluency for Builders**, **Beyond the capital**, **DEVCON HQ Office at Makati or Ortigas**; no links to the old devcon.ph site; generic changelog notes.
 
 ## Run the checks locally
 

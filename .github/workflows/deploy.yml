@@ -92,7 +92,7 @@ jobs:
           echo "Expected version: $expected"
           check() {  # $1 = base url
             for i in $(seq 1 20); do
-              v=$(curl -s "$1?v=$RANDOM" | grep -o '<meta name="version" content="[^"]*"' | head -1 | sed 's/.*content="//;s/"//')
+              v=$(curl -s -A "Mozilla/5.0 (DEVCON deploy check)" "$1?v=$RANDOM" | grep -o '<meta name="version" content="[^"]*"' | head -1 | sed 's/.*content="//;s/"//')
               [ "$v" = "$expected" ] && { echo "OK $1 -> $v"; return 0; }
               echo "waiting on $1 (got '$v')"; sleep 15
             done
@@ -103,7 +103,7 @@ jobs:
           fail=0
           for p in $(python3 -c "import json;print(' '.join(json.load(open('docs/url-map.json'))['pages']))"); do
             for base in "${GH_URL%/}" "${CF_URL%/}"; do
-              code=$(curl -s -o /dev/null -w '%{http_code}' "$base$p")
+              code=$(curl -s -A "Mozilla/5.0 (DEVCON deploy check)" -o /dev/null -w '%{http_code}' "$base$p")
               [ "$code" = "200" ] || { echo "::error::$base$p returned $code"; fail=1; }
             done
           done

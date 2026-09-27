@@ -37,6 +37,13 @@ To serve it on devcon.ph instead, add the domain under **Custom domain** on the 
 
 [PRD.md](PRD.md) is the product requirements document and single source of truth for goals, pages, content rules, features, security, and workflow.
 
+## Environments
+
+- **Staging:** https://staging.devcon-ph-2026-website-redesign.pages.dev (branch `staging`, the default)
+- **Production:** https://devcon-philippines.github.io/DEVCON.ph-2026-Website-Redesign/ and https://devcon-ph-2026-website-redesign.pages.dev (branch `main`)
+
+Open pull requests against `staging`. HQ leaders review, merge, and release to `main`. See [CONTRIBUTING.md](CONTRIBUTING.md).
+
 ## Contributing and approvals
 
 Changes go through a pull request, a review by a website admin, and an approved deploy. See [CONTRIBUTING.md](CONTRIBUTING.md).
