@@ -1,6 +1,6 @@
 # DEVCON.PH 2026 Website Redesign: Product Requirements Document
 
-**Status:** Live on GitHub Pages · **Current version:** v1.82 · Workflow: staging → production · **Owner:** DEVCON Philippines National Office (Communications)
+**Status:** Live on GitHub Pages · **Current version:** v1.83 · Workflow: staging → production · **Owner:** DEVCON Philippines National Office (Communications)
 **Source of truth:** this file. When the site, a brief, or a chat thread disagrees with this PRD, update this PRD first, then the site.
 
 ---
@@ -43,12 +43,12 @@ The site is a static, self-contained HTML build. It is a visual and content blue
 
 **Homepage order:** hero, logo carousel ("Trusted by leaders and pioneers"), locations map (static on mobile), numbers, about, 17 years, explore, Recent news 3×3 ("What we've been building", led by the Mindanao AI Caravan as major news), Be part of DEVCON 17 hub, FAQ, partners, DEVCON+ banner.
 
-**Pages (47):**
+**Pages (48):**
 
 - **Core:** Home (`/`), Our Story (`about`), Leadership (`leadership`), Programs (`programs`), Attend (`attend`), Partner (`partner`), Invite DEVCON (`invite`), AI Scholarships (`ai`), Jumpstart Internships (`jumpstart-internships`), AI code camps (`ai-code-camps`).
 - **Locations:** Locations hub (`chapters`) and 13 location pages: manila, laguna, legazpi, pampanga, cebu, iloilo, bohol, bacolod, tacloban, davao, iligan, cagayandeoro, bukidnon.
 - **Programs:** devcon-kids, campus, sheisdevcon, pro-summit, crest, dctx, educators, ai-fluency-masterclass.
-- **DevRel case studies:** hub (`devrel-case-studies`) and case-study-sui, case-study-icp, case-study-hour-of-ai, case-study-zoho-creator, case-study-campus-devcon-summit, case-study-pro-summit, case-study-mindanao-ai-caravan.
+- **DevRel case studies:** hub (`devrel-case-studies`) and case-study-sui, case-study-icp, case-study-hour-of-ai, case-study-zoho-creator, case-study-campus-devcon-summit, case-study-pro-summit, case-study-mindanao-ai-caravan, case-study-ai-physical-computing-educators.
 - **Community Playbook:** playbook, volunteers-guide, code-of-conduct-for-national-and-chapter-officers-and-volunteers, standard-privacy-and-safespace-consent, campus-events-guidelines, child-protection-policy, brand-kit.
 
 **URLs match devcon.ph.** Every page lives at a trailing-slash URL, the same as the current devcon.ph (for example `/about/`, `/manila/`, `/jumpstart-internships/`), so existing links, bookmarks, and search results keep working. The downloadable ZIP keeps `.html` file names so pages open locally.
