@@ -4,6 +4,7 @@ Newest first. Times are Philippine Standard Time (PHT).
 
 | Version | Updated | Changes |
 |---|---|---|
+| v1.82 | Sep 28, 2026, 1:25 AM PHT | Volunteer community pages clarified |
 | v1.81 | Sep 28, 2026, 1:23 AM PHT | Visitor guide wording refined |
 | v1.80 | Sep 28, 2026, 1:20 AM PHT | Location page awards spacing and headlines refined |
 | v1.79 | Sep 27, 2026, 9:01 PM PHT | Location page story and calls to action refined |
