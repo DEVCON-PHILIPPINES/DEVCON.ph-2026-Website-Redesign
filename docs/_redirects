@@ -306,3 +306,4 @@
 /volunteers-guide /volunteers-guide/ 301
 /volunteers-guide.html /volunteers-guide/ 301
 /index.html / 301
+/.well-known/security.txt /security.txt 200
