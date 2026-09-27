@@ -148,7 +148,7 @@ The site is static, has no backend, and stores no personal data. Hardening:
 | Supply chain and secrets | Secret scanning and push protection, Dependabot updates, CodeQL code scanning, and read-only workflow permissions by default. |
 | Unauthorized changes | Protected `main` (pull request, code-owner approval, passing checks, no force pushes) and deploy approval for the `github-pages` environment. |
 
-`scripts/check_site.py` fails any pull request that breaks these rules. Report vulnerabilities through GitHub private vulnerability reporting or hello@devcon.ph (see `SECURITY.md` and `/.well-known/security.txt`).
+`scripts/check_site.py` fails any pull request that breaks these rules. Actions are pinned to commit SHAs, and a full-org secret scan found no leaked credentials (see the audit in `SECURITY.md`). Report vulnerabilities through GitHub private vulnerability reporting or hello@devcon.ph (see `SECURITY.md` and `/.well-known/security.txt`).
 
 ## 10. Workflow and governance
 
