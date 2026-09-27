@@ -1,4 +1,6 @@
-# Every change needs a review from a website admin before it can merge into main.
+# HQ leaders approve every change. Approval is centralized: no one else can approve merges into staging or main.
+# When the org team exists, replace the names below with: @DEVCON-PHILIPPINES/hq-leaders
 *                    @domdeleondevcon @JFernando-DEVCON
 /.github/            @domdeleondevcon @JFernando-DEVCON
 /scripts/            @domdeleondevcon @JFernando-DEVCON
+/PRD.md              @domdeleondevcon @JFernando-DEVCON
