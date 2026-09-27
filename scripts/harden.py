@@ -5,7 +5,7 @@ import sys, os, re, hashlib, base64, glob
 FRAMEBUST = "<script>/* anti-clickjacking */if(window.top!==window.self){document.documentElement.style.display='none';try{window.top.location.replace(window.location.href);}catch(e){}}</script>"
 BASE = ("default-src 'none'; script-src 'self' {hashes}; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; "
         "font-src https://fonts.gstatic.com data:; img-src 'self' data:; "
-        "frame-src https://www.openstreetmap.org https://docs.google.com https://accounts.google.com; "
+        "frame-src https://www.openstreetmap.org https://docs.google.com https://accounts.google.com https://www.youtube-nocookie.com https://www.youtube.com; "
         "connect-src 'self'; manifest-src 'self'; media-src 'self' data:; base-uri 'none'; form-action 'none'; object-src 'none'; "
         "upgrade-insecure-requests")
 def harden(html):

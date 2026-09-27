@@ -8,7 +8,7 @@ Report privately with [GitHub private vulnerability reporting](../../security/ad
 
 The site is static: no backend, no accounts, no stored personal data.
 
-- **Content-Security-Policy on every page:** `default-src 'none'`; scripts only from `'self'` plus SHA-256 hashes of each inline script (no `unsafe-inline`, no `unsafe-eval`); `object-src 'none'`, `base-uri 'none'`, `form-action 'none'`; frames limited to OpenStreetMap and Google Forms; `upgrade-insecure-requests`.
+- **Content-Security-Policy on every page:** `default-src 'none'`; scripts only from `'self'` plus SHA-256 hashes of each inline script (no `unsafe-inline`, no `unsafe-eval`); `object-src 'none'`, `base-uri 'none'`, `form-action 'none'`; frames limited to OpenStreetMap, Google Forms, and YouTube (privacy-enhanced); `upgrade-insecure-requests`.
 - **No inline event handlers or `javascript:` URLs, and no external script files.**
 - **Anti-clickjacking:** pages hide themselves when framed by another site.
 - **Links:** every new-tab link uses `rel="noopener"`, and the referrer policy is `strict-origin-when-cross-origin`.
