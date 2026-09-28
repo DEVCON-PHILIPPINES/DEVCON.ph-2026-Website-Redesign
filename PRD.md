@@ -1,6 +1,6 @@
 # DEVCON.PH 2026 Website Redesign: Product Requirements Document
 
-**Status:** Live on GitHub Pages · **Current version:** v1.85 · Workflow: staging → production · **Owner:** DEVCON Philippines National Office (Communications)
+**Status:** Live on GitHub Pages · **Current version:** v1.86 · Workflow: staging → production · **Owner:** DEVCON Philippines National Office (Communications)
 **Source of truth:** this file. When the site, a brief, or a chat thread disagrees with this PRD, update this PRD first, then the site.
 
 ---
@@ -119,7 +119,7 @@ A rule-based chat at the lower right of every page. Devie is a **basic FAQ bot, 
 ### 6.4 Other features
 - **Locations map:** homepage map with pulsing chapter dots, where rows and pins link to chapter pages. Each location page has a Philippines mini-map, an OpenStreetMap view framed on the chapter's whole administrative region (for example, Central Visayas for Cebu and Bohol), and an Open in Google Maps link. There is no Get directions button.
 - **FAQ next steps:** every FAQ answer ends with "Next step" links.
-- **Leaders:** board, national office, area program leaders, and chapter presidents, each with a LinkedIn link. Chapter president photos use a standardized head-and-shoulders crop, tone-matched to a bright, clean studio look and sharpened at 360 px.
+- **Leaders:** a full-width Founder and President row for Winston Damarillo (bio and why DEVCON matters to him), then the board, national office, area program leaders, and chapter presidents, each with a LinkedIn link. Chapter president photos use a standardized head-and-shoulders crop, tone-matched to a bright, clean studio look and sharpened at 360 px.
 - **Intern quotes:** each name links to Jumpstart intern stories on Medium.
 - **Scroll animations:** homepage headings and cards fade up with a light stagger; off for reduced-motion users.
 - **Video:** the NEXUS final-stop video (YouTube, privacy-enhanced embed, muted autoplay, centered) on the Mindanao AI Caravan case study and the DEVCON Kids page; CSP allows only youtube-nocookie.com and youtube.com frames.

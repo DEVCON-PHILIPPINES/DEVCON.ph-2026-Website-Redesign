@@ -4,6 +4,7 @@ Newest first. Times are Philippine Standard Time (PHT).
 
 | Version | Updated | Changes |
 |---|---|---|
+| v1.86 | Sep 28, 2026, 12:35 PM PHT | Leadership founder profile added |
 | v1.85 | Sep 28, 2026, 12:31 PM PHT | President photos enhanced; location page order refined |
 | v1.84 | Sep 28, 2026, 2:21 AM PHT | Location page photos, balance, and video features |
 | v1.83 | Sep 28, 2026, 1:30 AM PHT | New educators case study |
