@@ -48,16 +48,28 @@ REDIRECTS = {
     'news': '', 'blog': '', 'home': '', 'feed': '', 'comments/feed': '', 'author/devconadmin': '', 'brand-kit/feed': 'brand-kit',
 }
 
-def rel_link_fix(s, depth, names):
-    """Rewrite href="x.html#a" and href="index.html" for a page that lives `depth` levels deep."""
-    up = '../' * depth
+import posixpath
+_here = os.path.dirname(os.path.abspath(__file__))
+_paths_file = os.path.join(_here, 'paths.py')
+exec(open(_paths_file).read())
+
+def _rel(from_path, to_path):
+    """Relative URL from folder page from_path ('' = home) to folder page to_path."""
+    r = posixpath.relpath('/' + to_path if to_path else '/', '/' + from_path if from_path else '/')
+    return './' if r == '.' else r + '/'
+
+def rel_link_fix(s, here, names):
+    """Rewrite href="x.html#a" to the nested folder URL of x, relative to the page at folder `here`."""
     def fix(m):
         fn, frag = m.group(1), m.group(2) or ''
         if fn not in names: return m.group(0)
-        if fn == 'index.html': target = up or './'
-        else: target = f'{up}{fn[:-5]}/'
-        return f'href="{target}{frag}"'
-    return re.sub(r'href="([A-Za-z0-9_-]+\.html)(#[^"]*)?"', fix, s)
+        return f'href="{_rel(here, path_of(fn[:-5]))}{frag}"'
+    s = re.sub(r'href="([A-Za-z0-9_-]+\.html)(#[^"]*)?"', fix, s)
+    return abs_fix(s)
+
+def abs_fix(s):
+    """Canonical, Open Graph, JSON-LD, sitemap, llms.txt: https://devcon.ph/<stem>/ -> nested path."""
+    return re.sub(r'https://devcon\.ph/([a-z0-9-]+)/', lambda m: f'https://devcon.ph/{path_of(m.group(1))}/' if m.group(1) in PATHS else m.group(0), s)
 
 def stub(target_rel, target_abs, title='Redirecting'):
     t = html.escape(target_rel, quote=True)
@@ -78,57 +90,80 @@ def stub(target_rel, target_abs, title='Redirecting'):
 
 def main():
     if os.path.exists(OUT):
-        for p in os.listdir(OUT):
-            if p in ('.nojekyll', '.well-known'): continue
-            fp = os.path.join(OUT, p)
+        for q in os.listdir(OUT):
+            if q in ('.nojekyll', '.well-known'): continue
+            fp = os.path.join(OUT, q)
             shutil.rmtree(fp) if os.path.isdir(fp) else os.remove(fp)
     os.makedirs(OUT, exist_ok=True)
     names = {os.path.basename(f) for f in glob.glob(os.path.join(SRC, '*.html'))}
-    slugs = sorted(n[:-5] for n in names if n != 'index.html')
-    # static files (sitemap, robots, llms, icons, og image)
+    stems = sorted(n[:-5] for n in names)
+    real = {path_of(st) for st in stems}                       # folders that hold real pages
+    # static files (sitemap, robots, llms, icons, og image) with nested URLs
     for f in os.listdir(SRC):
-        if not f.endswith('.html'): shutil.copy(os.path.join(SRC, f), os.path.join(OUT, f))
-    # pages
-    s = open(os.path.join(SRC, 'index.html'), encoding='utf-8').read()
-    open(os.path.join(OUT, 'index.html'), 'w', encoding='utf-8').write(rel_link_fix(s, 0, names))
-    for slug in slugs:
-        s = open(os.path.join(SRC, slug + '.html'), encoding='utf-8').read()
-        os.makedirs(os.path.join(OUT, slug), exist_ok=True)
-        open(os.path.join(OUT, slug, 'index.html'), 'w', encoding='utf-8').write(rel_link_fix(s, 1, names))
-        # /<slug>.html -> /<slug>/
-        open(os.path.join(OUT, slug + '.html'), 'w', encoding='utf-8').write(stub(f'{slug}/', f'https://devcon.ph/{slug}/'))
-    # old URLs -> new pages
+        if f.endswith('.html'): continue
+        if f.endswith(('.xml', '.txt')):
+            open(os.path.join(OUT, f), 'w', encoding='utf-8').write(abs_fix(open(os.path.join(SRC, f), encoding='utf-8').read()))
+        else: shutil.copy(os.path.join(SRC, f), os.path.join(OUT, f))
+    # pages in nested folders
+    for st in stems:
+        here = path_of(st)
+        s = open(os.path.join(SRC, st + '.html'), encoding='utf-8').read()
+        d = os.path.join(OUT, here) if here else OUT
+        os.makedirs(d, exist_ok=True)
+        open(os.path.join(d, 'index.html'), 'w', encoding='utf-8').write(rel_link_fix(s, here, names))
+    # redirects: every older address -> its nested page
+    moves = {}                                                 # old folder path -> new folder path ('' = home)
+    for st in stems:
+        if st == 'index': continue
+        new = path_of(st)
+        if st != new: moves[st] = new                          # /cebu/ -> /locations/cebu/
+    for old, tgt in REDIRECTS.items():
+        moves.setdefault(old, path_of(tgt) if tgt else '')
     made = 0
-    for old, new in REDIRECTS.items():
-        if old in slugs: continue                      # a real page already lives there
-        assert new == '' or new.split('#')[0] in slugs, (old, new)
-        depth = old.count('/') + 1
-        target = ('../' * depth) + (f'{new}/' if new else '')
+    for old, new in moves.items():
+        if old in real: continue                               # a real page lives there
+        assert new == '' or new in real, (old, new)
         d = os.path.join(OUT, old); os.makedirs(d, exist_ok=True)
-        open(os.path.join(d, 'index.html'), 'w', encoding='utf-8').write(stub(target, f'https://devcon.ph/{new + "/" if new else ""}'))
+        open(os.path.join(d, 'index.html'), 'w', encoding='utf-8').write(stub(_rel(old, new), f'https://devcon.ph/{new + "/" if new else ""}'))
         made += 1
-    # smart 404 for everything else
-    alias = {k: v for k, v in REDIRECTS.items()}
-    for sl in slugs: alias[sl] = sl
-    open(os.path.join(OUT, '404.html'), 'w', encoding='utf-8').write(NOT_FOUND.replace('__ALIAS__', json.dumps(alias, separators=(',', ':'))))
-    json.dump({'pages': ['/'] + [f'/{x}/' for x in slugs], 'redirects': {f'/{k}/': (f'/{v}/' if v else '/') for k, v in REDIRECTS.items() if k not in slugs}},
+    # /<stem>.html -> nested page (links shared from earlier previews)
+    for st in stems:
+        if st == 'index': continue
+        open(os.path.join(OUT, st + '.html'), 'w', encoding='utf-8').write(stub(_rel('', path_of(st)), f'https://devcon.ph/{path_of(st)}/'))
+    # smart 404: aliases -> stems, stems -> nested
+    alias = dict(REDIRECTS)
+    for st in stems:
+        if st != 'index': alias[st] = st
+    pm = {st: path_of(st) for st in stems if st != 'index'}
+    nf = NOT_FOUND.replace('__ALIAS__', json.dumps(alias, separators=(',', ':')))
+    nf = nf.replace("function go(slug){ location.replace(base+(slug?slug+'/':'')+location.hash); }",
+                    "var PM=" + json.dumps(pm, separators=(',', ':')) + ";\n  function go(slug){ var t=slug?(PM[slug]||slug):''; location.replace(base+(t?t+'/':'')+location.hash); }")
+    nf = nf.replace("  document.getElementById('nf-title').textContent=",
+                    "  var sec=(parts[0]||'').toLowerCase(); if(['locations','programs','case-studies','playbook','about'].indexOf(sec)>-1){ location.replace(base+sec+'/'); return; }\n  document.getElementById('nf-title').textContent=", 1)
+    assert 'var PM=' in nf and "indexOf(sec)" in nf
+    open(os.path.join(OUT, '404.html'), 'w', encoding='utf-8').write(nf)
+    json.dump({'pages': sorted({'/' + (path_of(st) + '/' if path_of(st) else '') for st in stems}),
+               'redirects': {f'/{k}/': (f'/{v}/' if v else '/') for k, v in moves.items() if k not in real}},
               open(os.path.join(OUT, 'url-map.json'), 'w'), indent=1)
-    # Cloudflare Pages: server-side 301s (search engines keep rankings) + real security headers
+    # Cloudflare Pages: server-side 301s
     lines = ['# Generated by scripts/restructure.py. Server-side redirects for Cloudflare Pages.']
-    for old, new in REDIRECTS.items():
-        if old in slugs: continue
-        tgt = f'/{new}/' if new else '/'
-        lines += [f'/{old} {tgt} 301', f'/{old}/ {tgt} 301']
-    for sl in slugs:
-        lines += [f'/{sl} /{sl}/ 301', f'/{sl}.html /{sl}/ 301']
+    for old, new in moves.items():
+        if old in real: continue
+        t = f'/{new}/' if new else '/'
+        lines += [f'/{old} {t} 301', f'/{old}/ {t} 301']
+    for st in stems:
+        if st == 'index': continue
+        np_ = path_of(st)
+        lines += [f'/{st}.html /{np_}/ 301']
+        if np_ == st: lines += [f'/{st} /{st}/ 301']
+        else: lines += [f'/{np_} /{np_}/ 301']
     lines += ['/index.html / 301', '/.well-known/security.txt /security.txt 200']
     open(os.path.join(OUT, '_redirects'), 'w').write('\n'.join(lines) + '\n')
     open(os.path.join(OUT, '_headers'), 'w').write(HEADERS)
-    # security.txt at both locations (some hosts skip dot-folders on upload)
     os.makedirs(os.path.join(OUT, '.well-known'), exist_ok=True)
     for f in (os.path.join(OUT, '.well-known', 'security.txt'), os.path.join(OUT, 'security.txt')):
         open(f, 'w').write(SECURITY_TXT)
-    print(f'pages {len(slugs) + 1}, .html stubs {len(slugs)}, old-URL redirects {made}, 404 aliases {len(alias)}, _redirects rules {len(lines) - 1}')
+    print(f'pages {len(stems)}, moved {sum(1 for st in stems if st != "index" and path_of(st) != st)}, redirect folders {made}, _redirects rules {len(lines) - 1}')
 
 SECURITY_TXT = '''Contact: mailto:hello@devcon.ph
 Contact: https://github.com/DEVCON-PHILIPPINES/staging-devcon-ph-2026-website-redesign/security/advisories/new

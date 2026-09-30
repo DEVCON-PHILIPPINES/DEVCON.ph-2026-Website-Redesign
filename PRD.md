@@ -1,6 +1,6 @@
 # DEVCON.PH 2026 Website Redesign: Product Requirements Document
 
-**Status:** Live on GitHub Pages · **Current version:** v1.90 · Workflow: staging → production · **Owner:** DEVCON Philippines National Office (Communications)
+**Status:** Live on GitHub Pages · **Current version:** v1.91 · Workflow: staging → production · **Owner:** DEVCON Philippines National Office (Communications)
 **Source of truth:** this file. When the site, a brief, or a chat thread disagrees with this PRD, update this PRD first, then the site.
 
 ---
@@ -53,7 +53,7 @@ The site is a static, self-contained HTML build. It is a visual and content blue
 - **DevRel case studies:** hub (`devrel-case-studies`) and case-study-sui, case-study-icp, case-study-hour-of-ai, case-study-zoho-creator, case-study-campus-devcon-summit, case-study-pro-summit, case-study-mindanao-ai-caravan, case-study-ai-physical-computing-educators.
 - **Community Playbook:** playbook, volunteers-guide, code-of-conduct-for-national-and-chapter-officers-and-volunteers, standard-privacy-and-safespace-consent, campus-events-guidelines, child-protection-policy, brand-kit.
 
-**URLs match devcon.ph.** Every page lives at a trailing-slash URL, the same as the current devcon.ph (for example `/about/`, `/manila/`, `/jumpstart-internships/`), so existing links, bookmarks, and search results keep working. The downloadable ZIP keeps `.html` file names so pages open locally.
+**URLs use section folders.** Pages live under their section: `/about/` (with `/about/17years/`, `/about/leadership/`), `/programs/<program>/` (for example `/programs/kids/`, `/programs/campus/`, `/programs/ai-scholarships/`), `/locations/<city>/` (for example `/locations/manila/`), `/case-studies/<name>/` (for example `/case-studies/sui/`), `/playbook/<page>/` (Brand Kit, policies, volunteers guide), plus `/attend/`, `/invite/`, `/partner/`. The folder map lives in `scripts/paths.py` and drives the deploy layout, links, canonical URLs, the sitemap, Devie's links, and all redirects. Every older address (flat `/cebu/`, `/devcon-kids/`, `/case-study-sui/`, `.html` links, and the old devcon.ph URLs) 301-redirects to its folder page; unknown paths inside a section go to that section's page. The downloadable ZIP keeps `.html` file names so pages open locally.
 
 **Legacy URL migration.** Every known devcon.ph URL either maps to a page with the same path or redirects to its new home. `docs/url-map.json` lists all pages and redirects. Highlights:
 
