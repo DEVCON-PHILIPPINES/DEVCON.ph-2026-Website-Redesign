@@ -4,6 +4,7 @@ Newest first. Times are Philippine Standard Time (PHT).
 
 | Version | Updated | Changes |
 |---|---|---|
+| v1.88 | Oct 1, 2026, 1:35 AM PHT | DEVCON Kids program page and new education case studies |
 | v1.87 | Sep 28, 2026, 1:13 PM PHT | Location pages streamlined; case study calls to action; new manifesto page |
 | v1.86 | Sep 28, 2026, 12:35 PM PHT | Leadership founder profile added |
 | v1.85 | Sep 28, 2026, 12:31 PM PHT | President photos enhanced; location page order refined |

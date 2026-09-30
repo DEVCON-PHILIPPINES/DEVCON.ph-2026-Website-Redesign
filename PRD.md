@@ -1,6 +1,6 @@
 # DEVCON.PH 2026 Website Redesign: Product Requirements Document
 
-**Status:** Live on GitHub Pages · **Current version:** v1.87 · Workflow: staging → production · **Owner:** DEVCON Philippines National Office (Communications)
+**Status:** Live on GitHub Pages · **Current version:** v1.88 · Workflow: staging → production · **Owner:** DEVCON Philippines National Office (Communications)
 **Source of truth:** this file. When the site, a brief, or a chat thread disagrees with this PRD, update this PRD first, then the site.
 
 ---
@@ -43,7 +43,7 @@ The site is a static, self-contained HTML build. It is a visual and content blue
 
 **Homepage order:** hero, logo carousel ("Trusted by leaders and pioneers"), locations map (static on mobile), numbers, about, 17 years, explore, Recent news 3×3 ("What we've been building", led by the Mindanao AI Caravan as major news), Be part of DEVCON 17 hub, FAQ, partners, DEVCON+ banner.
 
-**Pages (49):**
+**Pages (51):**
 
 - **Core:** Home (`/`), About DEVCON Philippines (`about`, org history and "a community, not an events company"), DEVCON 17 manifesto (`17years`, Engineering an AI-Ready Nation and the 17-year anniversary), Leadership (`leadership`), Programs (`programs`), Attend (`attend`), Partner (`partner`), Invite DEVCON (`invite`), AI Scholarships (`ai`), Jumpstart Internships (`jumpstart-internships`), AI code camps (`ai-code-camps`).
 - **Locations:** Locations hub (`chapters`) and 13 location pages: manila, laguna, legazpi, pampanga, cebu, iloilo, bohol, bacolod, tacloban, davao, iligan, cagayandeoro, bukidnon.
@@ -123,6 +123,7 @@ A rule-based chat at the lower right of every page. Devie is a **basic FAQ bot, 
 - **Intern quotes:** each name links to Jumpstart intern stories on Medium.
 - **Scroll animations:** homepage headings and cards fade up with a light stagger; off for reduced-motion users.
 - **Case studies:** every case study leads and closes with **Sponsor the next one** and **Help scale this program nationally**, ends with "Discover other case studies and impactful results", and shows program years where relevant (ICP 2024–2025 · 2 years; Sui 2026 · Year 1). Summit case study headlines carry no year.
+- **DEVCON Kids (`/devcon-kids/`):** dedicated program page from the 2026 DEVCON Kids deck and 2026 inputs: 2025 impact report (5,609 students, 184 volunteers, 70 schools, 44 code camps), why it matters (PISA 2022, TIMSS 2019), programs, 2026 momentum and event log (15 events, 990+ learners and educators, January to August), 2025 reach by chapter, chapter launches, real stories (86/78/92%), featured video, 2026 initiatives, and coming up (Climate Champions Summit with SDO DepEd Pasig, DEVCON Kids Hour of AI). Case studies: DEVCON for Educators with CSTA and DEVCON Kids (`/case-study-devcon-for-educators/`), micro:bit (`/case-study-microbit/`), and Hour of AI with a 2025 to 2026 section.
 - **Video:** the NEXUS final-stop video (YouTube, privacy-enhanced embed, muted autoplay, centered) on the Mindanao AI Caravan case study and the DEVCON Kids page; CSP allows only youtube-nocookie.com and youtube.com frames.
 - **Section rhythm:** location pages alternate section backgrounds; related pairs (events + snapshots, stats + awards, quality over quantity + volunteer-led line) share a band; 72 px desktop / 48 px mobile spacing.
 - **Brand Kit:** logos, palette, Montserrat, key visuals, boilerplate, and entity information.
