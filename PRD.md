@@ -1,6 +1,6 @@
 # DEVCON.PH 2026 Website Redesign: Product Requirements Document
 
-**Status:** Live on GitHub Pages · **Current version:** v1.91 · Workflow: staging → production · **Owner:** DEVCON Philippines National Office (Communications)
+**Status:** Live on GitHub Pages · **Current version:** v1.92 · Workflow: staging → production · **Owner:** DEVCON Philippines National Office (Communications)
 **Source of truth:** this file. When the site, a brief, or a chat thread disagrees with this PRD, update this PRD first, then the site.
 
 ---
@@ -38,6 +38,8 @@ The site is a static, self-contained HTML build. It is a visual and content blue
 ## 4. Information architecture
 
 **Top menu:** Our Story, Programs, Locations, DevRel Case Studies, Community Playbook, Volunteer.
+
+**Agentic Training** (`/programs/agentic-training/`, formerly the AI Fluency Masterclass): one program with two tracks inside, AI Fluency for Builders (masterclass plus hands-on Agentic AI Hackathon) and Agentic Training for Leaders (chapter leaders as AI orchestrators). Old masterclass addresses redirect here.
 
 **Programs menu:** DEVCON Kids is listed first under Pioneering programs.
 
