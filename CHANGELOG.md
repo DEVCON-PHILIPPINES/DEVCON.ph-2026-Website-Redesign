@@ -4,6 +4,7 @@ Newest first. Times are Philippine Standard Time (PHT).
 
 | Version | Updated | Changes |
 |---|---|---|
+| v1.90 | Oct 1, 2026, 3:26 AM PHT | Location page headers and flow simplified |
 | v1.89 | Oct 1, 2026, 3:15 AM PHT | Sui video and programs menu update |
 | v1.88 | Oct 1, 2026, 1:35 AM PHT | DEVCON Kids program page and new education case studies |
 | v1.87 | Sep 28, 2026, 1:13 PM PHT | Location pages streamlined; case study calls to action; new manifesto page |
