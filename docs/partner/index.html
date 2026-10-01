@@ -1,9 +1,26 @@
 <!doctype html>
 <!--
   DEVCON Philippines website
-  Version v1.75 · Updated Sep 26, 2026, 5:13 PM PHT
+  Version v1.92 · Updated Oct 1, 2026, 3:40 AM PHT
 
   Change log (newest first)
+  v1.92   Oct 1, 2026, 3:40 AM PHT    Agentic Training program page
+  v1.91   Oct 1, 2026, 3:32 AM PHT    Nested folder URLs for all sections
+  v1.90   Oct 1, 2026, 3:26 AM PHT    Location page headers and flow simplified
+  v1.89   Oct 1, 2026, 3:15 AM PHT    Sui video and programs menu update
+  v1.88   Oct 1, 2026, 1:35 AM PHT    DEVCON Kids program page and new education case studies
+  v1.87   Sep 28, 2026, 1:13 PM PHT   Location pages streamlined; case study calls to action; new manifesto page
+  v1.86   Sep 28, 2026, 12:35 PM PHT  Leadership founder profile added
+  v1.85   Sep 28, 2026, 12:31 PM PHT  President photos enhanced; location page order refined
+  v1.84   Sep 28, 2026, 2:21 AM PHT   Location page photos, balance, and video features
+  v1.83   Sep 28, 2026, 1:30 AM PHT   New educators case study
+  v1.82   Sep 28, 2026, 1:25 AM PHT   Volunteer community pages clarified
+  v1.81   Sep 28, 2026, 1:23 AM PHT   Visitor guide wording refined
+  v1.80   Sep 28, 2026, 1:20 AM PHT   Location page awards spacing and headlines refined
+  v1.79   Sep 27, 2026, 9:01 PM PHT   Location page story and calls to action refined
+  v1.78   Sep 27, 2026, 8:28 PM PHT   Location pages restructured
+  v1.77   Sep 27, 2026, 9:16 AM PHT   Chapter page additions and case study partner credits
+  v1.76   Sep 27, 2026, 9:03 AM PHT   Hosting labels updated and old addresses redirected
   v1.75   Sep 26, 2026, 5:13 PM PHT   Homepage CTAs, map growth areas, and educator stories
   v1.74   Sep 26, 2026, 4:55 PM PHT   Assistant moved and made more readable
   v1.73   Sep 26, 2026, 4:43 PM PHT   Community messaging and invitation guidance
@@ -85,11 +102,11 @@
 <html lang="en-PH">
 <head>
 <meta charset="utf-8"/>
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-+9qxSzQ0G/29ZlAbQlg+kQmcdzQBn+QmkTRUJCUUQEs=' 'sha256-2IpYCtDIjo4d8we+7/wJ4BAQ8LQNh8eCV4difVaOygM=' 'sha256-4zKmhDvBNxq6dKFbL4GzcJQOZLWuZBaAGVvZgdZUk/Q=' 'sha256-GPt+JUtupJdmqOQaqS5cJOEQ+qJ4ATaNAuevVY8i3vg=' 'sha256-HoKXGkXcHLPyOq9cKwpT3AfRTF3PGKURVIXHv8dvJF8=' 'sha256-Kh75R5k/CBR3pbljE+W0LH4CPdZNANrS0e/f6RCCc30=' 'sha256-OGtMSWzwPDu9fqrbRqIWl6zO2bL4KjdYhU52+UKgRN4=' 'sha256-ScVUVPUktJe/UURySxVVLRR4pOu7YCpmem31US/7EJc=' 'sha256-W+XD2LPuZ4Y4kn2hcPpP+22aesfEdYAFWUTYPEABJ/g=' 'sha256-ZUfR4zZckD8zIJtBeKm7536CAnocghPyJupQkMrnKJ0=' 'sha256-ed8TeAnJbXUO5fjplj3lKwqFOmuJAhvtK1fIDyZOwYU=' 'sha256-fVDQTdriVhwr6aHSUX+0PYA9S8LE71I1miUWaSzJXY4=' 'sha256-iIhj48LSNRji0gBLRC1kiw4aua9bmHPKAWC82Cczpwc=' 'sha256-wUbSmLQN6yy+j64BnXOGMXVM+SU2/eRZlC1JCdQlmFE=' 'sha256-ydHnf62x7HIc1TdYkBDvg2c7ilnPBTWLgtrsPUR2Bec='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com data:; img-src 'self' data:; frame-src https://www.openstreetmap.org https://docs.google.com https://accounts.google.com; connect-src 'self'; manifest-src 'self'; media-src 'self' data:; base-uri 'none'; form-action 'none'; object-src 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'sha256-+9qxSzQ0G/29ZlAbQlg+kQmcdzQBn+QmkTRUJCUUQEs=' 'sha256-2IpYCtDIjo4d8we+7/wJ4BAQ8LQNh8eCV4difVaOygM=' 'sha256-4zKmhDvBNxq6dKFbL4GzcJQOZLWuZBaAGVvZgdZUk/Q=' 'sha256-GPt+JUtupJdmqOQaqS5cJOEQ+qJ4ATaNAuevVY8i3vg=' 'sha256-HoKXGkXcHLPyOq9cKwpT3AfRTF3PGKURVIXHv8dvJF8=' 'sha256-Kh75R5k/CBR3pbljE+W0LH4CPdZNANrS0e/f6RCCc30=' 'sha256-OGtMSWzwPDu9fqrbRqIWl6zO2bL4KjdYhU52+UKgRN4=' 'sha256-ScVUVPUktJe/UURySxVVLRR4pOu7YCpmem31US/7EJc=' 'sha256-W+XD2LPuZ4Y4kn2hcPpP+22aesfEdYAFWUTYPEABJ/g=' 'sha256-ZUfR4zZckD8zIJtBeKm7536CAnocghPyJupQkMrnKJ0=' 'sha256-ed8TeAnJbXUO5fjplj3lKwqFOmuJAhvtK1fIDyZOwYU=' 'sha256-fVDQTdriVhwr6aHSUX+0PYA9S8LE71I1miUWaSzJXY4=' 'sha256-iIhj48LSNRji0gBLRC1kiw4aua9bmHPKAWC82Cczpwc=' 'sha256-wUbSmLQN6yy+j64BnXOGMXVM+SU2/eRZlC1JCdQlmFE=' 'sha256-zI90VdXX8/MuBOOhcUYlIIjjo7kd4L0MvdF60At4Gbw='; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com data:; img-src 'self' data:; frame-src https://www.openstreetmap.org https://docs.google.com https://accounts.google.com https://www.youtube-nocookie.com https://www.youtube.com; connect-src 'self'; manifest-src 'self'; media-src 'self' data:; base-uri 'none'; form-action 'none'; object-src 'none'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <script>/* anti-clickjacking */if(window.top!==window.self){document.documentElement.style.display='none';try{window.top.location.replace(window.location.href);}catch(e){}}</script>
-<meta name="version" content="v1.75"/>
-<meta name="build-date" content="2026-09-26T17:13+08:00"/>
+<meta name="version" content="v1.92"/>
+<meta name="build-date" content="2026-10-01T03:40+08:00"/>
 <script>/* hold #anchor on arrival so it can be scrolled to smoothly */(function(){var h=location.hash;if(h&&h.length>1&&h.indexOf("#/")!==0){window.__pendingAnchor=h;try{history.scrollRestoration="manual";history.replaceState(history.state,"",location.pathname+location.search);}catch(e){}}})();</script>
 
 <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAGAUlEQVR4nO2VW2wc1RnH/985c9ubHXvX1/gW44RLHCeN2woBAUci5aWEIuFFeaCiiIJIBA+gQNWH7K76QGkfqgr1IXlAAkra7iBBIaitVKidplhV7CTgxHGsOJDitTO2s7v2+rI7OzNfH9ZJNtiRQqVKVZWfNJqZM3P0/b/rAW5xi/9XmEEAMHCytW3obHNj+Vo54r8loK8PEgAixcwLVUuZJ8rXylFusJ9iMVAcAOJgIjAzKB5f7UE8Ab72VnqMx+LU05fwnhl8RjWcN6MEugTmX8yYxF/fv4q1wvSfcvx4zb2ZUxpPD2n2iTPrNwLA6dPQkklIrNi5LgLMIKKSG7OfVTcBQJHVTMM2a3F8oLau0u+o6fMAJnzwpZexnPLhX8Na0cq0uF967WRN7RIDi3soB9CB1/dQHX2wX4JZKlBrCtmfvHdy60udnZ9ly21eFRCLQQDgg4Pd6m7vrCl5YZemkPAK2j4Ab/hlztTgfasyqDsUcqSSmScN7EY04/R8IT+5joKKaL+kP337L8Obvn0q0rHtT5VBWYws5Uu+BXX7qbvd0Qe/Ggp8lIf8IEf+oe3bL80oAMAxCMTB8b4H5F7thFld4zySycKp8ENZKvCKSG4MVXPQNy+g+AgwXNiqxKTDdQTpuo7urd/yuXPfk0daazfM1hsscTktQAQwQEUbqKtyW0jh56w57nFU9wCAdxUAoAS85Oak3Jd/IVm1kR65nGFXgNhxwczwAICk+ptcmhsLGaUo5x2SS5rIF9SCZ4tJZmMBGjWM9T+0e/joK5m2TRdzu3/++Ke6shyFy4YggCXlrGXtHVv3H27dtvdTUMK7moLBwW619b0nDkc6go9mJw1Qtee6voIEXSvI+u7cr0pPC2UZnFq5n8fP2r/3I6lTQGW91Trx0G+bvzv37Ll/hi82+ecPuAzMwre/vWvuELAIIHG13hQACL2afruqRTyGdBaeHXmLKZhbR8o+d74I2GopAWPQkYILAOgrmR060k25YJAHrJZKziuPFSksBOv5+o7x1/k4xLFjjW+uE7mfeky5VF2LyclhiRoQ9cC9UuwCAApZ7cNpK1xcsLSj1c9aT/IEF+SUAZoIQUwGSr2bgks74dBOOJQoXa8NveLt7O932G7d5aK61uPaiCTj472DHaf74jGxY8fwhbwnTjqK/PuO1uEMANBOOKBrs0MBgK6Pz70z+vCmqYWZtuFNOMbTVsYvFh3A0FmyQeVel0Emer1fdzyv57zwwwVqkJKrQ35VOwgAM4BggM6pvkNCUpZ5ac35Iq50wR0fjn2y8Y1jswxQMRVedlIVEBMgTHlr7UMvkgIgzrr199te/Z0emmtUBM68PBb8G4MpmkjYBPDnWsNbqa4t7xOBiVZSWMa1LuiFRA+IAGfgrD+V8fm+MALsI4ksMAeM4LoxmkSvB4AOcNvjrmgLaG5Dk573xQjkxUq15QBAtHPEXtODcgEAEDXhJtErARNfWfULPs5/oVIBmkYZADDN67yXBHj72w93S265X/Ha6ikbSK2f0/8AMCWw2tMbseZpOCW2ipTolilsx0XnO1fNXuEu9DJATGLjjxVsaA5crg9xQTn0Q9BiDJDATRw6awsoGUl7nepl7tKnsdWY8TolAJgr32JgkQD4xe5/3GEst+8xrEYjLd0Z+57ZgwwmIL520dyArx3HJSN52RW0mWuJi0UVpJX/sRkggLzgWPalgFsZGg8tZUfD468d/aTLOo+kNJG46fCvEnAGpcmnLt9Wo5LR4grHkapdAQB3oYZiYBEFubGO2aa5rPGDYd/UqZMNfxy1Wo/8HiNMJuI3HfobRKBEMVel6J6uqAzFNeArrfZgBCYBwJ+XJu5LRyYGcpvfXmzeMnzhy/hICjESSOAbhX+VgARMBoC/dnw05rPDp4xiUFOFYiEN9D3Qh/7+qHv7U/eEFrT9329qv9jUsSGzpS4iHj0OoHczyFzTxDcQgFiUkQDS97561l4OJO3FCldKuoBRAD1xoB/ounvmtqrIuB6uyE8T5O+aQy1/ASyY0ZtvvVvc4n+KfwMU+pBVFaZWwgAAAABJRU5ErkJggg=="/>
@@ -1726,6 +1743,183 @@ html.vol-lock,html.vol-lock body{overflow:hidden}
 .ed-stop-tag{margin:0!important;color:var(--y)!important;font-weight:900;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}
 @media (max-width:760px){.ed-stop{grid-template-columns:minmax(0,1fr)}}
 
+/* v1.77 chapter page additions */
+.ch-ethos{padding-top:12px!important;padding-bottom:12px!important}
+.ethos-line--end{margin:0 auto;justify-content:center;text-align:center;padding:16px 20px;border-radius:16px;background:rgba(113,180,5,.06);border:1px solid rgba(113,180,5,.3);color:#fff}
+.ch-plus-note{margin:10px 0 0;max-width:56ch;color:var(--text-secondary);font-size:.9rem;line-height:1.55}
+.ch-plus-note a{color:#fff;text-decoration:underline;text-decoration-color:var(--y);display:inline-flex;align-items:center;min-height:44px}
+.pres-bio{font-size:.92rem;line-height:1.6;color:var(--text-secondary);margin:6px 0 8px}
+.ch-sights{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.ch-sights li{display:flex;flex-direction:column;gap:4px;padding:16px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid var(--line)}
+.ch-sights b{color:#fff;font-weight:800}.ch-sights span{color:var(--text-secondary);font-size:.9rem;line-height:1.5}
+.ch-perk{margin:16px 0 0;padding:14px 18px;border-radius:14px;border:1px solid rgba(242,197,0,.45);background:rgba(242,197,0,.07);color:#fff;line-height:1.6}
+.ch-perk b{color:var(--y)}
+.ch-perk a{display:inline-flex;align-items:center;min-height:44px;margin-left:4px;color:#fff;font-weight:800;text-decoration:underline;text-decoration-color:var(--y)}
+.byte-econ{margin-top:12px!important;padding-top:12px;border-top:1px dashed var(--line)}
+.byte-econ b{color:var(--y)}
+.mac-logos{gap:14px!important}
+.mac-logos li{background:#fff;border-radius:14px;padding:12px 16px;min-height:72px;display:flex;align-items:center;justify-content:center}
+.mac-logos img{max-height:44px;width:auto}
+@media (max-width:980px){.ch-sights{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.ch-sights{grid-template-columns:minmax(0,1fr)}}
+
+/* v1.78 chapter page flow */
+.topic-chips{list-style:none;margin:6px 0 16px;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.topic-chips li{padding:6px 12px;border-radius:999px;background:rgba(165,123,255,.14);border:1px solid rgba(165,123,255,.45);color:#fff;font-weight:700;font-size:.85rem}
+.ch-testimony .ch-quote{margin:0}
+.ch-upcoming .hero-btns{margin-top:6px}
+.numbers .sec-head{margin-bottom:18px}
+
+/* v1.80 awards read as part of the stats block */
+.numbers:has(+ .awards){border-bottom:0!important;padding-bottom:28px!important}
+.numbers + .awards{padding-top:8px!important;padding-bottom:72px!important;border-top:0!important;background:rgb(11,8,64)}
+.awards{padding-bottom:72px!important}
+.awards .sec-head{margin-bottom:20px}
+.awards .aw-grid{margin-bottom:0}
+@media (max-width:760px){.numbers + .awards,.awards{padding-bottom:48px!important}.numbers:has(+ .awards){padding-bottom:20px!important}}
+
+/* v1.82 inactive-community status */
+.ch-status{max-width:60ch;margin:14px 0 0;padding:12px 16px;border-radius:14px;border:1px solid rgba(234,100,29,.55);background:rgba(234,100,29,.1);color:#fff;line-height:1.55;font-size:.95rem}
+.ch-status b{color:#FFB38A}
+
+/* v1.83 educators case study */
+.page-hero--apc{background:radial-gradient(800px 420px at 90% 0%,rgba(165,123,255,.3),transparent 70%),radial-gradient(700px 400px at 0% 100%,rgba(242,197,0,.14),transparent 70%),var(--navy)}
+
+/* v1.84 chapter gallery, QoQ, rhythm, video */
+.ch-gal{list-style:none;margin:0;padding:0;display:grid;gap:12px;grid-template-columns:repeat(3,minmax(0,1fr))}
+.ch-gal--2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.ch-gal--4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.ch-gal img{display:block;width:100%;height:100%;aspect-ratio:4/3;object-fit:cover;border-radius:16px;border:1px solid var(--line)}
+.ch-qoq .qoq-note{margin-top:4px}
+.ch-qoq .qoq-note a{color:#fff;display:inline-flex;align-items:center;min-height:44px;text-decoration:underline;text-decoration-color:var(--y);font-weight:800}
+/* balanced rhythm on location pages */
+[data-page^="chapter-"] > .section{padding-top:72px;padding-bottom:72px}
+[data-page^="chapter-"] > .section.ch-photo-sec{padding-bottom:24px}
+[data-page^="chapter-"] > .section.ch-photo-sec + .section{padding-top:24px}
+[data-page^="chapter-"] > .section.ch-travel + .section{padding-top:24px}
+[data-page^="chapter-"] > .section.ch-qoq{padding-bottom:24px}
+[data-page^="chapter-"] > .section.ch-ethos{padding-top:12px!important;padding-bottom:56px!important}
+[data-page^="chapter-"] .sec-head{margin-bottom:24px}
+@media (max-width:760px){
+  [data-page^="chapter-"] > .section{padding-top:48px;padding-bottom:48px}
+  .ch-gal,.ch-gal--4,.ch-gal--2{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+.yt-head{text-align:center;margin-left:auto;margin-right:auto;max-width:720px}
+.yt-frame{position:relative;max-width:960px;margin:0 auto;aspect-ratio:16/9;border-radius:20px;overflow:hidden;border:1px solid var(--line);box-shadow:0 24px 60px rgba(0,0,0,.45);background:#000}
+.yt-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.yt-link{text-align:center;margin:12px 0 0}
+.yt-link a{display:inline-flex;align-items:center;min-height:44px;color:#fff;font-weight:800;text-decoration:underline;text-decoration-color:var(--y)}
+
+/* v1.84 rhythm: pairs that belong together share a band */
+[data-page^="chapter-"] > .section.band2 + .section.ch-gallery{padding-top:8px}
+[data-page^="chapter-"] > .section.band2:has(+ .ch-gallery){padding-bottom:40px}
+
+/* v1.85 QoQ below the map */
+[data-page^="chapter-"] > .section.ch-qoq{padding-top:72px;padding-bottom:72px}
+[data-page^="chapter-"] > .section.ch-travel + .section.ch-nearby{padding-top:8px}
+[data-page^="chapter-"] > .section.ch-travel:has(+ .ch-nearby){padding-bottom:40px}
+[data-page^="chapter-"] > .section.ch-ethos{padding-top:56px!important;padding-bottom:56px!important}
+.pres-av img,.ch-side .ring img{image-rendering:auto}
+@media (max-width:760px){[data-page^="chapter-"] > .section.ch-qoq{padding-top:48px;padding-bottom:48px}[data-page^="chapter-"] > .section.ch-ethos{padding-top:40px!important;padding-bottom:40px!important}}
+
+/* v1.86 founder row */
+.founder-sec{padding-bottom:24px!important}
+.founder{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:40px;align-items:center;padding:32px;border-radius:28px;
+  background:linear-gradient(135deg,rgba(242,197,0,.10),rgba(120,8,255,.10));border:1px solid rgba(242,197,0,.35)}
+.founder-photo{display:flex;justify-content:center}
+.founder-ring{width:240px!important;height:240px!important;padding:6px}
+.founder-ring img{width:100%;height:100%;border-radius:50%;object-fit:cover}
+.founder-copy h2{margin:6px 0 14px;font-weight:900;font-size:clamp(1.8rem,1.3rem + 1.6vw,2.6rem);color:#fff}
+.founder-copy p{margin:0 0 14px;color:var(--text-secondary);line-height:1.7;max-width:68ch}
+.founder-why{padding:14px 18px;border-left:4px solid var(--y);background:rgba(7,4,48,.45);border-radius:0 14px 14px 0;color:#fff!important}
+.founder-why b{color:var(--y)}
+.founder-li{margin-top:2px}
+@media (max-width:760px){.founder{grid-template-columns:minmax(0,1fr);gap:20px;padding:22px;text-align:left}.founder-ring{width:180px!important;height:180px!important}}
+
+/* v1.87 merged location rows */
+.ch-about-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:28px;align-items:center}
+.ch-about-grid .ch-photo{margin:0}
+.ch-about-grid .byte{margin:0;max-width:none}
+.merge-block{margin-top:48px;padding-top:40px;border-top:1px solid var(--line)}
+.merge-narrow{max-width:760px;margin-left:auto;margin-right:auto}
+.sub-h{margin:6px 0 10px;font-weight:900;font-size:clamp(1.2rem,1rem + .8vw,1.6rem);line-height:1.2;color:#fff}
+.numbers .merge-block{border-top-color:rgba(255,255,255,.08)}
+.ethos-line--cta{justify-content:center;margin:0 auto 18px;text-align:center;color:var(--text-secondary);max-width:60ch}
+[data-page^="chapter-"] > .section{padding-top:80px;padding-bottom:80px}
+[data-page^="chapter-"] > .numbers{padding-top:80px!important;padding-bottom:80px!important}
+@media (max-width:860px){.ch-about-grid{grid-template-columns:minmax(0,1fr)}.merge-block{margin-top:32px;padding-top:28px}[data-page^="chapter-"] > .section,[data-page^="chapter-"] > .numbers{padding-top:52px!important;padding-bottom:52px!important}}
+
+/* v1.87 case studies + manifesto */
+.cs-years{margin:12px 0 0}
+.cs-years span{display:inline-flex;padding:5px 12px;border-radius:999px;background:rgba(242,197,0,.14);border:1px solid rgba(242,197,0,.55);color:var(--y);font-weight:900;font-size:.8rem;letter-spacing:.06em}
+.case .cs-years{margin:4px 0 8px}
+.disc-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.disc-card{display:flex;flex-direction:column;gap:6px;height:100%;padding:18px 20px;border-radius:18px;background:rgba(255,255,255,.04);border:1px solid var(--line);color:#fff;text-decoration:none;transition:border-color .2s,transform .2s}
+.disc-card:hover{border-color:var(--y);transform:translateY(-2px)}
+.disc-card b{font-weight:900;line-height:1.3}.disc-card span{color:var(--text-secondary);font-size:.92rem;line-height:1.5}
+.disc-card em{margin-top:auto;padding-top:6px;font-style:normal;font-weight:800;font-size:.85rem;color:var(--y)}
+.mf-list{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.mf-list li{display:grid;grid-template-columns:56px minmax(0,1fr);gap:14px;align-items:start;padding:18px 20px;border-radius:18px;background:rgba(255,255,255,.04);border:1px solid var(--line)}
+.mf-list li:last-child{border-color:rgba(242,197,0,.55);background:rgba(242,197,0,.07)}
+.mf-n{font-weight:900;font-size:1.4rem;color:var(--y);line-height:1.2}
+.mf-list h3{margin:0 0 4px;font-weight:900;font-size:1.1rem;color:#fff}
+.mf-list p{margin:0;color:var(--text-secondary);line-height:1.6}
+@media (max-width:900px){.disc-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.disc-grid{grid-template-columns:minmax(0,1fr)}}
+@media (prefers-reduced-motion:reduce){.disc-card{transition:none}.disc-card:hover{transform:none}}
+
+/* v1.87 layout fixes */
+.page-cta .ethos-line--cta{display:block;text-align:center;max-width:640px;margin:0 auto 22px;line-height:1.6}
+.page-cta .ethos-line--cta .ethos-tag{display:inline-block;margin:0 8px 6px 0;vertical-align:middle}
+.ch-story-grid > .merge-block:nth-child(2){margin-top:0;padding-top:0;border-top:0}
+.ch-story-grid > .merge-block:nth-child(n+3){grid-column:1/-1}
+
+/* v1.88 DEVCON Kids */
+.kids-hero{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:36px;align-items:center}
+.kids-hero .cs-fig{margin:0}
+.kids-worked{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.kids-worked article{padding:20px;border-radius:18px;background:rgba(255,255,255,.04);border:1px solid var(--line)}
+.kids-worked h3{margin:0 0 6px;font-weight:900;color:#fff;font-size:1.05rem}
+.kids-worked p{margin:0 0 8px;color:var(--text-secondary);line-height:1.6}
+.ev-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.ev-list li{display:grid;grid-template-columns:44px minmax(0,1fr);gap:2px 10px;padding:10px 12px;border-radius:12px;background:rgba(255,255,255,.03);border:1px solid var(--line)}
+.ev-m{grid-row:span 2;font-weight:900;color:var(--y);font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;padding-top:2px}
+.ev-list b{color:#fff;font-size:.9rem;line-height:1.35}.ev-n{color:var(--text-secondary);font-size:.82rem}
+.kids-reach-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:28px;align-items:start}
+.tbl-wrap{overflow-x:auto}
+.reach-tbl{width:100%;border-collapse:collapse;font-size:.92rem}
+.reach-tbl caption{text-align:left;color:var(--text-secondary);margin-bottom:8px;font-size:.85rem}
+.reach-tbl th,.reach-tbl td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:right;color:#fff}
+.reach-tbl th[scope="row"],.reach-tbl thead th:first-child{text-align:left}
+.reach-tbl thead th{color:var(--y);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase}
+.reach-tbl tfoot th,.reach-tbl tfoot td{font-weight:900;border-bottom:0}
+.kids-growth{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.kids-growth li{display:flex;justify-content:space-between;gap:8px;padding:10px 12px;border-radius:12px;background:rgba(255,255,255,.04);border:1px solid var(--line)}
+.kids-growth b{color:#fff}.kids-growth span{color:var(--text-secondary);font-size:.85rem}
+.kids-pct{list-style:none;margin:0 0 16px;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.kids-pct li{padding:16px;border-radius:16px;background:rgba(242,197,0,.08);border:1px solid rgba(242,197,0,.4)}
+.kids-pct b{display:block;font-size:2rem;font-weight:900;color:var(--y);line-height:1}.kids-pct span{color:#fff;font-size:.88rem}
+.pp-grid--5{grid-template-columns:repeat(5,minmax(0,1fr))}
+[data-page="devcon-kids"] .pp-grid:not(.pp-grid--5){grid-template-columns:repeat(4,minmax(0,1fr))}
+@media (max-width:1000px){[data-page="devcon-kids"] .pp-grid:not(.pp-grid--5){grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){[data-page="devcon-kids"] .pp-grid:not(.pp-grid--5){grid-template-columns:minmax(0,1fr)}}
+.kids-upnext{margin:18px 0 0;padding:14px 18px;border-radius:14px;border:1px solid rgba(113,180,5,.5);background:rgba(113,180,5,.08);color:#fff}
+.kids-upnext b{color:#B8E86A}
+.policy-note a{display:inline-flex;align-items:center;min-height:44px;color:#fff;text-decoration:underline;text-decoration-color:var(--y)}
+@media (max-width:1000px){.pp-grid--5{grid-template-columns:repeat(2,minmax(0,1fr))}.ev-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:860px){.kids-hero,.kids-reach-grid{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:600px){.kids-worked,.ev-list,.kids-pct,.pp-grid--5{grid-template-columns:minmax(0,1fr)}}
+
+/* v1.90 concise volunteer-community hero */
+.ch-chips .chip-warn{border-color:rgba(234,100,29,.7)!important;background:rgba(234,100,29,.14)!important;color:#FFC4A3!important;font-weight:800}
+.ch-side--brief h3{margin:4px 0 8px}
+.ch-side--brief p{margin:0 0 6px;line-height:1.55}
+.ch-side--brief .pp-link{display:inline-flex;align-items:center;min-height:44px}
+
+/* v1.92 Agentic Training tracks */
+.track-tag{display:inline-block;margin:0 8px 4px 0;padding:2px 9px;border-radius:999px;background:rgba(113,180,5,.16);border:1px solid rgba(113,180,5,.55);color:#B8E86A;font-size:.68rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase;vertical-align:middle}
+.track-tag--lead{background:rgba(242,197,0,.14);border-color:rgba(242,197,0,.55);color:var(--y)}
+
 /* ================= MULTI-PAGE (hash routes) ================= */
 .page[hidden]{display:none!important}
 .narrow{max-width:880px}
@@ -1872,9 +2066,9 @@ html.vol-lock,html.vol-lock body{overflow:hidden}
         <button class="nav-dd-toggle" type="button" aria-expanded="false" aria-controls="dd-story"><span class="sr-only">Show Our Story</span><svg class="dd-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
         <div class="nav-dd-panel nav-dd-panel--sm" id="dd-story">
           <ul class="dd-simple" role="list">
-            <li><a href="../about/#about" style="--c:#F2C500"><b>About DEVCON</b><span>A non-profit built by volunteers since 2009</span></a></li>
-            <li><a href="../about/" style="--c:#EA641D"><b>Our 17-year AI story</b><span>From 2009 to an AI-Ready Nation</span></a></li>
-            <li><a href="../leadership/" data-nav="leadership" style="--c:#A57BFF"><b>Leadership</b><span>The people behind DEVCON</span></a></li>
+            <li><a href="../about/" style="--c:#F2C500"><b>About DEVCON Philippines</b><span>Our history: a volunteer non-profit since 2009</span></a></li>
+            <li><a href="../about/17years/" style="--c:#EA641D"><b>DEVCON 17 manifesto</b><span>Engineering an AI-Ready Nation</span></a></li>
+            <li><a href="../about/leadership/" data-nav="leadership" style="--c:#A57BFF"><b>Leadership</b><span>The people behind DEVCON</span></a></li>
           </ul>
         </div>
       </div>
@@ -1884,26 +2078,26 @@ html.vol-lock,html.vol-lock body{overflow:hidden}
         <div class="nav-dd-panel" id="dd-programs">
           <a class="dd-head" href="../programs/"><b>All DEVCON programs</b><span>From kids to leaders, nationwide</span></a>
           <div class="ddp-cols">
-            <div class="dd-col"><p class="dd-region" style="--c:#F2C500">2026 focus <span>6</span></p><ul role="list"><li><a class="ddp-focus" href="../programs/#hour-of-ai" style="--c:#F2C500"><span class="ddp-ic" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="5"/><path d="M12 5.5V8l1.5 1"/><circle cx="6" cy="17.5" r="1.6"/><circle cx="12" cy="17.5" r="1.6"/><circle cx="18" cy="17.5" r="1.6"/><path d="M3.5 22a2.5 2.5 0 0 1 5 0M9.5 22a2.5 2.5 0 0 1 5 0M15.5 22a2.5 2.5 0 0 1 5 0"/></svg></span><span><b>Hour of AI for Kids</b><small>DEVCON Kids</small></span></a></li><li><a class="ddp-focus" href="../ai-code-camps/" style="--c:#EA641D"><span class="ddp-ic" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5H9l2 2h8.5A1.5 1.5 0 0 1 21 8.5v10a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18.5Z"/><path d="m10 11-2 2 2 2M14 11l2 2-2 2"/></svg></span><span><b>Open-Source AI Code Camps</b><small>Free hands-on AI labs</small></span></a></li><li><a class="ddp-focus" href="../ai-fluency-masterclass/" style="--c:#4DA2FF"><span class="ddp-ic" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 6-6"/></svg></span><span><b>AI Fluency Masterclass</b><small>For builders and leaders</small></span></a></li><li><a class="ddp-focus" href="../ai/" style="--c:#F2C500"><span class="ddp-ic" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 4 6 6M11 7l6 6M12.5 5.5l5 5-3 3-5-5Z"/><path d="m11 11-7 7a1.4 1.4 0 0 0 2 2l7-7"/><path d="M13 21h8"/></svg></span><span><b>AI Scholarships</b><small>Certifications, starting with Claude</small></span></a></li><li><a class="ddp-focus" href="../jumpstart-internships/" style="--c:#A57BFF"><span class="ddp-ic" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M7 8h10M7 11h6"/><circle cx="16" cy="16.5" r="2.5"/><path d="m14.8 18.6-.8 3.4 2-1 2 1-.8-3.4"/></svg></span><span><b>AI Engineering Internships</b><small>DEVCON Jumpstart</small></span></a></li><li><a class="ddp-focus" href="../ai-fluency-masterclass/" style="--c:#71B405"><span class="ddp-ic" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 4 6 6M11 7l6 6M12.5 5.5l5 5-3 3-5-5Z"/><path d="m11 11-7 7a1.4 1.4 0 0 0 2 2l7-7"/><path d="M13 21h8"/></svg></span><span><b>Agentic Training for Leaders</b><small>AI Fluency for Builders</small></span></a></li></ul></div>
-            <div class="dd-col"><p class="dd-region" style="--c:#B99BFF">Pioneering programs</p><ul role="list"><li><a href="../campus/" style="--c:#A57BFF"><i class="dd-dot"></i><span class="dd-name">Campus DEVCON</span></a></li><li><a href="../case-study-sui/" style="--c:#A57BFF"><i class="dd-dot"></i><span class="dd-name">Move Smart Contracts Code Camps</span></a></li><li><a href="../pro-summit/" style="--c:#A57BFF"><i class="dd-dot"></i><span class="dd-name">PRO Developers Summit</span></a></li><li><a href="../sheisdevcon/" style="--c:#A57BFF"><i class="dd-dot"></i><span class="dd-name">#SHEISDEVCON</span></a></li><li><a href="../jumpstart-internships/" style="--c:#A57BFF"><i class="dd-dot"></i><span class="dd-name">DEVCON Jumpstart Internships</span></a></li><li><a href="../crest/" style="--c:#A57BFF"><i class="dd-dot"></i><span class="dd-name">DEVCON CREST</span></a></li><li><a href="https://www.devcon.plus" target="_blank" rel="noopener" style="--c:#A57BFF"><i class="dd-dot"></i><span class="dd-name">DEVCON+</span><svg class="ddp-ext" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg><span class="sr-only"> (opens in a new tab)</span></a></li></ul></div>
+            <div class="dd-col"><p class="dd-region" style="--c:#F2C500">2026 focus <span>6</span></p><ul role="list"><li><a class="ddp-focus" href="../programs/#hour-of-ai" style="--c:#F2C500"><span class="ddp-ic" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="5"/><path d="M12 5.5V8l1.5 1"/><circle cx="6" cy="17.5" r="1.6"/><circle cx="12" cy="17.5" r="1.6"/><circle cx="18" cy="17.5" r="1.6"/><path d="M3.5 22a2.5 2.5 0 0 1 5 0M9.5 22a2.5 2.5 0 0 1 5 0M15.5 22a2.5 2.5 0 0 1 5 0"/></svg></span><span><b>Hour of AI for Kids</b><small>DEVCON Kids</small></span></a></li><li><a class="ddp-focus" href="../programs/ai-code-camps/" style="--c:#EA641D"><span class="ddp-ic" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5H9l2 2h8.5A1.5 1.5 0 0 1 21 8.5v10a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18.5Z"/><path d="m10 11-2 2 2 2M14 11l2 2-2 2"/></svg></span><span><b>Open-Source AI Code Camps</b><small>Free hands-on AI labs</small></span></a></li><li><a class="ddp-focus" href="../programs/agentic-training/" style="--c:#4DA2FF"><span class="ddp-ic" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 6-6"/></svg></span><span><b>Agentic Training</b><small>AI Fluency for builders and chapter leaders</small></span></a></li><li><a class="ddp-focus" href="../programs/ai-scholarships/" style="--c:#F2C500"><span class="ddp-ic" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 4 6 6M11 7l6 6M12.5 5.5l5 5-3 3-5-5Z"/><path d="m11 11-7 7a1.4 1.4 0 0 0 2 2l7-7"/><path d="M13 21h8"/></svg></span><span><b>AI Scholarships</b><small>Certifications, starting with Claude</small></span></a></li><li><a class="ddp-focus" href="../programs/jumpstart-internships/" style="--c:#A57BFF"><span class="ddp-ic" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M7 8h10M7 11h6"/><circle cx="16" cy="16.5" r="2.5"/><path d="m14.8 18.6-.8 3.4 2-1 2 1-.8-3.4"/></svg></span><span><b>AI Engineering Internships</b><small>DEVCON Jumpstart</small></span></a></li><li><a class="ddp-focus" href="../programs/agentic-training/" style="--c:#71B405"><span class="ddp-ic" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 4 6 6M11 7l6 6M12.5 5.5l5 5-3 3-5-5Z"/><path d="m11 11-7 7a1.4 1.4 0 0 0 2 2l7-7"/><path d="M13 21h8"/></svg></span><span><b>Agentic Training</b><small>AI Fluency for builders and chapter leaders</small></span></a></li></ul></div>
+            <div class="dd-col"><p class="dd-region" style="--c:#B99BFF">Pioneering programs</p><ul role="list"><li><a href="../programs/kids/" style="--c:#A57BFF"><i class="dd-dot"></i><span class="dd-name">DEVCON Kids</span></a></li><li><a href="../programs/campus/" style="--c:#A57BFF"><i class="dd-dot"></i><span class="dd-name">Campus DEVCON</span></a></li><li><a href="../case-studies/sui/" style="--c:#A57BFF"><i class="dd-dot"></i><span class="dd-name">Move Smart Contracts Code Camps</span></a></li><li><a href="../programs/pro-summit/" style="--c:#A57BFF"><i class="dd-dot"></i><span class="dd-name">PRO Developers Summit</span></a></li><li><a href="../programs/sheisdevcon/" style="--c:#A57BFF"><i class="dd-dot"></i><span class="dd-name">#SHEISDEVCON</span></a></li><li><a href="../programs/jumpstart-internships/" style="--c:#A57BFF"><i class="dd-dot"></i><span class="dd-name">DEVCON Jumpstart Internships</span></a></li><li><a href="../programs/crest/" style="--c:#A57BFF"><i class="dd-dot"></i><span class="dd-name">DEVCON CREST</span></a></li><li><a href="https://www.devcon.plus" target="_blank" rel="noopener" style="--c:#A57BFF"><i class="dd-dot"></i><span class="dd-name">DEVCON+</span><svg class="ddp-ext" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg><span class="sr-only"> (opens in a new tab)</span></a></li></ul></div>
           </div>
         </div>
       </div>
       <div class="nav-dd" data-dd>
-        <a class="nav-dd-trigger" href="../chapters/" data-nav="chapters" aria-haspopup="true" aria-expanded="false" aria-controls="dd-chapters">Locations<svg class="dd-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
+        <a class="nav-dd-trigger" href="../locations/" data-nav="chapters" aria-haspopup="true" aria-expanded="false" aria-controls="dd-chapters">Locations<svg class="dd-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
         <button class="nav-dd-toggle" type="button" aria-expanded="false" aria-controls="dd-chapters"><span class="sr-only">Show locations</span><svg class="dd-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
         <div class="nav-dd-panel" id="dd-chapters">
-          <a class="dd-head" href="../chapters/"><b>All 13 locations</b><span>Chapters and volunteer communities across Luzon, Visayas, and Mindanao</span></a>
-          <div class="dd-cols"><div class="dd-col"><p class="dd-region" style="--c:#B99BFF">Luzon <span>4</span></p><ul role="list"><li><a href="../manila/" style="--c:#7808FF"><i class="dd-dot"></i><span class="dd-name">Manila</span><span class="dd-num">5.4k+</span></a></li><li><a href="../laguna/" style="--c:#7808FF"><i class="dd-dot"></i><span class="dd-name">Laguna</span><span class="dd-num">1.4k+</span></a></li><li><a href="../legazpi/" style="--c:#7808FF"><i class="dd-dot"></i><span class="dd-name">Legazpi</span><span class="dd-num">980+</span></a></li><li><a href="../pampanga/" style="--c:#7808FF"><i class="dd-dot"></i><span class="dd-name">Pampanga</span><span class="dd-num">630+</span></a></li></ul></div><div class="dd-col"><p class="dd-region" style="--c:#FF9A66">Visayas <span>5</span></p><ul role="list"><li><a href="../cebu/" style="--c:#EA641D"><i class="dd-dot"></i><span class="dd-name">Cebu</span><span class="dd-num">3.4k+</span></a></li><li><a href="../iloilo/" style="--c:#EA641D"><i class="dd-dot"></i><span class="dd-name">Iloilo</span><span class="dd-num">2.6k+</span></a></li><li><a href="../bohol/" style="--c:#EA641D"><i class="dd-dot is-vol"></i><span class="dd-name">Bohol<sup>*</sup></span><span class="dd-num">560+</span></a></li><li><a href="../bacolod/" style="--c:#EA641D"><i class="dd-dot is-vol"></i><span class="dd-name">Bacolod<sup>*</sup></span><span class="dd-num">300+</span></a></li><li><a href="../tacloban/" style="--c:#EA641D"><i class="dd-dot is-vol"></i><span class="dd-name">Tacloban<sup>*</sup></span><span class="dd-num">50+</span></a></li></ul></div><div class="dd-col"><p class="dd-region" style="--c:#9BDB3A">Mindanao <span>4</span></p><ul role="list"><li><a href="../davao/" style="--c:#71B405"><i class="dd-dot"></i><span class="dd-name">Davao</span><span class="dd-num">5.8k+</span></a></li><li><a href="../cagayandeoro/" style="--c:#71B405"><i class="dd-dot is-vol"></i><span class="dd-name">CDO<sup>*</sup></span><span class="dd-num">4.0k+</span></a></li><li><a href="../iligan/" style="--c:#71B405"><i class="dd-dot"></i><span class="dd-name">Iligan</span><span class="dd-num">1.4k+</span></a></li><li><a href="../bukidnon/" style="--c:#71B405"><i class="dd-dot"></i><span class="dd-name">Bukidnon</span><span class="dd-num">890+</span></a></li></ul></div></div>
+          <a class="dd-head" href="../locations/"><b>All 13 locations</b><span>Chapters and volunteer communities across Luzon, Visayas, and Mindanao</span></a>
+          <div class="dd-cols"><div class="dd-col"><p class="dd-region" style="--c:#B99BFF">Luzon <span>4</span></p><ul role="list"><li><a href="../locations/manila/" style="--c:#7808FF"><i class="dd-dot"></i><span class="dd-name">Manila</span><span class="dd-num">5.4k+</span></a></li><li><a href="../locations/laguna/" style="--c:#7808FF"><i class="dd-dot"></i><span class="dd-name">Laguna</span><span class="dd-num">1.4k+</span></a></li><li><a href="../locations/legazpi/" style="--c:#7808FF"><i class="dd-dot"></i><span class="dd-name">Legazpi</span><span class="dd-num">980+</span></a></li><li><a href="../locations/pampanga/" style="--c:#7808FF"><i class="dd-dot"></i><span class="dd-name">Pampanga</span><span class="dd-num">630+</span></a></li></ul></div><div class="dd-col"><p class="dd-region" style="--c:#FF9A66">Visayas <span>5</span></p><ul role="list"><li><a href="../locations/cebu/" style="--c:#EA641D"><i class="dd-dot"></i><span class="dd-name">Cebu</span><span class="dd-num">3.4k+</span></a></li><li><a href="../locations/iloilo/" style="--c:#EA641D"><i class="dd-dot"></i><span class="dd-name">Iloilo</span><span class="dd-num">2.6k+</span></a></li><li><a href="../locations/bohol/" style="--c:#EA641D"><i class="dd-dot is-vol"></i><span class="dd-name">Bohol<sup>*</sup></span><span class="dd-num">560+</span></a></li><li><a href="../locations/bacolod/" style="--c:#EA641D"><i class="dd-dot is-vol"></i><span class="dd-name">Bacolod<sup>*</sup></span><span class="dd-num">300+</span></a></li><li><a href="../locations/tacloban/" style="--c:#EA641D"><i class="dd-dot is-vol"></i><span class="dd-name">Tacloban<sup>*</sup></span><span class="dd-num">50+</span></a></li></ul></div><div class="dd-col"><p class="dd-region" style="--c:#9BDB3A">Mindanao <span>4</span></p><ul role="list"><li><a href="../locations/davao/" style="--c:#71B405"><i class="dd-dot"></i><span class="dd-name">Davao</span><span class="dd-num">5.8k+</span></a></li><li><a href="../locations/cagayandeoro/" style="--c:#71B405"><i class="dd-dot is-vol"></i><span class="dd-name">CDO<sup>*</sup></span><span class="dd-num">4.0k+</span></a></li><li><a href="../locations/iligan/" style="--c:#71B405"><i class="dd-dot"></i><span class="dd-name">Iligan</span><span class="dd-num">1.4k+</span></a></li><li><a href="../locations/bukidnon/" style="--c:#71B405"><i class="dd-dot"></i><span class="dd-name">Bukidnon</span><span class="dd-num">890+</span></a></li></ul></div></div>
           <p class="dd-note"><sup>*</sup> Local tech community network, no active chapter officers.</p>
         </div>
       </div>
-      <a href="../devrel-case-studies/" data-nav="case-studies">DevRel Case Studies</a>
+      <a href="../case-studies/" data-nav="case-studies">DevRel Case Studies</a>
       <div class="nav-dd nav-dd--pb" data-dd>
         <a class="nav-dd-trigger" href="../playbook/" data-nav="playbook" aria-haspopup="true" aria-expanded="false" aria-controls="dd-pb">Community Playbook<svg class="dd-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></a>
         <button class="nav-dd-toggle" type="button" aria-expanded="false" aria-controls="dd-pb"><span class="sr-only">Show Community Playbook</span><svg class="dd-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
         <div class="nav-dd-panel nav-dd-panel--sm nav-dd-panel--right" id="dd-pb">
-          <ul class="dd-simple" role="list"><li><a href="../playbook/" style="--c:#EA641D"><b>Community Playbook home</b><span>Guidelines, loopers, and the Playbook AI</span></a></li><li><a href="../volunteers-guide/" style="--c:#F2C500"><b>Volunteering Basics</b></a></li><li><a href="../code-of-conduct-for-national-and-chapter-officers-and-volunteers/" style="--c:#A57BFF"><b>Code of Conduct for Officers and Volunteers</b></a></li><li><a href="../standard-privacy-and-safespace-consent/" style="--c:#4DA2FF"><b>Events Privacy and Safe Space Consent</b></a></li><li><a href="../campus-events-guidelines/" style="--c:#71B405"><b>Campus DEVCON Events Guidelines</b></a></li><li><a href="../child-protection-policy/" style="--c:#EC4899"><b>Child Protection Policy</b></a></li><li><a href="../brand-kit/" style="--c:#F2C500"><b>Brand Kit</b></a></li></ul>
+          <ul class="dd-simple" role="list"><li><a href="../playbook/" style="--c:#EA641D"><b>Community Playbook home</b><span>Guidelines, loopers, and the Playbook AI</span></a></li><li><a href="../playbook/volunteers-guide/" style="--c:#F2C500"><b>Volunteering Basics</b></a></li><li><a href="../playbook/code-of-conduct/" style="--c:#A57BFF"><b>Code of Conduct for Officers and Volunteers</b></a></li><li><a href="../playbook/privacy-and-safe-space/" style="--c:#4DA2FF"><b>Events Privacy and Safe Space Consent</b></a></li><li><a href="../playbook/campus-events-guidelines/" style="--c:#71B405"><b>Campus DEVCON Events Guidelines</b></a></li><li><a href="../playbook/child-protection-policy/" style="--c:#EC4899"><b>Child Protection Policy</b></a></li><li><a href="../playbook/brand-kit/" style="--c:#F2C500"><b>Brand Kit</b></a></li></ul>
         </div>
       </div>
       <a class="nav-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSczVxZPmHIRPphNJNgbuRVzEC5QTponVzjDPPMmkSxP0cIdrg/viewform" target="_blank" rel="noopener" data-volunteer>Volunteer</a>
@@ -1919,7 +2113,7 @@ html.vol-lock,html.vol-lock body{overflow:hidden}
       <span class="eyebrow" style="color:var(--y)">Partner with DEVCON</span>
       <h1 id="partner-title">Invest in Philippine tech talent</h1>
       <p class="page-lead">The country&#8217;s largest and longest-running SEC-registered, BIR-compliant non-profit volunteer tech community, established in 2009. The most trusted entry point for global tech platforms growing in the Philippines.</p>
-      <div class="hero-btns"><a class="btn-primary btn-xl" href="mailto:hello@devcon.ph?subject=Partnership%20and%20sponsorship%20inquiry">Talk to our partnerships team</a><a class="btn-outline" href="../case-study-sui/">Read the Sui case study</a></div>
+      <div class="hero-btns"><a class="btn-primary btn-xl" href="mailto:hello@devcon.ph?subject=Partnership%20and%20sponsorship%20inquiry">Talk to our partnerships team</a><a class="btn-outline" href="../case-studies/sui/">Read the Sui case study</a></div>
     </div>
   </header>
 
@@ -1933,9 +2127,9 @@ html.vol-lock,html.vol-lock body{overflow:hidden}
     <div class="wrap">
       <header class="sec-head"><span class="eyebrow" style="color:var(--y)">Ways to partner</span><h2>Reach builders at every stage</h2></header>
       <ul class="pp-grid" role="list">
-        <li class="pp" style="--c:#4DA2FF"><span class="pp-ic" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5H9l2 2h8.5A1.5 1.5 0 0 1 21 8.5v10a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18.5Z"/><path d="m10 11-2 2 2 2M14 11l2 2-2 2"/></svg></span><h3>DevRel and code camps</h3><p>Train developers on your stack through our chapters, with verifiable outcomes.</p><a class="pp-link" href="../case-study-sui/">See the Sui results</a></li>
+        <li class="pp" style="--c:#4DA2FF"><span class="pp-ic" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5H9l2 2h8.5A1.5 1.5 0 0 1 21 8.5v10a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 18.5Z"/><path d="m10 11-2 2 2 2M14 11l2 2-2 2"/></svg></span><h3>DevRel and code camps</h3><p>Train developers on your stack through our chapters, with verifiable outcomes.</p><a class="pp-link" href="../case-studies/sui/">See the Sui results</a></li>
         <li class="pp" style="--c:#F2C500"><span class="pp-ic" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><h3>Summit and event sponsorship</h3><p>The PRO Summit, regional summits, SheIsDEVCON, and 140+ chapter events a year.</p></li>
-        <li class="pp" style="--c:#A57BFF"><span class="pp-ic" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M7 8h10M7 11h6"/><circle cx="16" cy="16.5" r="2.5"/><path d="m14.8 18.6-.8 3.4 2-1 2 1-.8-3.4"/></svg></span><h3>Scholarships and internships</h3><p>Fund AI Certification Scholarships and DEVCON Jumpstart internship cohorts.</p><a class="pp-link" href="../jumpstart-internships/">About Jumpstart</a></li>
+        <li class="pp" style="--c:#A57BFF"><span class="pp-ic" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M7 8h10M7 11h6"/><circle cx="16" cy="16.5" r="2.5"/><path d="m14.8 18.6-.8 3.4 2-1 2 1-.8-3.4"/></svg></span><h3>Scholarships and internships</h3><p>Fund AI Certification Scholarships and DEVCON Jumpstart internship cohorts.</p><a class="pp-link" href="../programs/jumpstart-internships/">About Jumpstart</a></li>
         <li class="pp" style="--c:#71B405"><span class="pp-ic" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="5"/><path d="M12 5.5V8l1.5 1"/><circle cx="6" cy="17.5" r="1.6"/><circle cx="12" cy="17.5" r="1.6"/><circle cx="18" cy="17.5" r="1.6"/><path d="M3.5 22a2.5 2.5 0 0 1 5 0M9.5 22a2.5 2.5 0 0 1 5 0M15.5 22a2.5 2.5 0 0 1 5 0"/></svg></span><h3>DEVCON Kids donations</h3><p>micro:bits, robotics kits, and Hour of AI support for public schools.</p></li>
         <li class="pp" style="--c:#EA641D"><span class="pp-ic" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="2"/><path d="M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14"/></svg></span><h3>Content and media</h3><p>Program coverage by DEVCON Studios across our online channels.</p></li>
         <li class="pp" style="--c:#EC4899"><span class="pp-ic" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></span><h3>In-kind and venue support</h3><p>Spaces, tools, and credits that let chapters run more free events.</p></li>
@@ -1949,7 +2143,7 @@ html.vol-lock,html.vol-lock body{overflow:hidden}
         <h2>Year 1 with Sui</h2>
         <p>Every code camp submission counts only when it's live on mainnet. Partners get quarterly reports and a final assessment.</p>
         <ul class="facts" role="list" style="--c:#4DA2FF;margin-top:18px"><li><b>548</b><span>code camp attendees</span></li><li><b>330+</b><span>verified mainnet submissions</span></li><li><b>60.4%</b><span>completion rate</span></li><li><b>6</b><span>developer events</span></li></ul>
-        <div class="programs-cta" style="justify-content:flex-start"><a class="btn-outline" href="../case-study-sui/">Read the full case study</a></div>
+        <div class="programs-cta" style="justify-content:flex-start"><a class="btn-outline" href="../case-studies/sui/">Read the full case study</a></div>
       </div>
       <div>
         <ol class="steps" role="list"><li><span class="step-n" aria-hidden="true">1</span><div><h3>Discovery call</h3><p>Tell us your goals, audience, and timeline.</p></div></li><li><span class="step-n" aria-hidden="true">2</span><div><h3>Co-design the program</h3><p>We agree on the format, chapters, and KPIs together.</p></div></li><li><span class="step-n" aria-hidden="true">3</span><div><h3>Roll out nationwide</h3><p>Our chapters and volunteers run it on the ground.</p></div></li><li><span class="step-n" aria-hidden="true">4</span><div><h3>Report quarterly</h3><p>Clear numbers every quarter, plus a final assessment.</p></div></li></ol>
@@ -1979,12 +2173,12 @@ html.vol-lock,html.vol-lock body{overflow:hidden}
     </div></div>
     </div>
   </section>
-<section class="section band2 faq-sec" aria-labelledby="partner-faq"><div class="wrap narrow"><header class="sec-head"><span class="eyebrow" style="color:var(--y)">Sponsor FAQ</span><h2 id="partner-faq">What global and local partners ask us</h2></header><div class="faq"><details class="faq-item"><summary>Why partner with DEVCON Philippines?</summary><p>DEVCON is the Philippines&#8217; largest and longest-running volunteer tech community, founded in 2009, with 70k+ online reach, 19k+ face-to-face attendees in 2025, and 13 locations nationwide.</p><p class="faq-next"><span>Next step</span><a href="../devrel-case-studies/">See DevRel case studies</a><span class="faq-next-sep" aria-hidden="true"> · </span><a href="../about/">Read our story</a></p></details><details class="faq-item"><summary>What partnership formats are available?</summary><p>DevRel and code camps, summit and event sponsorship, AI Certification Scholarships and internships, DEVCON Kids donations, content and media, and in-kind or venue support.</p><p class="faq-next"><span>Next step</span><a href="../programs/">Explore programs</a><span class="faq-next-sep" aria-hidden="true"> · </span><a href="../pro-summit/">PRO Summit sponsorship</a></p></details><details class="faq-item"><summary>What results can partners expect?</summary><p>Verifiable outcomes and quarterly reports. For example, one DevRel code camp series produced 330+ verified mainnet submissions across five chapters in its first year.</p><p class="faq-next"><span>Next step</span><a href="../case-study-sui/">Sui case study</a><span class="faq-next-sep" aria-hidden="true"> · </span><a href="../devrel-case-studies/">All case studies</a></p></details><details class="faq-item"><summary>Is DEVCON a registered non-profit?</summary><p>Yes. DevConnect Philippines Inc. is an SEC-registered, BIR-compliant non-profit organization.</p><p class="faq-next"><span>Next step</span><a href="../brand-kit/">Entity information in the Brand Kit</a></p></details><details class="faq-item"><summary>How do we start?</summary><p>Email hello@devcon.ph. We begin with a discovery call, co-design the program and KPIs, roll it out through our chapters, and report every quarter.</p><p class="faq-next"><span>Next step</span><a href="mailto:hello@devcon.ph?subject=Partnership%20inquiry">Email hello@devcon.ph</a><span class="faq-next-sep" aria-hidden="true"> · </span><a href="../brand-kit/">Get the Brand Kit</a></p></details></div></div></section>
+<section class="section band2 faq-sec" aria-labelledby="partner-faq"><div class="wrap narrow"><header class="sec-head"><span class="eyebrow" style="color:var(--y)">Sponsor FAQ</span><h2 id="partner-faq">What global and local partners ask us</h2></header><div class="faq"><details class="faq-item"><summary>Why partner with DEVCON Philippines?</summary><p>DEVCON is the Philippines&#8217; largest and longest-running volunteer tech community, founded in 2009, with 70k+ online reach, 19k+ face-to-face attendees in 2025, and 13 locations nationwide.</p><p class="faq-next"><span>Next step</span><a href="../case-studies/">See DevRel case studies</a><span class="faq-next-sep" aria-hidden="true"> · </span><a href="../about/">Read our story</a></p></details><details class="faq-item"><summary>What partnership formats are available?</summary><p>DevRel and code camps, summit and event sponsorship, AI Certification Scholarships and internships, DEVCON Kids donations, content and media, and in-kind or venue support.</p><p class="faq-next"><span>Next step</span><a href="../programs/">Explore programs</a><span class="faq-next-sep" aria-hidden="true"> · </span><a href="../programs/pro-summit/">PRO Summit sponsorship</a></p></details><details class="faq-item"><summary>What results can partners expect?</summary><p>Verifiable outcomes and quarterly reports. For example, one DevRel code camp series produced 330+ verified mainnet submissions across five chapters in its first year.</p><p class="faq-next"><span>Next step</span><a href="../case-studies/sui/">Sui case study</a><span class="faq-next-sep" aria-hidden="true"> · </span><a href="../case-studies/">All case studies</a></p></details><details class="faq-item"><summary>Is DEVCON a registered non-profit?</summary><p>Yes. DevConnect Philippines Inc. is an SEC-registered, BIR-compliant non-profit organization.</p><p class="faq-next"><span>Next step</span><a href="../playbook/brand-kit/">Entity information in the Brand Kit</a></p></details><details class="faq-item"><summary>How do we start?</summary><p>Email hello@devcon.ph. We begin with a discovery call, co-design the program and KPIs, roll it out through our chapters, and report every quarter.</p><p class="faq-next"><span>Next step</span><a href="mailto:hello@devcon.ph?subject=Partnership%20inquiry">Email hello@devcon.ph</a><span class="faq-next-sep" aria-hidden="true"> · </span><a href="../playbook/brand-kit/">Get the Brand Kit</a></p></details></div></div></section>
   <section class="page-cta">
     <div class="wrap">
       <h2>Let&#8217;s build the Philippines&#8217; AI-ready talent together.</h2>
       <p>Your support funds the chapters, events, and programs that keep Filipino developers competitive.</p>
-      <div class="programs-cta"><a class="btn-primary btn-xl" href="mailto:hello@devcon.ph?subject=Partnership%20and%20sponsorship%20inquiry">Talk to our partnerships team</a><a class="btn-outline" href="../devrel-case-studies/">See all DevRel case studies</a></div>
+      <div class="programs-cta"><a class="btn-primary btn-xl" href="mailto:hello@devcon.ph?subject=Partnership%20and%20sponsorship%20inquiry">Talk to our partnerships team</a><a class="btn-outline" href="../case-studies/">See all DevRel case studies</a></div>
     </div>
   </section>
 
@@ -2012,39 +2206,39 @@ html.vol-lock,html.vol-lock body{overflow:hidden}
           <li><a href="../programs/">Campus DEVCON</a></li>
           <li><a href="../programs/">PRO Summit</a></li>
           <li><a href="../programs/">SheIsDEVCON</a></li>
-          <li><a href="../jumpstart-internships/">Jumpstart Internship</a></li>
+          <li><a href="../programs/jumpstart-internships/">Jumpstart Internship</a></li>
         </ul>
       </nav>
 
       <nav class="ft-col ft-chapters" aria-labelledby="ft-chapters">
-        <h2 id="ft-chapters"><a class="ft-h-link" href="../chapters/">Nationwide Locations</a></h2>
+        <h2 id="ft-chapters"><a class="ft-h-link" href="../locations/">Nationwide Locations</a></h2>
         <div class="ft-regions">
           <div>
             <h3>Luzon</h3>
             <ul class="ft-list">
-              <li><a href="../manila/">Manila</a></li>
-              <li><a href="../laguna/">Laguna</a></li>
-              <li><a href="../legazpi/">Legazpi</a></li>
-              <li><a href="../pampanga/">Pampanga</a></li>
+              <li><a href="../locations/manila/">Manila</a></li>
+              <li><a href="../locations/laguna/">Laguna</a></li>
+              <li><a href="../locations/legazpi/">Legazpi</a></li>
+              <li><a href="../locations/pampanga/">Pampanga</a></li>
             </ul>
           </div>
           <div>
             <h3>Visayas</h3>
             <ul class="ft-list">
-              <li><a href="../cebu/">Cebu</a></li>
-              <li><a href="../iloilo/">Iloilo</a></li>
-              <li><a href="../bohol/">Bohol</a></li>
-              <li><a href="../bacolod/">Bacolod</a></li>
-              <li><a href="../tacloban/">Tacloban</a></li>
+              <li><a href="../locations/cebu/">Cebu</a></li>
+              <li><a href="../locations/iloilo/">Iloilo</a></li>
+              <li><a href="../locations/bohol/">Bohol</a></li>
+              <li><a href="../locations/bacolod/">Bacolod</a></li>
+              <li><a href="../locations/tacloban/">Tacloban</a></li>
             </ul>
           </div>
           <div>
             <h3>Mindanao</h3>
             <ul class="ft-list">
-              <li><a href="../davao/">Davao</a></li>
-              <li><a href="../cagayandeoro/">CDO</a></li>
-              <li><a href="../iligan/">Iligan</a></li>
-              <li><a href="../bukidnon/">Bukidnon</a></li>
+              <li><a href="../locations/davao/">Davao</a></li>
+              <li><a href="../locations/cagayandeoro/">CDO</a></li>
+              <li><a href="../locations/iligan/">Iligan</a></li>
+              <li><a href="../locations/bukidnon/">Bukidnon</a></li>
             </ul>
           </div>
         </div>
@@ -2054,15 +2248,15 @@ html.vol-lock,html.vol-lock body{overflow:hidden}
         <h2 id="ft-community">Community</h2>
         <ul class="ft-list" aria-labelledby="ft-community">
           <li><a href="../attend/">Attend an event</a></li>
-          <li><a href="../about/">Our 17-year story</a></li>
-          <li><a href="../leadership/">Leadership</a></li>
+          <li><a href="../about/">About DEVCON Philippines</a></li><li><a href="../about/17years/">DEVCON 17 manifesto</a></li>
+          <li><a href="../about/leadership/">Leadership</a></li>
           <li><a href="../playbook/">Community Playbook</a></li>
-          <li><a href="../devrel-case-studies/">DevRel Case Studies</a></li>
+          <li><a href="../case-studies/">DevRel Case Studies</a></li>
           <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSczVxZPmHIRPphNJNgbuRVzEC5QTponVzjDPPMmkSxP0cIdrg/viewform" target="_blank" rel="noopener" data-volunteer>Volunteer</a></li>
-          <li><a href="../partner/">Become a partner</a></li>
+          <li><a href="./">Become a partner</a></li>
           <li><a href="../invite/">Invite DEVCON</a></li>
           <li><a href="../invite/#start-a-chapter">Start a chapter</a></li>
-          <li><a href="../code-of-conduct-for-national-and-chapter-officers-and-volunteers/">Code of Conduct</a></li>
+          <li><a href="../playbook/code-of-conduct/">Code of Conduct</a></li>
         </ul>
         <address class="ft-contact">
           DEVCON HQ Office: Makati or Ortigas, Metro Manila<br/>
@@ -2080,8 +2274,8 @@ html.vol-lock,html.vol-lock body{overflow:hidden}
     <div class="ft-bottom">
       <p>&copy; <span data-year>2026</span> DEVCON Philippines. All rights reserved.</p>
       <ul class="ft-legal" aria-label="Legal">
-        <li><a href="../standard-privacy-and-safespace-consent/">Privacy and Safe Space</a></li>
-        <li><a href="../code-of-conduct-for-national-and-chapter-officers-and-volunteers/">Code of Conduct</a></li>
+        <li><a href="../playbook/privacy-and-safe-space/">Privacy and Safe Space</a></li>
+        <li><a href="../playbook/code-of-conduct/">Code of Conduct</a></li>
         <li><a href="#top">Back to top</a></li>
       </ul>
     </div>
@@ -2357,22 +2551,26 @@ html.vol-lock,html.vol-lock body{overflow:hidden}
 <script>
 /* Devie: rule-based FAQ assistant. No data leaves the browser. */
 (function(){
-  var FILES = {"home": "index.html", "story": "about.html", "programs": "programs.html", "chapters": "chapters.html", "case-studies": "devrel-case-studies.html", "sui": "case-study-sui.html", "attend": "attend.html", "invite": "invite.html", "partner": "partner.html", "leadership": "leadership.html", "icp": "case-study-icp.html", "playbook": "playbook.html", "ai-code-camps": "ai-code-camps.html", "internships": "jumpstart-internships.html", "hour-of-ai": "case-study-hour-of-ai.html", "volunteers-guide": "volunteers-guide.html", "code-of-conduct-for-national-and-chapter-officers-and-volunteers": "code-of-conduct-for-national-and-chapter-officers-and-volunteers.html", "standard-privacy-and-safespace-consent": "standard-privacy-and-safespace-consent.html", "campus-events-guidelines": "campus-events-guidelines.html", "child-protection-policy": "child-protection-policy.html", "devcon-kids": "devcon-kids.html", "campus": "campus.html", "sheisdevcon": "sheisdevcon.html", "pro-summit": "pro-summit.html", "crest": "crest.html", "dctx": "dctx.html", "educators": "educators.html", "ai-fluency": "ai-fluency-masterclass.html", "ai": "ai.html", "brand-kit": "brand-kit.html", "zoho-creator": "case-study-zoho-creator.html", "campus-summit": "case-study-campus-devcon-summit.html", "pro-summit-2023": "case-study-pro-summit.html", "mindanao-ai-caravan": "case-study-mindanao-ai-caravan.html"};
+  var FILES = {"home": "index.html", "story": "about.html", "programs": "programs.html", "chapters": "chapters.html", "case-studies": "devrel-case-studies.html", "sui": "case-study-sui.html", "attend": "attend.html", "invite": "invite.html", "partner": "partner.html", "leadership": "leadership.html", "icp": "case-study-icp.html", "playbook": "playbook.html", "ai-code-camps": "ai-code-camps.html", "internships": "jumpstart-internships.html", "hour-of-ai": "case-study-hour-of-ai.html", "volunteers-guide": "volunteers-guide.html", "code-of-conduct-for-national-and-chapter-officers-and-volunteers": "code-of-conduct-for-national-and-chapter-officers-and-volunteers.html", "standard-privacy-and-safespace-consent": "standard-privacy-and-safespace-consent.html", "campus-events-guidelines": "campus-events-guidelines.html", "child-protection-policy": "child-protection-policy.html", "devcon-kids": "devcon-kids.html", "campus": "campus.html", "sheisdevcon": "sheisdevcon.html", "pro-summit": "pro-summit.html", "crest": "crest.html", "dctx": "dctx.html", "educators": "educators.html", "ai-fluency": "ai-fluency-masterclass.html", "ai": "ai.html", "brand-kit": "brand-kit.html", "zoho-creator": "case-study-zoho-creator.html", "campus-summit": "case-study-campus-devcon-summit.html", "pro-summit-2023": "case-study-pro-summit.html", "mindanao-ai-caravan": "case-study-mindanao-ai-caravan.html", "ai-physical-computing": "case-study-ai-physical-computing-educators.html", "17years": "17years.html", "educators-csta": "case-study-devcon-for-educators.html", "microbit": "case-study-microbit.html"};
   var root=document.getElementById('devie'); if(!root) return;
   var fab=document.getElementById('devie-fab'), panel=document.getElementById('devie-panel'), log=document.getElementById('devie-log'),
       chips=document.getElementById('devie-chips'), form=document.getElementById('devie-form'), inp=document.getElementById('devie-in');
   var SPA = document.querySelectorAll('[data-page]').length > 1;
   var here = (location.pathname.split('/').pop() || 'index.html');
   var segs = location.pathname.split('/').filter(Boolean), curSlug = (segs[segs.length-1]||'').replace(/\.html$/,'');
-  var IS_HOME = !!document.querySelector('[data-page="home"]'), ROOT = IS_HOME ? '' : '../';
+  var IS_HOME = !!document.querySelector('[data-page="home"]');
+  var PM={"about":"about","17years":"about/17years","leadership":"about/leadership","programs":"programs","devcon-kids":"programs/kids","campus":"programs/campus","sheisdevcon":"programs/sheisdevcon","pro-summit":"programs/pro-summit","crest":"programs/crest","dctx":"programs/dctx","educators":"programs/educators","ai-fluency-masterclass":"programs/agentic-training","ai-code-camps":"programs/ai-code-camps","jumpstart-internships":"programs/jumpstart-internships","ai":"programs/ai-scholarships","chapters":"locations","devrel-case-studies":"case-studies","case-study-sui":"case-studies/sui","case-study-icp":"case-studies/icp","case-study-hour-of-ai":"case-studies/hour-of-ai","case-study-zoho-creator":"case-studies/zoho-creator","case-study-campus-devcon-summit":"case-studies/campus-devcon-summit","case-study-pro-summit":"case-studies/pro-summit","case-study-mindanao-ai-caravan":"case-studies/mindanao-ai-caravan","case-study-ai-physical-computing-educators":"case-studies/ai-physical-computing-educators","case-study-devcon-for-educators":"case-studies/devcon-for-educators","case-study-microbit":"case-studies/microbit","playbook":"playbook","brand-kit":"playbook/brand-kit","volunteers-guide":"playbook/volunteers-guide","code-of-conduct-for-national-and-chapter-officers-and-volunteers":"playbook/code-of-conduct","standard-privacy-and-safespace-consent":"playbook/privacy-and-safe-space","child-protection-policy":"playbook/child-protection-policy","campus-events-guidelines":"playbook/campus-events-guidelines","attend":"attend","invite":"invite","partner":"partner","manila":"locations/manila","laguna":"locations/laguna","legazpi":"locations/legazpi","pampanga":"locations/pampanga","cebu":"locations/cebu","iloilo":"locations/iloilo","bohol":"locations/bohol","bacolod":"locations/bacolod","tacloban":"locations/tacloban","davao":"locations/davao","cagayandeoro":"locations/cagayandeoro","iligan":"locations/iligan","bukidnon":"locations/bukidnon"};
+  var _ki=segs.indexOf('staging-devcon-ph-2026-website-redesign'), BASE=_ki>-1?'/'+segs.slice(0,_ki+1).join('/')+'/':'/';
+  var curPath=location.pathname.slice(BASE.length).replace(/\/$/,'');
   function href(r, a){
     if(r.indexOf('http')===0 || r.indexOf('mailto:')===0) return r;
     if(SPA) return a ? '#'+a : '#/'+r;
     var f = r.indexOf('chapter/')===0 ? r.slice(8)+'.html' : (FILES[r] || 'index.html');
     if(location.protocol==='file:'){ return (f===here && a) ? '#'+a : f + (a ? '#'+a : ''); }
     var slug=f.replace(/\.html$/,''), isHomeT=(slug==='index');
-    if(a && ((isHomeT && IS_HOME) || (!isHomeT && !IS_HOME && slug===curSlug))) return '#'+a;
-    return (isHomeT ? (ROOT||'./') : ROOT+slug+'/') + (a ? '#'+a : '');
+    var tp=isHomeT?'':(PM[slug]||slug);
+    if(a && tp===curPath) return '#'+a;
+    return BASE+(tp?tp+'/':'') + (a ? '#'+a : '');
   }
   /* ---------- local greetings per chapter ---------- */
   var G = {

@@ -4,6 +4,23 @@ Newest first. Times are Philippine Standard Time (PHT).
 
 | Version | Updated | Changes |
 |---|---|---|
+| v1.92 | Oct 1, 2026, 3:40 AM PHT | Agentic Training program page |
+| v1.91 | Oct 1, 2026, 3:32 AM PHT | Nested folder URLs for all sections |
+| v1.90 | Oct 1, 2026, 3:26 AM PHT | Location page headers and flow simplified |
+| v1.89 | Oct 1, 2026, 3:15 AM PHT | Sui video and programs menu update |
+| v1.88 | Oct 1, 2026, 1:35 AM PHT | DEVCON Kids program page and new education case studies |
+| v1.87 | Sep 28, 2026, 1:13 PM PHT | Location pages streamlined; case study calls to action; new manifesto page |
+| v1.86 | Sep 28, 2026, 12:35 PM PHT | Leadership founder profile added |
+| v1.85 | Sep 28, 2026, 12:31 PM PHT | President photos enhanced; location page order refined |
+| v1.84 | Sep 28, 2026, 2:21 AM PHT | Location page photos, balance, and video features |
+| v1.83 | Sep 28, 2026, 1:30 AM PHT | New educators case study |
+| v1.82 | Sep 28, 2026, 1:25 AM PHT | Volunteer community pages clarified |
+| v1.81 | Sep 28, 2026, 1:23 AM PHT | Visitor guide wording refined |
+| v1.80 | Sep 28, 2026, 1:20 AM PHT | Location page awards spacing and headlines refined |
+| v1.79 | Sep 27, 2026, 9:01 PM PHT | Location page story and calls to action refined |
+| v1.78 | Sep 27, 2026, 8:28 PM PHT | Location pages restructured |
+| v1.77 | Sep 27, 2026, 9:16 AM PHT | Chapter page additions and case study partner credits |
+| v1.76 | Sep 27, 2026, 9:03 AM PHT | Hosting labels updated and old addresses redirected |
 | v1.75 | Sep 26, 2026, 5:13 PM PHT | Homepage CTAs, map growth areas, and educator stories |
 | v1.74 | Sep 26, 2026, 4:55 PM PHT | Assistant moved and made more readable |
 | v1.73 | Sep 26, 2026, 4:43 PM PHT | Community messaging and invitation guidance |

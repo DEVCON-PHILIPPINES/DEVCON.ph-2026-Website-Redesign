@@ -1,6 +1,6 @@
 # DEVCON.PH 2026 Website Redesign: Product Requirements Document
 
-**Status:** Live on GitHub Pages · **Current version:** v1.75 · Workflow: staging → production · **Owner:** DEVCON Philippines National Office (Communications)
+**Status:** Live on GitHub Pages · **Current version:** v1.92 · Workflow: staging → production · **Owner:** DEVCON Philippines National Office (Communications)
 **Source of truth:** this file. When the site, a brief, or a chat thread disagrees with this PRD, update this PRD first, then the site.
 
 ---
@@ -9,7 +9,7 @@
 
 The DEVCON.PH 2026 website is the public home of DEVCON Philippines (DevConnect Philippines Inc.), the country's largest volunteer tech community: a non-profit founded in 2009 with 13 locations nationwide. The 2026 redesign launches with DEVCON 17 and its theme, **Engineering an AI-Ready Nation**.
 
-The site is a static, self-contained HTML build. It is a visual and content blueprint for the eventual production site at devcon.ph, and it is live today at https://devcon-philippines.github.io/DEVCON.ph-2026-Website-Redesign/.
+The site is a static, self-contained HTML build. It is a visual and content blueprint for the eventual production site at devcon.ph, and it runs in two environments: **staging-** on GitHub Pages (https://devcon-philippines.github.io/staging-devcon-ph-2026-website-redesign/) and **prod-** on Cloudflare Pages (https://prod-devcon-ph-2026-website-redesign.pages.dev).
 
 ## 2. Goals
 
@@ -39,19 +39,23 @@ The site is a static, self-contained HTML build. It is a visual and content blue
 
 **Top menu:** Our Story, Programs, Locations, DevRel Case Studies, Community Playbook, Volunteer.
 
+**Agentic Training** (`/programs/agentic-training/`, formerly the AI Fluency Masterclass): one program with two tracks inside, AI Fluency for Builders (masterclass plus hands-on Agentic AI Hackathon) and Agentic Training for Leaders (chapter leaders as AI orchestrators). Old masterclass addresses redirect here.
+
+**Programs menu:** DEVCON Kids is listed first under Pioneering programs.
+
 **Homepage hero CTAs:** "Attend free events" (scrolls to the DEVCON+ banner) and "Discover a chapter near you" (opens the Locations map).
 
 **Homepage order:** hero, logo carousel ("Trusted by leaders and pioneers"), locations map (static on mobile), numbers, about, 17 years, explore, Recent news 3×3 ("What we've been building", led by the Mindanao AI Caravan as major news), Be part of DEVCON 17 hub, FAQ, partners, DEVCON+ banner.
 
-**Pages (47):**
+**Pages (51):**
 
-- **Core:** Home (`/`), Our Story (`about`), Leadership (`leadership`), Programs (`programs`), Attend (`attend`), Partner (`partner`), Invite DEVCON (`invite`), AI Scholarships (`ai`), Jumpstart Internships (`jumpstart-internships`), AI code camps (`ai-code-camps`).
+- **Core:** Home (`/`), About DEVCON Philippines (`about`, org history and "a community, not an events company"), DEVCON 17 manifesto (`17years`, Engineering an AI-Ready Nation and the 17-year anniversary), Leadership (`leadership`), Programs (`programs`), Attend (`attend`), Partner (`partner`), Invite DEVCON (`invite`), AI Scholarships (`ai`), Jumpstart Internships (`jumpstart-internships`), AI code camps (`ai-code-camps`).
 - **Locations:** Locations hub (`chapters`) and 13 location pages: manila, laguna, legazpi, pampanga, cebu, iloilo, bohol, bacolod, tacloban, davao, iligan, cagayandeoro, bukidnon.
 - **Programs:** devcon-kids, campus, sheisdevcon, pro-summit, crest, dctx, educators, ai-fluency-masterclass.
-- **DevRel case studies:** hub (`devrel-case-studies`) and case-study-sui, case-study-icp, case-study-hour-of-ai, case-study-zoho-creator, case-study-campus-devcon-summit, case-study-pro-summit, case-study-mindanao-ai-caravan.
+- **DevRel case studies:** hub (`devrel-case-studies`) and case-study-sui, case-study-icp, case-study-hour-of-ai, case-study-zoho-creator, case-study-campus-devcon-summit, case-study-pro-summit, case-study-mindanao-ai-caravan, case-study-ai-physical-computing-educators.
 - **Community Playbook:** playbook, volunteers-guide, code-of-conduct-for-national-and-chapter-officers-and-volunteers, standard-privacy-and-safespace-consent, campus-events-guidelines, child-protection-policy, brand-kit.
 
-**URLs match devcon.ph.** Every page lives at a trailing-slash URL, the same as the current devcon.ph (for example `/about/`, `/manila/`, `/jumpstart-internships/`), so existing links, bookmarks, and search results keep working. The downloadable ZIP keeps `.html` file names so pages open locally.
+**URLs use section folders.** Pages live under their section: `/about/` (with `/about/17years/`, `/about/leadership/`), `/programs/<program>/` (for example `/programs/kids/`, `/programs/campus/`, `/programs/ai-scholarships/`), `/locations/<city>/` (for example `/locations/manila/`), `/case-studies/<name>/` (for example `/case-studies/sui/`), `/playbook/<page>/` (Brand Kit, policies, volunteers guide), plus `/attend/`, `/invite/`, `/partner/`. The folder map lives in `scripts/paths.py` and drives the deploy layout, links, canonical URLs, the sitemap, Devie's links, and all redirects. Every older address (flat `/cebu/`, `/devcon-kids/`, `/case-study-sui/`, `.html` links, and the old devcon.ph URLs) 301-redirects to its folder page; unknown paths inside a section go to that section's page. The downloadable ZIP keeps `.html` file names so pages open locally.
 
 **Legacy URL migration.** Every known devcon.ph URL either maps to a page with the same path or redirects to its new home. `docs/url-map.json` lists all pages and redirects. Highlights:
 
@@ -79,6 +83,10 @@ These rules are enforced by review and, where possible, by `scripts/check_site.p
 - **Locations:** say "13 locations", never "13 chapters". The map header reads "13 grassroots locations nationwide". Strategic growth areas (Ilocos Region, MIMAROPA with the pin in Palawan, Zamboanga, GenSan) appear on the homepage and Locations maps as dashed cyan circles that animate in last. They have no local partners or applications yet, are not part of the 13, and are not in any menu or list. Nine are active chapters; Bohol, Bacolod, Tacloban, and Cagayan de Oro are volunteer communities.
 - **Chapter status:** volunteer communities have no active or renewed chapter officers. Promotion to active chapter status follows a stringent process that tests commitment, readiness, and long-term alignment with DEVCON as a non-profit, beyond seed funds and tech hype. Volunteer-community pages use Volunteer CTAs.
 - **Who we are:** DEVCON is a volunteer tech community, not an events company. Speakers, mentors, officers, and organizers volunteer to pay it forward and give back to the community, and every program is a public good. Homepage, Locations, every chapter page, Leadership, and Invite carry this message.
+- **Location page flow.** Active chapters (8 rows): Hero (president; Volunteer today / Join DEVCON+) → About <place> (photo + Did you know?) → 2025 impact report (story, highlights, snapshots) → By the numbers (stats, awards, testimony) → What's next (be the first to know + Get involved; Volunteer today / Join DEVCON+ / Follow) → Where we meet + Quality over quantity → Visiting + Keep exploring → closing CTA. Volunteer communities keep a concise hero (one "No active events right now" chip, Help restart / Find events nearby, a short "On the path to a full chapter" note linking to Quality over quantity) and show nearby active chapters inside Upcoming events. Rows alternate backgrounds around the numbers row.
+- **Volunteer communities (Bohol, Bacolod, Tacloban, Cagayan de Oro):** say plainly there are **no active events right now** (hero status note, "No active events in <city> yet" in Upcoming events, "Past highlights" for earlier activity). CTAs: Help restart DEVCON <city> / Volunteer to help restart, Get updates on DEVCON+, and Find events nearby, which jumps to a list of active chapters in the same region only.
+- **2025 data:** always labeled as the **2025 impact report**.
+- **Chapter pages:** active chapters lead with **Volunteer today** (volunteer form popup) and **Join DEVCON+** ("Join DEVCON+ to start earning points and redeeming rewards like merch"). Each page has a 2 to 3 sentence chapter president profile drawn from verified chapter data, a "Did you know?" with local economic context tech can help transform, a first-time visitor guide ("First time in <place>? Must-visit spots", 4 destinations) with the active officer host perk, and the volunteer-led line near the end.
 - **Chapter capacity:** as a volunteer community, DEVCON has limited capacity. To date, 4 chapters were not renewed for non-compliance and inactivity. DEVCON always prioritizes quality over quantity, of both events and impact. Requirements are listed on the Invite page (`/invite/#chapter-requirements`).
 - **How chapters start:** every chapter starts with a DEVCON speaker paying it forward at a free event. Hosts cover each volunteer speaker's transportation, meals, a token of appreciation, and accommodations (as applicable); this is required outside existing chapter locations. Invitations go to hello@devcon.ph using the pre-filled invitation email on the Invite page.
 - **Office:** "DEVCON HQ Office at Makati or Ortigas".
@@ -115,9 +123,13 @@ A rule-based chat at the lower right of every page. Devie is a **basic FAQ bot, 
 ### 6.4 Other features
 - **Locations map:** homepage map with pulsing chapter dots, where rows and pins link to chapter pages. Each location page has a Philippines mini-map, an OpenStreetMap view framed on the chapter's whole administrative region (for example, Central Visayas for Cebu and Bohol), and an Open in Google Maps link. There is no Get directions button.
 - **FAQ next steps:** every FAQ answer ends with "Next step" links.
-- **Leaders:** board, national office, area program leaders, and chapter presidents, each with a LinkedIn link. Chapter president photos use a standardized head-and-shoulders crop.
+- **Leaders:** a full-width Founder and President row for Winston Damarillo (bio and why DEVCON matters to him), then the board, national office, area program leaders, and chapter presidents, each with a LinkedIn link. Chapter president photos use a standardized head-and-shoulders crop, tone-matched to a bright, clean studio look and sharpened at 360 px.
 - **Intern quotes:** each name links to Jumpstart intern stories on Medium.
 - **Scroll animations:** homepage headings and cards fade up with a light stagger; off for reduced-motion users.
+- **Case studies:** every case study leads and closes with **Sponsor the next one** and **Help scale this program nationally**, ends with "Discover other case studies and impactful results", and shows program years where relevant (ICP 2024–2025 · 2 years; Sui 2026 · Year 1). Summit case study headlines carry no year.
+- **DEVCON Kids (`/devcon-kids/`):** dedicated program page from the 2026 DEVCON Kids deck and 2026 inputs: 2025 impact report (5,609 students, 184 volunteers, 70 schools, 44 code camps), why it matters (PISA 2022, TIMSS 2019), programs, 2026 momentum and event log (15 events, 990+ learners and educators, January to August), 2025 reach by chapter, chapter launches, real stories (86/78/92%), featured video, 2026 initiatives, and coming up (Climate Champions Summit with SDO DepEd Pasig, DEVCON Kids Hour of AI). Case studies: DEVCON for Educators with CSTA and DEVCON Kids (`/case-study-devcon-for-educators/`), micro:bit (`/case-study-microbit/`), and Hour of AI with a 2025 to 2026 section.
+- **Video:** the NEXUS final-stop video (YouTube, privacy-enhanced embed, muted autoplay, centered) on the Mindanao AI Caravan case study and the DEVCON Kids page, and "Why Sui partnered with DEVCON Philippines" (JDe6L8peLvk) on the Sui case study; CSP allows only youtube-nocookie.com and youtube.com frames.
+- **Section rhythm:** location pages alternate section backgrounds; related pairs (events + snapshots, stats + awards, quality over quantity + volunteer-led line) share a band; 72 px desktop / 48 px mobile spacing.
 - **Brand Kit:** logos, palette, Montserrat, key visuals, boilerplate, and entity information.
 
 ## 7. Design system
@@ -152,6 +164,8 @@ The site is static, has no backend, and stores no personal data. Hardening:
 
 ## 10. Workflow and governance
 
+**Environment labels:** GitHub Pages is **staging-**, Cloudflare Pages is **prod-**. Old addresses redirect with no 404s: the previous GitHub Pages path is forwarded by the `devcon-philippines.github.io` redirect repo to staging (same path), and the previous `devcon-ph-2026-website-redesign.pages.dev` project 301-redirects to prod- (its old staging alias goes to staging-). Keep both redirect sources in place.
+
 The site is open source and welcomes outside contributors; **approval is centralized to HQ leaders** (`@domdeleondevcon`, `@JFernando-DEVCON`, later the `hq-leaders` team).
 
 **Branches and environments**
@@ -159,8 +173,8 @@ The site is open source and welcomes outside contributors; **approval is central
 | Branch | Environment | Deploys to | Protection |
 |---|---|---|---|
 | `feature/*`, `content/*`, `fix/*`, `docs/*`, `chore/*` | PR preview | Cloudflare preview URL per pull request | None; short-lived, deleted after merge |
-| `staging` (default) | Staging | https://staging.devcon-ph-2026-website-redesign.pages.dev (noindex) | PR required, 1 code-owner (HQ) approval, last-push approval, conversations resolved, site-checks and CodeQL required, squash only, no bypass, no force push or deletion |
-| `main` | Production | GitHub Pages and Cloudflare Pages production | Same as staging, plus the release-source check (PRs from `staging` or `hotfix/*` only), merge commits only, and an HQ-approved `github-pages` environment (no admin bypass, no self-review) |
+| `staging` (default) | staging- (GitHub Pages) | https://devcon-philippines.github.io/staging-devcon-ph-2026-website-redesign/ (noindex) | PR required, 1 code-owner (HQ) approval, last-push approval, conversations resolved, site-checks and CodeQL required, squash only, no bypass, no force push or deletion |
+| `main` | prod- (Cloudflare Pages) | https://prod-devcon-ph-2026-website-redesign.pages.dev | Same as staging, plus the release-source check (PRs from `staging` or `hotfix/*` only), merge commits only, and an HQ-approved `github-pages` environment (no admin bypass, no self-review) |
 
 **Flow**
 
@@ -168,7 +182,7 @@ The site is open source and welcomes outside contributors; **approval is central
 2. Checks run and Cloudflare posts a preview link; an HQ leader approves and squash-merges.
 3. `staging` auto-deploys to the staging URL.
 4. An HQ leader opens a release PR from `staging` into `main`; another HQ leader approves it; merge with a merge commit.
-5. **Deploy (GitHub Pages + Cloudflare Pages)** waits for HQ approval, deploys the same commit to both production hosts, and verifies they match. Cloudflare's own Git production deploys are off.
+5. **Deploy production (Cloudflare Pages)** waits for HQ approval in the `production` environment, deploys to prod-, and verifies every page. Staging deploys to GitHub Pages automatically on each merge into `staging`. Cloudflare's own Git production deploys are off.
 6. Hotfixes: `hotfix/*` from `main` into `main`, then back-merge `main` into `staging`.
 
 **Other controls:** outside-contributor workflow runs need approval, only GitHub-owned actions are allowed, workflow tokens are read-only, Cloudflare credentials are environment secrets (production and staging) that only approved deploy jobs can read, and Dependabot targets `staging`. Every release bumps the minor version and updates `CHANGELOG.md`.

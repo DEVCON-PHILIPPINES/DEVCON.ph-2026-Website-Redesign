@@ -1,7 +1,7 @@
-name: Deploy (GitHub Pages + Cloudflare Pages)
+name: Deploy production (Cloudflare Pages)
 
-# One approval deploys the same commit to both hosts, then verifies they match.
-# Cloudflare's own Git auto-deploy for production is turned off, so this workflow is the only way production changes.
+# prod-: https://prod-devcon-ph-2026-website-redesign.pages.dev
+# Runs when a release PR (staging -> main) or hotfix merges. An HQ leader must approve the `production` environment.
 on:
   push:
     branches: [main]
@@ -31,29 +31,18 @@ jobs:
       - run: python3 scripts/check_site.py
 
   deploy:
-    name: Deploy to both hosts
+    name: Deploy to production
     needs: check
     runs-on: ubuntu-latest
     timeout-minutes: 20
-    permissions:
-      contents: read
-      pages: write
-      id-token: write
-      deployments: write
     environment:
-      name: github-pages
-      url: ${{ steps.gh.outputs.page_url }}
-    outputs:
-      gh_url: ${{ steps.gh.outputs.page_url }}
-      cf_url: ${{ steps.cf.outputs.url }}
+      name: production
+      url: https://${{ vars.CLOUDFLARE_PROJECT }}.pages.dev/
     steps:
       - uses: actions/checkout@v4
         with:
           persist-credentials: false
-
-      # Cloudflare first: if it fails, GitHub Pages is not updated, so the two never drift.
       - name: Deploy to Cloudflare Pages (production)
-        id: cf
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
@@ -64,48 +53,20 @@ jobs:
             --commit-hash "${{ github.sha }}" \
             --commit-message "$(git log -1 --pretty=%s | head -c 300)" \
             --commit-dirty=true
-          echo "url=https://${{ vars.CLOUDFLARE_PROJECT }}.pages.dev/" >> "$GITHUB_OUTPUT"
-
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: docs
-      - id: gh
-        name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v4
-
-  verify:
-    name: Verify both hosts match
-    needs: deploy
-    runs-on: ubuntu-latest
-    timeout-minutes: 15
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          persist-credentials: false
-      - name: Compare live version and pages
+      - name: Verify production
         env:
-          GH_URL: ${{ needs.deploy.outputs.gh_url }}
-          CF_URL: ${{ needs.deploy.outputs.cf_url }}
+          PROD_URL: https://${{ vars.CLOUDFLARE_PROJECT }}.pages.dev
         run: |
+          UA="Mozilla/5.0 (DEVCON deploy check)"
           expected=$(grep -o '<meta name="version" content="[^"]*"' docs/index.html | head -1 | sed 's/.*content="//;s/"//')
-          echo "Expected version: $expected"
-          check() {  # $1 = base url
-            for i in $(seq 1 20); do
-              v=$(curl -s -A "Mozilla/5.0 (DEVCON deploy check)" "$1?v=$RANDOM" | grep -o '<meta name="version" content="[^"]*"' | head -1 | sed 's/.*content="//;s/"//')
-              [ "$v" = "$expected" ] && { echo "OK $1 -> $v"; return 0; }
-              echo "waiting on $1 (got '$v')"; sleep 15
-            done
-            echo "::error::$1 is serving '$v', expected '$expected'"; return 1
-          }
-          check "$GH_URL" && check "$CF_URL"
-          # spot-check that every page resolves on both hosts
+          for i in $(seq 1 20); do
+            v=$(curl -s -A "$UA" "$PROD_URL/?v=$RANDOM" | grep -o '<meta name="version" content="[^"]*"' | head -1 | sed 's/.*content="//;s/"//')
+            [ "$v" = "$expected" ] && break; sleep 10
+          done
+          [ "$v" = "$expected" ] || { echo "::error::Production serves '$v', expected '$expected'"; exit 1; }
           fail=0
           for p in $(python3 -c "import json;print(' '.join(json.load(open('docs/url-map.json'))['pages']))"); do
-            for base in "${GH_URL%/}" "${CF_URL%/}"; do
-              code=$(curl -s -A "Mozilla/5.0 (DEVCON deploy check)" -o /dev/null -w '%{http_code}' "$base$p")
-              [ "$code" = "200" ] || { echo "::error::$base$p returned $code"; fail=1; }
-            done
+            code=$(curl -s -A "$UA" -o /dev/null -w '%{http_code}' "$PROD_URL$p"); [ "$code" = "200" ] || { echo "::error::$p returned $code"; fail=1; }
           done
-          [ $fail = 0 ] && echo "All pages live on both hosts."
+          [ $fail = 0 ] && echo "Production is live: $PROD_URL ($v), all pages 200."
           exit $fail
