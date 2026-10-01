@@ -4,6 +4,7 @@ Newest first. Times are Philippine Standard Time (PHT).
 
 | Version | Updated | Changes |
 |---|---|---|
+| v1.94 | Oct 1, 2026, 10:48 AM PHT | Location page highlights layout |
 | v1.93 | Oct 1, 2026, 8:13 AM PHT | DEVCON Kids video and photos; invite page for kids and youth |
 | v1.92 | Oct 1, 2026, 3:40 AM PHT | Agentic Training program page |
 | v1.91 | Oct 1, 2026, 3:32 AM PHT | Nested folder URLs for all sections |
