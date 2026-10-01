@@ -22,10 +22,10 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           persist-credentials: false
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
       - run: python3 scripts/check_site.py
@@ -43,7 +43,7 @@ jobs:
       name: github-pages
       url: ${{ steps.gh.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           persist-credentials: false
       - name: Prepare staging copy (noindex)
@@ -51,13 +51,13 @@ jobs:
           rm -rf _site && cp -r docs _site
           printf 'User-agent: *\nDisallow: /\n' > _site/robots.txt
           find _site -name '*.html' -print0 | xargs -0 sed -i 's#<meta charset="utf-8"/>#<meta charset="utf-8"/>\n<meta name="robots" content="noindex, nofollow"/>#'
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/configure-pages@v6
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: _site
       - id: gh
         name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
       - name: Verify staging
         env:
           STG_URL: ${{ steps.gh.outputs.page_url }}
