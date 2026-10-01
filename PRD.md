@@ -1,6 +1,6 @@
 # DEVCON.PH 2026 Website Redesign: Product Requirements Document
 
-**Status:** Live on GitHub Pages · **Current version:** v1.97 · Workflow: staging → production · **Owner:** DEVCON Philippines National Office (Communications)
+**Status:** Live on GitHub Pages · **Current version:** v1.98 · Workflow: staging → production · **Owner:** DEVCON Philippines National Office (Communications)
 **Source of truth:** this file. When the site, a brief, or a chat thread disagrees with this PRD, update this PRD first, then the site.
 
 ---
@@ -44,6 +44,8 @@ The site is a static, self-contained HTML build. It is a visual and content blue
 **Invite** covers kids and youth: an Elementary and high schools card (DEVCON Kids, Hour of AI, micro:bit, robotics, teacher training), DepEd divisions under local governments, and the invitation email asks for the audience (kids and youth, students, or professionals).
 
 **#SHEISDEVCON** (`/programs/sheisdevcon/`) carries photos and videos from devcon.ph/she-2026: featured "Why the Board of Investments supports #SHEISDEVCON" (muted autoplay), a 2025 highlights section (collage + 3 photos), and "Stories from the community" (BOI message, Jumpstart intern story, two awareness shorts; no autoplay).
+
+**Hour of AI 2026 season** appears on the Hour of AI case study ("The season at a glance") and the DEVCON Kids page ("Milestones: Hour of AI 2026"): execution windows Nov 23–26 and Dec 7–18, 2026; free teacher and volunteer training Nov 14, 21, 28; a four-phase timeline (school contacting, preparation and training, execution, post event) through the Hour of AI and Chapter Awards Night on Feb 5, 2027; CTAs Volunteer for Hour of AI and Book a date for your school. The 2026 season keeps its 2026 name.
 
 **Programs menu:** DEVCON Kids is listed first under Pioneering programs.
 
