@@ -1,6 +1,6 @@
 # DEVCON.PH 2026 Website Redesign: Product Requirements Document
 
-**Status:** Live on GitHub Pages · **Current version:** v1.92 · Workflow: staging → production · **Owner:** DEVCON Philippines National Office (Communications)
+**Status:** Live on GitHub Pages · **Current version:** v1.93 · Workflow: staging → production · **Owner:** DEVCON Philippines National Office (Communications)
 **Source of truth:** this file. When the site, a brief, or a chat thread disagrees with this PRD, update this PRD first, then the site.
 
 ---
@@ -40,6 +40,8 @@ The site is a static, self-contained HTML build. It is a visual and content blue
 **Top menu:** Our Story, Programs, Locations, DevRel Case Studies, Community Playbook, Volunteer.
 
 **Agentic Training** (`/programs/agentic-training/`, formerly the AI Fluency Masterclass): one program with two tracks inside, AI Fluency for Builders (masterclass plus hands-on Agentic AI Hackathon) and Agentic Training for Leaders (chapter leaders as AI orchestrators). Old masterclass addresses redirect here.
+
+**Invite** covers kids and youth: an Elementary and high schools card (DEVCON Kids, Hour of AI, micro:bit, robotics, teacher training), DepEd divisions under local governments, and the invitation email asks for the audience (kids and youth, students, or professionals).
 
 **Programs menu:** DEVCON Kids is listed first under Pioneering programs.
 
@@ -127,8 +129,8 @@ A rule-based chat at the lower right of every page. Devie is a **basic FAQ bot, 
 - **Intern quotes:** each name links to Jumpstart intern stories on Medium.
 - **Scroll animations:** homepage headings and cards fade up with a light stagger; off for reduced-motion users.
 - **Case studies:** every case study leads and closes with **Sponsor the next one** and **Help scale this program nationally**, ends with "Discover other case studies and impactful results", and shows program years where relevant (ICP 2024–2025 · 2 years; Sui 2026 · Year 1). Summit case study headlines carry no year.
-- **DEVCON Kids (`/devcon-kids/`):** dedicated program page from the 2026 DEVCON Kids deck and 2026 inputs: 2025 impact report (5,609 students, 184 volunteers, 70 schools, 44 code camps), why it matters (PISA 2022, TIMSS 2019), programs, 2026 momentum and event log (15 events, 990+ learners and educators, January to August), 2025 reach by chapter, chapter launches, real stories (86/78/92%), featured video, 2026 initiatives, and coming up (Climate Champions Summit with SDO DepEd Pasig, DEVCON Kids Hour of AI). Case studies: DEVCON for Educators with CSTA and DEVCON Kids (`/case-study-devcon-for-educators/`), micro:bit (`/case-study-microbit/`), and Hour of AI with a 2025 to 2026 section.
-- **Video:** the NEXUS final-stop video (YouTube, privacy-enhanced embed, muted autoplay, centered) on the Mindanao AI Caravan case study and the DEVCON Kids page, and "Why Sui partnered with DEVCON Philippines" (JDe6L8peLvk) on the Sui case study; CSP allows only youtube-nocookie.com and youtube.com frames.
+- **DEVCON Kids (`/devcon-kids/`):** dedicated program page from the 2026 DEVCON Kids deck and 2026 inputs: 2025 impact report (5,609 students, 184 volunteers, 70 schools, 44 code camps), why it matters (PISA 2022, TIMSS 2019), programs, 2026 momentum and event log (15 events, 990+ learners and educators, January to August), 2025 reach by chapter, chapter launches, real stories (86/78/92%), featured video, 2026 initiatives, an "In action" photo section from Hour of AI and educator sessions, and coming up (DEVCON Kids Hour of AI). Case studies: DEVCON for Educators with CSTA and DEVCON Kids (`/case-study-devcon-for-educators/`), micro:bit (`/case-study-microbit/`), and Hour of AI with a 2025 to 2026 section.
+- **Video:** the NEXUS final-stop video (YouTube, privacy-enhanced embed, muted autoplay, centered) on the Mindanao AI Caravan case study; "DEVCON at 16: Inspiring the Next Generation with DEVCON Kids" (SdVjWd_4MUE) on the DEVCON Kids page, and "Why Sui partnered with DEVCON Philippines" (JDe6L8peLvk) on the Sui case study; CSP allows only youtube-nocookie.com and youtube.com frames.
 - **Section rhythm:** location pages alternate section backgrounds; related pairs (events + snapshots, stats + awards, quality over quantity + volunteer-led line) share a band; 72 px desktop / 48 px mobile spacing.
 - **Brand Kit:** logos, palette, Montserrat, key visuals, boilerplate, and entity information.
 
