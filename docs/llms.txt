@@ -13,35 +13,37 @@ Key facts:
 - [Home](https://devcon.ph/): overview, locations map, news
 - [About DEVCON](https://devcon.ph/about/): 17-year story and mission
 - [Partner with DEVCON](https://devcon.ph/partner/): sponsorship and DevRel partnerships
-- [Locations](https://devcon.ph/chapters/): all 13 chapters and volunteer communities
+- [Locations](https://devcon.ph/locations/): all 13 chapters and volunteer communities
 - [Programs](https://devcon.ph/programs/): every DEVCON program
 
 ## AI programs
-- [AI Scholarships](https://devcon.ph/ai/): AI Certification Scholarships, starting with Claude
-- [AI Fluency Masterclass](https://devcon.ph/ai-fluency-masterclass/)
-- [Open-Source AI Code Camps](https://devcon.ph/ai-code-camps/)
-- [AI Engineering Internships](https://devcon.ph/jumpstart-internships/)
+- [AI Scholarships](https://devcon.ph/programs/ai-scholarships/): AI Certification Scholarships, starting with Claude
+- [Agentic Training](https://devcon.ph/programs/agentic-training/): AI Fluency for Builders and Agentic Training for Leaders
+- [Open-Source AI Code Camps](https://devcon.ph/programs/ai-code-camps/)
+- [AI Engineering Internships](https://devcon.ph/programs/jumpstart-internships/)
 
 ## Case studies
-- [DevRel case studies](https://devcon.ph/devrel-case-studies/)
-- [Smart contract code camps, Year 1](https://devcon.ph/case-study-sui/)
-- [Nationwide smart contracts code camp series](https://devcon.ph/case-study-icp/)
-- [Hour of AI for Kids](https://devcon.ph/case-study-hour-of-ai/)
-- [Mindanao AI Caravan](https://devcon.ph/case-study-mindanao-ai-caravan/): DEVCON AI Angat in Bukidnon and Iligan City
-- [Low-code code camps nationwide](https://devcon.ph/case-study-zoho-creator/)
-- [Campus DEVCON Summit 2023](https://devcon.ph/case-study-campus-devcon-summit/)
-- [DEVCON Pro Summit 2023](https://devcon.ph/case-study-pro-summit/)
+- [DevRel case studies](https://devcon.ph/case-studies/)
+- [Smart contract code camps, Year 1](https://devcon.ph/case-studies/sui/)
+- [Nationwide smart contracts code camp series](https://devcon.ph/case-studies/icp/)
+- [Hour of AI for Kids](https://devcon.ph/case-studies/hour-of-ai/)
+- [AI and Physical Computing for Educators](https://devcon.ph/case-studies/ai-physical-computing-educators/): 95 educators, 32 schools, Iloilo
+- [Mindanao AI Caravan](https://devcon.ph/case-studies/mindanao-ai-caravan/): DEVCON AI Angat in Bukidnon and Iligan City
+- [Low-code code camps nationwide](https://devcon.ph/case-studies/zoho-creator/)
+- [Campus DEVCON Summit 2023](https://devcon.ph/case-studies/campus-devcon-summit/)
+- [DEVCON Pro Summit 2023](https://devcon.ph/case-studies/pro-summit/)
 
 ## Get involved
 - [Attend an event](https://devcon.ph/attend/)
 - [Invite DEVCON to your city](https://devcon.ph/invite/)
-- [Leadership](https://devcon.ph/leadership/)
+- [Leadership](https://devcon.ph/about/leadership/)
 
 ## Community Playbook and policies
 - [Community Playbook](https://devcon.ph/playbook/)
-- [Volunteering Basics](https://devcon.ph/volunteers-guide/)
-- [Code of Conduct](https://devcon.ph/code-of-conduct-for-national-and-chapter-officers-and-volunteers/)
-- [Privacy and Safe Space Consent](https://devcon.ph/standard-privacy-and-safespace-consent/)
-- [Campus Events Guidelines](https://devcon.ph/campus-events-guidelines/)
-- [Child Protection Policy](https://devcon.ph/child-protection-policy/)
-- [Brand Kit](https://devcon.ph/brand-kit/): logos, colors, key visuals, boilerplate
+- [Volunteering Basics](https://devcon.ph/playbook/volunteers-guide/)
+- [Code of Conduct](https://devcon.ph/playbook/code-of-conduct/)
+- [Privacy and Safe Space Consent](https://devcon.ph/playbook/privacy-and-safe-space/)
+- [Campus Events Guidelines](https://devcon.ph/playbook/campus-events-guidelines/)
+- [Child Protection Policy](https://devcon.ph/playbook/child-protection-policy/)
+- [DEVCON 17 manifesto](https://devcon.ph/about/17years/): Engineering an AI-Ready Nation
+- [Brand Kit](https://devcon.ph/playbook/brand-kit/): logos, colors, key visuals, boilerplate
