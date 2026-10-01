@@ -1,6 +1,6 @@
 # DEVCON.PH 2026 Website Redesign: Product Requirements Document
 
-**Status:** Live on GitHub Pages · **Current version:** v1.96 · Workflow: staging → production · **Owner:** DEVCON Philippines National Office (Communications)
+**Status:** Live on GitHub Pages · **Current version:** v1.97 · Workflow: staging → production · **Owner:** DEVCON Philippines National Office (Communications)
 **Source of truth:** this file. When the site, a brief, or a chat thread disagrees with this PRD, update this PRD first, then the site.
 
 ---
@@ -39,7 +39,7 @@ The site is a static, self-contained HTML build. It is a visual and content blue
 
 **Top menu:** Our Story, Programs, Locations, DevRel Case Studies, Community Playbook, Volunteer.
 
-**Agentic Training** (`/programs/agentic-training/`, formerly the AI Fluency Masterclass): one program with two tracks inside, AI Fluency for Builders (masterclass plus hands-on Agentic AI Hackathon) and Agentic Training for Leaders (chapter leaders as AI orchestrators). Old masterclass addresses redirect here.
+**AI Fluency & Agentic Training** (`/programs/ai-fluency-agentic-training/`) is one program everywhere: the AI Fluency Masterclass, a hands-on Agentic AI Hackathon, and Agentic Training for Leaders (chapter leaders) sit inside it. It appears once on Programs, in the menu, in the anniversary pillars, and in the DEVCON 17 manifesto. Event names such as "NEXUS AI Fluency Masterclass and Hackathon" keep their official titles. Older masterclass and agentic-training addresses redirect here.
 
 **Invite** covers kids and youth: an Elementary and high schools card (DEVCON Kids, Hour of AI, micro:bit, robotics, teacher training), DepEd divisions under local governments, and the invitation email asks for the audience (kids and youth, students, or professionals).
 

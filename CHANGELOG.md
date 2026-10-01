@@ -4,6 +4,7 @@ Newest first. Times are Philippine Standard Time (PHT).
 
 | Version | Updated | Changes |
 |---|---|---|
+| v1.97 | Oct 1, 2026, 11:30 AM PHT | One AI fluency and agentic training program |
 | v1.96 | Oct 1, 2026, 11:10 AM PHT | Calls to action point to next year |
 | v1.95 | Oct 1, 2026, 10:53 AM PHT | SHEISDEVCON photos and videos |
 | v1.94 | Oct 1, 2026, 10:48 AM PHT | Location page highlights layout |
