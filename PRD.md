@@ -1,6 +1,6 @@
 # DEVCON.PH 2026 Website Redesign: Product Requirements Document
 
-**Status:** Live on GitHub Pages · **Current version:** v1.94 · Workflow: staging → production · **Owner:** DEVCON Philippines National Office (Communications)
+**Status:** Live on GitHub Pages · **Current version:** v1.95 · Workflow: staging → production · **Owner:** DEVCON Philippines National Office (Communications)
 **Source of truth:** this file. When the site, a brief, or a chat thread disagrees with this PRD, update this PRD first, then the site.
 
 ---
@@ -42,6 +42,8 @@ The site is a static, self-contained HTML build. It is a visual and content blue
 **Agentic Training** (`/programs/agentic-training/`, formerly the AI Fluency Masterclass): one program with two tracks inside, AI Fluency for Builders (masterclass plus hands-on Agentic AI Hackathon) and Agentic Training for Leaders (chapter leaders as AI orchestrators). Old masterclass addresses redirect here.
 
 **Invite** covers kids and youth: an Elementary and high schools card (DEVCON Kids, Hour of AI, micro:bit, robotics, teacher training), DepEd divisions under local governments, and the invitation email asks for the audience (kids and youth, students, or professionals).
+
+**#SHEISDEVCON** (`/programs/sheisdevcon/`) carries photos and videos from devcon.ph/she-2026: featured "Why the Board of Investments supports #SHEISDEVCON" (muted autoplay), a 2025 highlights section (collage + 3 photos), and "Stories from the community" (BOI message, Jumpstart intern story, two awareness shorts; no autoplay).
 
 **Programs menu:** DEVCON Kids is listed first under Pioneering programs.
 
