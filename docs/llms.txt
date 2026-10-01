@@ -18,7 +18,7 @@ Key facts:
 
 ## AI programs
 - [AI Scholarships](https://devcon.ph/programs/ai-scholarships/): AI Certification Scholarships, starting with Claude
-- [Agentic Training](https://devcon.ph/programs/agentic-training/): AI Fluency for Builders and Agentic Training for Leaders
+- [AI Fluency & Agentic Training](https://devcon.ph/programs/ai-fluency-agentic-training/): masterclass, Agentic AI Hackathon, and Agentic Training for Leaders
 - [Open-Source AI Code Camps](https://devcon.ph/programs/ai-code-camps/)
 - [AI Engineering Internships](https://devcon.ph/programs/jumpstart-internships/)
 

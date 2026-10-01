@@ -18,7 +18,7 @@ REDIRECTS = {
     'prosummit2023': 'case-study-pro-summit', 'pro-summit-2023': 'case-study-pro-summit', 'prosummit': 'pro-summit',
     'summergiveaway2023': 'case-study-zoho-creator', 'summer-giveaway-2023': 'case-study-zoho-creator', 'zoho-creator': 'case-study-zoho-creator',
     'ai-fluency': 'ai-fluency-masterclass', 'agentic-training': 'ai-fluency-masterclass', 'agentic-training-for-leaders': 'ai-fluency-masterclass',
-    'programs/ai-fluency-masterclass': 'ai-fluency-masterclass', 'ai-fluency-for-builders': 'ai-fluency-masterclass', 'masterclass': 'ai-fluency-masterclass',
+    'programs/ai-fluency-masterclass': 'ai-fluency-masterclass', 'programs/agentic-training': 'ai-fluency-masterclass', 'ai-fluency-agentic-training': 'ai-fluency-masterclass', 'ai-fluency-for-builders': 'ai-fluency-masterclass', 'masterclass': 'ai-fluency-masterclass',
     'sui-and-devcon-philippines-launch-build-beyond-developer-events-and-code-camps': 'case-study-sui', 'sui': 'case-study-sui', 'build-beyond': 'case-study-sui',
     '2025-news-isla-camp-ph-and-devcon-ph-renew-partnership-for-nationwide-smart-contracts-code-camps-and-emerging-technologies-education-in-2025': 'case-study-icp',
     'icp': 'case-study-icp', 'isla-camp': 'case-study-icp',
