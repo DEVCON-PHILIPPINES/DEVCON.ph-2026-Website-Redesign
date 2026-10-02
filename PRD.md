@@ -1,6 +1,6 @@
 # DEVCON.PH 2026 Website Redesign: Product Requirements Document
 
-**Status:** Live on GitHub Pages · **Current version:** v2.00 · Workflow: staging → production · **Owner:** DEVCON Philippines National Office (Communications)
+**Status:** Live on GitHub Pages · **Current version:** v2.01 · Workflow: staging → production · **Owner:** DEVCON Philippines National Office (Communications)
 **Source of truth:** this file. When the site, a brief, or a chat thread disagrees with this PRD, update this PRD first, then the site.
 
 ---
@@ -50,6 +50,8 @@ The site is a static, self-contained HTML build. It is a visual and content blue
 **Location videos:** every location page has one YouTube video after its 2025 impact report row: a DEVCON channel video that names the chapter where one exists (Manila, Laguna, Pampanga, Iloilo, Bacolod, Davao, Iligan, Bukidnon), otherwise the chapter-leader video qg52LcKPUHc ("Know a city that needs DEVCON?" on active chapters, "Help grow DEVCON in <place>" on volunteer communities). Outdated event invitations and videos that conflict with a page (for example, a president intro for a community without active officers) are not used.
 
 **Programs menu:** DEVCON Kids is listed first under Pioneering programs.
+
+**Homepage first view:** the hero is sized to the screen height so the "Trusted by leaders and pioneers" logo carousel is visible on first load, from 1920×1080 desktops to 375×667 phones (the hero illustration is hidden on phones).
 
 **Homepage hero CTAs:** "Attend free events" (scrolls to the DEVCON+ banner) and "Discover a chapter near you" (opens the Locations map).
 
