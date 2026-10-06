@@ -27,6 +27,7 @@ Key facts:
 - [Smart contract code camps, Year 1](https://devcon.ph/case-studies/sui/)
 - [Nationwide smart contracts code camp series](https://devcon.ph/case-studies/icp/)
 - [Hour of AI for Kids](https://devcon.ph/case-studies/hour-of-ai/)
+- [Hermes Agentic Code Camp and Hackathon](https://devcon.ph/case-studies/hermes-agentic-code-camp/): first in the Philippines, two weeks from test to national beta
 - [AI and Physical Computing for Educators](https://devcon.ph/case-studies/ai-physical-computing-educators/): 95 educators, 32 schools, Iloilo
 - [Mindanao AI Caravan](https://devcon.ph/case-studies/mindanao-ai-caravan/): DEVCON AI Angat in Bukidnon and Iligan City
 - [Low-code code camps nationwide](https://devcon.ph/case-studies/zoho-creator/)
