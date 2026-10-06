@@ -2,13 +2,13 @@
 
 The rebuilt **devcon.ph** for DEVCON 17: *Engineering an AI-Ready Nation*. It is written to replace the current devcon.ph content, so every page lives here and nothing links back to the old site.
 
-**Current version:** v2.00 · Oct 1, 2026, 10:46 PM PHT (see [CHANGELOG.md](CHANGELOG.md))
+**Current version:** v2.03 · Oct 6, 2026, 1:39 PM PHT (see [CHANGELOG.md](CHANGELOG.md))
 
 ## What's in this repo
 
 | Folder | What it is |
 |---|---|
-| `docs/` | The website: 51 self-contained HTML pages, plus `sitemap.xml`, `robots.txt`, and the social share image. Every image, style, and script is inlined, so any page opens on its own. |
+| `docs/` | The website: 52 self-contained HTML pages, plus `sitemap.xml`, `robots.txt`, and the social share image. Every image, style, and script is inlined, so any page opens on its own. |
 | `combined/` | The same site as one HTML file, for quick review. |
 
 Page file names follow the devcon.ph URL format, so `docs/manila.html` maps to `devcon.ph/manila/`. The compliance pages keep their exact devcon.ph slugs.
