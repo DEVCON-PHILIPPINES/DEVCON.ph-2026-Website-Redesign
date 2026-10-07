@@ -4,6 +4,7 @@ Newest first. Times are Philippine Standard Time (PHT).
 
 | Version | Updated | Changes |
 |---|---|---|
+| v2.06 | Oct 7, 2026, 2:26 PM PHT | Agentic code camp case study beta framing |
 | v2.05 | Oct 7, 2026, 2:21 PM PHT | Agentic code camp case study written for partners |
 | v2.04 | Oct 7, 2026, 2:18 PM PHT | Agentic code camp case study photos and partner call |
 | v2.03 | Oct 6, 2026, 1:39 PM PHT | Agentic code camp case study for global partners |
